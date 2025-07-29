@@ -42,22 +42,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Small Town Yoga Studio - Conservative Business Plan</title>
+    <title>Lucan Fusion Wellness Studio - Business Plan</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-        }
-        .chart-container {
-            position: relative;
-            height: 400px;
-            margin: 20px 0;
-        }
-        .small-chart-container {
-            position: relative;
-            height: 320px;
         }
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -65,18 +56,11 @@
         .card-shadow {
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .accordion-button {
+            transition: all 0.3s ease;
         }
-        th, td {
-            border: 1px solid #e5e7eb;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f3f4f6;
-            font-weight: 600;
+        .accordion-button:hover {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
         }
         .nav-link {
             transition: color 0.3s ease;
@@ -91,536 +75,83 @@
     <div class="gradient-bg text-white py-12 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-4">
-                <h1 class="text-4xl font-bold">Dashwood Fusion Wellness Studio</h1>
+                <h1 class="text-4xl font-bold">Lucan Fusion Wellness Studio</h1>
                 <a href="marketing-plan.html" class="nav-link text-lg font-medium underline opacity-90 hover:opacity-100">View Marketing Plan</a>
             </div>
-            <p class="text-xl opacity-90">Yoga • Pilates • Dance • Kids Programs • Wellness Services</p>
-            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                    <p class="text-sm opacity-90">Service Offerings</p>
-                    <p class="text-2xl font-semibold">6+ Programs</p>
-                    <p class="text-xs opacity-80 mt-1">All ages & fitness levels</p>
-                </div>
-                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                    <p class="text-sm opacity-90">Market Reach</p>
-                    <p class="text-2xl font-semibold">145,000</p>
-                    <p class="text-xs opacity-80 mt-1">Summer population</p>
-                </div>
-                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                    <p class="text-sm opacity-90">Revenue Streams</p>
-                    <p class="text-2xl font-semibold">8+ Sources</p>
-                    <p class="text-xs opacity-80 mt-1">Diversified income</p>
-                </div>
-            </div>
+            <p class="text-xl opacity-90">Business Plan Overview</p>
+            <p class="text-sm opacity-90">263 Main St, Lucan, ON N0M 2J0</p>
         </div>
     </div>
 
     <div class="p-6 -mt-8">
         <div class="max-w-7xl mx-auto">
-            <!-- Key Metrics Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                <div class="bg-white p-6 rounded-xl card-shadow transform hover:scale-105 transition-transform">
-                    <div class="flex items-center justify-between mb-2">
-                        <svg class="h-6 w-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Month 18</span>
-                    </div>
-                    <p class="text-sm font-medium text-gray-600">Monthly Revenue</p>
-                    <p class="text-2xl font-bold text-gray-900">$13,340</p>
-                    <p class="text-xs text-gray-500 mt-1">↑ From $3,525 (Month 1)</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl card-shadow transform hover:scale-105 transition-transform">
-                    <div class="flex items-center justify-between mb-2">
-                        <svg class="h-6 w-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                        </svg>
-                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Profitable</span>
-                    </div>
-                    <p class="text-sm font-medium text-gray-600">Monthly Profit</p>
-                    <p class="text-2xl font-bold text-gray-900">$4,490</p>
-                    <p class="text-xs text-gray-500 mt-1">Break-even: Month 6</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl card-shadow transform hover:scale-105 transition-transform">
-                    <div class="flex items-center justify-between mb-2">
-                        <svg class="h-6 w-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                        </svg>
-                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">6.3% of target</span>
-                    </div>
-                    <p class="text-sm font-medium text-gray-600">Total Members</p>
-                    <p class="text-2xl font-bold text-gray-900">230</p>
-                    <p class="text-xs text-gray-500 mt-1">134 Adults + 96 Kids</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl card-shadow transform hover:scale-105 transition-transform">
-                    <div class="flex items-center justify-between mb-2">
-                        <svg class="h-6 w-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                        <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">Conservative</span>
-                    </div>
-                    <p class="text-sm font-medium text-gray-600">Growth Rate</p>
-                    <p class="text-2xl font-bold text-gray-900">3.8%/mo</p>
-                    <p class="text-xs text-gray-500 mt-1">Sustainable pace</p>
-                </div>
-            </div>
-
-            <!-- Class Schedule -->
+            <!-- Business Overview -->
             <div class="bg-white p-6 rounded-xl card-shadow mb-8">
-                <h3 class="text-xl font-semibold mb-6">Weekly Class Schedule</h3>
-                <p class="text-sm text-gray-600 mb-4">Monday–Friday, two rooms (6 adults/class, 8 kids/class, 1 class/week per member)</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Time Slot</th>
-                            <th>Room 1</th>
-                            <th>Room 2</th>
-                            <th>Teachers</th>
-                            <th>Capacity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Morning (e.g., 8:00 AM)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>2</td>
-                            <td>12 adults</td>
-                        </tr>
-                        <tr>
-                            <td>Lunch (e.g., 12:00 PM)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>2</td>
-                            <td>12 adults</td>
-                        </tr>
-                        <tr>
-                            <td>Early Evening (e.g., 4:00 PM)</td>
-                            <td>Kids Dance</td>
-                            <td>Kids Dance</td>
-                            <td>2</td>
-                            <td>16 kids</td>
-                        </tr>
-                        <tr>
-                            <td>Evening 1 (e.g., 6:00 PM)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>2</td>
-                            <td>12 adults</td>
-                        </tr>
-                        <tr>
-                            <td>Evening 2 (e.g., 7:30 PM)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>Adult Wellness (Yoga/Pilates)</td>
-                            <td>2</td>
-                            <td>12 adults</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="mt-4 text-sm text-gray-600">
-                    <p><strong>Total Weekly Classes:</strong> 60 (40 adult, 20 kids)</p>
-                    <p><strong>Weekly Capacity:</strong> 240 adult slots, 80 kids’ slots</p>
-                    <p><strong>Max Members (75%):</strong> ~240 (144 adults, 96 kids)</p>
-                </div>
+                <h2 class="text-2xl font-semibold text-indigo-700 mb-6">Business Overview</h2>
+                <p class="text-gray-600 mb-4">
+                    Opening August 1, 2025, at 263 Main St, Lucan, ON N0M 2J0, Lucan Fusion Wellness Studio is a wellness hub for the Lucan community, offering yoga, dance, and meditation classes for all ages. We aim to engage local families, businesses, and community groups while attracting tourists from nearby Grand Bend. Our affordable memberships and drop-in classes include kids' programs ($50/mo for one dance style, $30/mo for additional styles).
+                </p>
+                <p class="text-gray-600">
+                    Key services include group classes, private sessions, and seasonal wellness retreats. Our strategy leverages Lucan community partnerships and tourism to drive steady growth, targeting 100 members by month 12 (July 2026) and 200 by month 24 (July 2027).
+                </p>
             </div>
 
-            <!-- Target Market Analysis -->
+            <!-- Financial Projections -->
             <div class="bg-white p-6 rounded-xl card-shadow mb-8">
-                <h3 class="text-xl font-semibold mb-6">Target Communities Within 30km of Dashwood</h3>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-                    <div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
-                        <h4 class="font-semibold text-blue-700 mb-2">Immediate (0-10km)</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex justify-between">
-                                <span>Dashwood</span>
-                                <span class="text-gray-600">~500</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Grand Bend</span>
-                                <span class="text-gray-600">~2,000</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Crediton</span>
-                                <span class="text-gray-600">~400</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Exeter</span>
-                                <span class="text-gray-600">~4,600</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="border border-green-200 rounded-lg p-4 bg-green-50">
-                        <h4 class="font-semibold text-green-700 mb-2">Primary (10-20km)</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex justify-between">
-                                <span>Zurich</span>
-                                <span class="text-gray-600">~900</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Hensall</span>
-                                <span class="text-gray-600">~1,200</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Parkhill</span>
-                                <span class="text-gray-600">~1,700</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Ailsa Craig</span>
-                                <span class="text-gray-600">~1,000</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="border border-purple-200 rounded-lg p-4 bg-purple-50">
-                        <h4 class="font-semibold text-purple-700 mb-2">Secondary (20-25km)</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex justify-between">
-                                <span>Clinton</span>
-                                <span class="text-gray-600">~3,100</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Seaforth</span>
-                                <span class="text-gray-600">~2,400</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Lucan</span>
-                                <span class="text-gray-600">~2,900</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Forest</span>
-                                <span class="text-gray-600">~2,900</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="border border-orange-200 rounded-lg p-4 bg-orange-50">
-                        <h4 class="font-semibold text-orange-700 mb-2">Extended (25-30km)</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex justify-between">
-                                <span>Goderich</span>
-                                <span class="text-gray-600">~7,600</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Strathroy</span>
-                                <span class="text-gray-600">~15,000</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Mitchell</span>
-                                <span class="text-gray-600">~4,700</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span>Thedford</span>
-                                <span class="text-gray-600">~600</span>
-                            </li>
-                        </ul>
-                        <p class="text-xs text-gray-500 mt-2">Summer: +50,000 tourists</p>
-                    </div>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <button id="toggleFinancials" class="accordion-button w-full text-left bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-4 rounded-lg font-semibold text-xl hover:shadow-lg">
+                    Financial Projections (Click to Expand/Collapse)
+                </button>
+                <div id="financialsContent" class="hidden mt-4">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Revenue & Profit Chart -->
                         <div>
-                            <p class="text-2xl font-bold text-gray-800">~95,000</p>
-                            <p class="text-sm text-gray-600">Year-round Population</p>
+                            <h3 class="text-lg font-semibold text-gray-700 mb-4">Revenue & Profit (Year 1: Aug 2025–Jul 2026)</h3>
+                            <canvas id="revenueProfitChart" class="w-full h-64"></canvas>
                         </div>
+                        <!-- Member Growth Chart -->
                         <div>
-                            <p class="text-2xl font-bold text-gray-800">~145,000</p>
-                            <p class="text-sm text-gray-600">Summer Population</p>
+                            <h3 class="text-lg font-semibold text-gray-700 mb-4">Member Growth (Years 1-2)</h3>
+                            <canvas id="memberGrowthChart" class="w-full h-64"></canvas>
                         </div>
-                        <div>
-                            <p class="text-2xl font-bold text-gray-800">3,625</p>
-                            <p class="text-sm text-gray-600">Potential Customers</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold text-gray-800">25-30min</p>
-                            <p class="text-sm text-gray-600">Max Drive Time</p>
+                        <!-- Revenue Sources -->
+                        <div class="lg:col-span-2">
+                            <h3 class="text-lg font-semibold text-gray-700 mb-4">Revenue Sources (Year 1)</h3>
+                            <canvas id="revenueSourcesChart" class="w-full h-64"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Grand Bend Tourism Opportunity -->
-            <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white p-6 rounded-xl card-shadow mb-8">
-                <h3 class="text-xl font-semibold mb-4">Grand Bend Summer Opportunity</h3>
+            <!-- Pricing Structure -->
+            <div class="bg-white p-6 rounded-xl card-shadow">
+                <h2 class="text-2xl font-semibold text-indigo-700 mb-6">Pricing Structure</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                        <h4 class="font-semibold mb-2">Seasonal Population</h4>
-                        <p class="text-3xl font-bold">50,000+</p>
-                        <p class="text-sm opacity-90">Summer visitors (May-Sep)</p>
-                    </div>
-                    <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                        <h4 class="font-semibold mb-2">Tourism Programs</h4>
-                        <ul class="text-sm space-y-1 opacity-90">
-                            <li>• Beach sunrise yoga</li>
-                            <li>• Cottage rental packages</li>
-                            <li>• Drop-in tourist classes</li>
-                            <li>• Weekend retreats</li>
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-indigo-600 mb-2">Adult Memberships</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Monthly Unlimited: $100</li>
+                            <li>• Drop-In Class: $15</li>
+                            <li>• 10-Class Pass: $120</li>
+                            <li>• Private Session: $60/hour</li>
                         </ul>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                        <h4 class="font-semibold mb-2">Revenue Potential</h4>
-                        <p class="text-3xl font-bold">+40%</p>
-                        <p class="text-sm opacity-90">Summer revenue boost from tourism</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Conservative Revenue Projection -->
-            <div class="bg-white p-6 rounded-xl card-shadow mb-8">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-xl font-semibold">Conservative Revenue & Profit Projection</h3>
-                    <div class="flex gap-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded-full">18 Months</span>
-                        <span class="text-xs bg-gray-100 text-gray-800 px-3 py-1 rounded-full">Small Town Model</span>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <canvas id="revenueChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Charts Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                <!-- Member Growth Chart -->
-                <div class="bg-white p-6 rounded-xl card-shadow">
-                    <h3 class="text-lg font-semibold mb-4">Conservative Member Growth</h3>
-                    <div class="small-chart-container">
-                        <canvas id="memberChart"></canvas>
-                    </div>
-                </div>
-                <!-- Revenue Breakdown -->
-                <div class="bg-white p-6 rounded-xl card-shadow">
-                    <h3 class="text-lg font-semibold mb-4">Revenue Sources (Month 18)</h3>
-                    <div class="small-chart-container">
-                        <canvas id="pieChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Offerings -->
-            <div class="bg-white p-6 rounded-xl card-shadow mb-8">
-                <h3 class="text-xl font-semibold mb-6">Fusion Studio Service Offerings</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg p-6">
-                        <h4 class="font-semibold text-indigo-700 mb-3">Adult Programs</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-start">
-                                <span class="text-indigo-500 mr-2">•</span>
-                                <div>
-                                    <strong>Yoga:</strong> Hatha, Vinyasa, Yin, Restorative
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-500 mr-2">•</span>
-                                <div>
-                                    <strong>Pilates:</strong> Mat, Reformer, Barre Fusion
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-500 mr-2">•</span>
-                                <div>
-                                    <strong>Specialty:</strong> Beach Yoga, SUP Yoga (summer)
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-500 mr-2">•</span>
-                                <div>
-                                    <strong>Wellness:</strong> Meditation, Breathwork
-                                </div>
-                            </li>
+                    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-green-600 mb-2">Kids Programs</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• One Dance Style: $50/month</li>
+                            <li>• Additional Style: $30/month</li>
+                            <li>• Drop-In Class: $10</li>
+                            <li>• Summer Camp (1 week): $150</li>
                         </ul>
                     </div>
-                    <div class="bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg p-6">
-                        <h4 class="font-semibold text-rose-700 mb-3">Kids & Teens</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-start">
-                                <span class="text-rose-500 mr-2">•</span>
-                                <div>
-                                    <strong>Dance:</strong> Ballet, Jazz, Hip Hop, Contemporary
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-rose-500 mr-2">•</span>
-                                <div>
-                                    <strong>Kids Yoga:</strong> Ages 4-7, 8-12, Teen Yoga
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-rose-500 mr-2">•</span>
-                                <div>
-                                    <strong>Summer Camps:</strong> Dance & Wellness camps
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-rose-500 mr-2">•</span>
-                                <div>
-                                    <strong>Birthday Parties:</strong> Yoga & dance themes
-                                </div>
-                            </li>
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-purple-600 mb-2">Special Programs</h3>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Wellness Retreat (Weekend): $250</li>
+                            <li>• Corporate Wellness: $500/month</li>
+                            <li>• Meditation Series (4 weeks): $80</li>
+                            <li>• Family Yoga (Drop-In): $25/family</li>
                         </ul>
-                    </div>
-                    <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg p-6">
-                        <h4 class="font-semibold text-emerald-700 mb-3">Wellness Services</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-start">
-                                <span class="text-emerald-500 mr-2">•</span>
-                                <div>
-                                    <strong>Private Sessions:</strong> 1-on-1 coaching
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-emerald-500 mr-2">•</span>
-                                <div>
-                                    <strong>Workshops:</strong> Monthly specialty topics
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-emerald-500 mr-2">•</span>
-                                <div>
-                                    <strong>Corporate:</strong> Workplace wellness
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-emerald-500 mr-2">•</span>
-                                <div>
-                                    <strong>Retreats:</strong> Weekend & day retreats
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pricing Strategy -->
-            <div class="bg-white p-6 rounded-xl card-shadow mb-8">
-                <h3 class="text-xl font-semibold mb-6">Multi-Service Pricing Structure</h3>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 text-center">
-                        <h4 class="font-semibold text-indigo-700 mb-2">Unlimited Adult</h4>
-                        <p class="text-3xl font-bold text-indigo-900 mb-2">$95<span class="text-lg font-normal">/mo</span></p>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• All yoga classes</li>
-                            <li>• All Pilates classes</li>
-                            <li>• Meditation sessions</li>
-                            <li>• 10% retail discount</li>
-                        </ul>
-                    </div>
-                    <div class="bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg p-6 text-center">
-                        <h4 class="font-semibold text-rose-700 mb-2">Kids Dance</h4>
-                        <p class="text-3xl font-bold text-rose-900 mb-2">$50<span class="text-lg font-normal">/mo</span></p>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• 1 style (1 class/week)</li>
-                            <li>• Additional style: $30/mo</li>
-                            <li>• Recital included</li>
-                            <li>• Sibling discount: 20%</li>
-                        </ul>
-                    </div>
-                    <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg p-6 text-center">
-                        <h4 class="font-semibold text-purple-700 mb-2">Family Package</h4>
-                        <p class="text-3xl font-bold text-purple-900 mb-2">$180<span class="text-lg font-normal">/mo</span></p>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• 2 adults + kids</li>
-                            <li>• All family classes</li>
-                            <li>• Kids yoga included</li>
-                            <li>• Best value!</li>
-                        </ul>
-                    </div>
-                    <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg p-6 text-center">
-                        <h4 class="font-semibold text-green-700 mb-2">Drop-In/Tourist</h4>
-                        <p class="text-3xl font-bold text-green-900 mb-2">$20<span class="text-lg font-normal">/class</span></p>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• Beach yoga: $25</li>
-                            <li>• 5-class pack: $85</li>
-                            <li>• Weekly pass: $60</li>
-                            <li>• First class: $10</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-6 bg-gray-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-600 text-center">
-                        <strong>Additional Revenue:</strong> Private sessions ($75/hr) • Workshops ($45-65) • 
-                        Retreats ($150-350) • Birthday parties ($200) • Summer camps ($175/week) • Corporate wellness (custom)
-                    </p>
-                </div>
-            </div>
-
-            <!-- Risk Mitigation -->
-            <div class="bg-white p-6 rounded-xl card-shadow mb-8">
-                <h3 class="text-xl font-semibold mb-6">Small Town Risk Mitigation</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="font-semibold text-red-600 mb-3">Potential Risks</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-start">
-                                <span class="text-red-500 mr-2">•</span>
-                                <span><strong>Limited market size:</strong> Approximately 3,625 potential customers within 30km</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-500 mr-2">•</span>
-                                <span><strong>Capacity constraints:</strong> Studio limited to 75% of 320-member capacity (~240 members)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-500 mr-2">•</span>
-                                <span><strong>High fixed costs:</strong> $8,850/month (rent, teachers, misc)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-500 mr-2">•</span>
-                                <span><strong>Seasonal fluctuations:</strong> Summer vacations, harvest season</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-500 mr-2">•</span>
-                                <span><strong>Cultural resistance:</strong> Conservative attitudes toward yoga</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-500 mr-2">•</span>
-                                <span><strong>Economic sensitivity:</strong> Income variations in small towns</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-green-600 mb-3">Mitigation Strategies</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-start">
-                                <span class="text-green-500 mr-2">•</span>
-                                <span><strong>Diversify offerings:</strong> Add Pilates, meditation, wellness coaching</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-500 mr-2">•</span>
-                                <span><strong>Flexible pricing:</strong> Sliding scale, work-study programs</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-500 mr-2">•</span>
-                                <span><strong>Community focus:</strong> Position as wellness center, not just yoga</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-500 mr-2">•</span>
-                                <span><strong>Cost management:</strong> Optimize teacher scheduling, increase drop-in/tourism revenue</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-green-500 mr-2">•</span>
-                                <span><strong>Capacity management:</strong> Cap memberships at 230, offer virtual classes, prioritize off-site events (e.g., beach yoga)</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Success Metrics -->
-            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-xl mb-8">
-                <h3 class="text-2xl font-semibold mb-6">Key Success Indicators</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center">
-                        <p class="text-4xl font-bold mb-2">70%</p>
-                        <p class="text-sm opacity-90">Member Retention Rate</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-4xl font-bold mb-2">$90</p>
-                        <p class="text-sm opacity-90">Avg Customer Value</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-4xl font-bold mb-2">1</p>
-                        <p class="text-sm opacity-90">Classes per Member/Week</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-4xl font-bold mb-2">34%</p>
-                        <p class="text-sm opacity-90">Profit Margin (Month 18)</p>
                     </div>
                 </div>
             </div>
@@ -628,226 +159,73 @@
     </div>
 
     <script>
-        // Fusion studio data with updated kids' pricing
-        const monthlyData = [
-            { month: 1, yogaMembers: 15, pilatesMembers: 10, kidsPrograms: 20, revenue: 3525, profit: -5325, adultRevenue: 2375, kidsRevenue: 1120, dropIns: 175 },
-            { month: 2, yogaMembers: 18, pilatesMembers: 12, kidsPrograms: 23, revenue: 4080, profit: -4770, adultRevenue: 2850, kidsRevenue: 1288, dropIns: 110 },
-            { month: 3, yogaMembers: 21, pilatesMembers: 14, kidsPrograms: 26, revenue: 4688, profit: -4162, adultRevenue: 3325, kidsRevenue: 1456, dropIns: 105 },
-            { month: 4, yogaMembers: 24, pilatesMembers: 16, kidsPrograms: 29, revenue: 5295, profit: -3555, adultRevenue: 3800, kidsRevenue: 1624, dropIns: 105 },
-            { month: 5, yogaMembers: 27, pilatesMembers: 18, kidsPrograms: 32, revenue: 6420, profit: -2430, adultRevenue: 4275, kidsRevenue: 1792, dropIns: 605, workshops: 500 },
-            { month: 6, yogaMembers: 31, pilatesMembers: 21, kidsPrograms: 36, revenue: 8568, profit: -282, adultRevenue: 4940, kidsRevenue: 2016, dropIns: 1860, workshops: 500 },
-            { month: 7, yogaMembers: 35, pilatesMembers: 24, kidsPrograms: 40, revenue: 10125, profit: 1275, adultRevenue: 5605, kidsRevenue: 2240, dropIns: 2620, workshops: 500 },
-            { month: 8, yogaMembers: 38, pilatesMembers: 26, kidsPrograms: 44, revenue: 10785, profit: 1935, adultRevenue: 6175, kidsRevenue: 2464, dropIns: 2970, workshops: 500 },
-            { month: 9, yogaMembers: 41, pilatesMembers: 28, kidsPrograms: 47, revenue: 8763, profit: -87, adultRevenue: 6745, kidsRevenue: 2632, dropIns: 1510, workshops: 500 },
-            { month: 10, yogaMembers: 44, pilatesMembers: 30, kidsPrograms: 50, revenue: 8390, profit: -460, adultRevenue: 7315, kidsRevenue: 2800, dropIns: 1080, workshops: 500 },
-            { month: 11, yogaMembers: 47, pilatesMembers: 32, kidsPrograms: 54, revenue: 8910, profit: 60, adultRevenue: 7885, kidsRevenue: 3024, dropIns: 1075, workshops: 500 },
-            { month: 12, yogaMembers: 51, pilatesMembers: 34, kidsPrograms: 57, revenue: 9438, profit: 588, adultRevenue: 8455, kidsRevenue: 3192, dropIns: 1090, workshops: 500 },
-            { month: 13, yogaMembers: 54, pilatesMembers: 37, kidsPrograms: 61, revenue: 9965, profit: 1115, adultRevenue: 9120, kidsRevenue: 3416, dropIns: 1000, workshops: 500 },
-            { month: 14, yogaMembers: 58, pilatesMembers: 39, kidsPrograms: 65, revenue: 10485, profit: 1635, adultRevenue: 9690, kidsRevenue: 3640, dropIns: 945, workshops: 800 },
-            { month: 15, yogaMembers: 62, pilatesMembers: 42, kidsPrograms: 69, revenue: 11085, profit: 2235, adultRevenue: 10355, kidsRevenue: 3864, dropIns: 945, workshops: 800 },
-            { month: 16, yogaMembers: 66, pilatesMembers: 45, kidsPrograms: 73, revenue: 11655, profit: 2805, adultRevenue: 11020, kidsRevenue: 4088, dropIns: 1025, workshops: 800 },
-            { month: 17, yogaMembers: 70, pilatesMembers: 48, kidsPrograms: 77, revenue: 12230, profit: 3380, adultRevenue: 11780, kidsRevenue: 4312, dropIns: 1105, workshops: 800 },
-            { month: 18, yogaMembers: 78, pilatesMembers: 56, kidsPrograms: 91, revenue: 13340, profit: 4490, adultRevenue: 13110, kidsRevenue: 5090, dropIns: 1160, workshops: 780 }
-        ];
+        // Accordion toggle for financials
+        const toggleFinancials = document.getElementById('toggleFinancials');
+        const financialsContent = document.getElementById('financialsContent');
 
-        // Chart defaults
-        Chart.defaults.font.family = 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+        toggleFinancials.addEventListener('click', () => {
+            financialsContent.classList.toggle('hidden');
+        });
 
-        // Revenue & Profit Line Chart
-        new Chart(document.getElementById('revenueChart'), {
+        // Revenue & Profit Chart
+        new Chart(document.getElementById('revenueProfitChart'), {
             type: 'line',
             data: {
-                labels: monthlyData.map(d => `M${d.month}`),
+                labels: ['Aug 2025', 'Sep 2025', 'Oct 2025', 'Nov 2025', 'Dec 2025', 'Jan 2026', 'Feb 2026', 'Mar 2026', 'Apr 2026', 'May 2026', 'Jun 2026', 'Jul 2026'],
                 datasets: [
                     {
-                        label: 'Revenue',
-                        data: monthlyData.map(d => d.revenue),
+                        label: 'Revenue ($)',
+                        data: [5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 15000, 16500, 18000],
                         borderColor: '#667eea',
-                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
-                        borderWidth: 3,
-                        tension: 0.3,
-                        pointRadius: 4,
-                        pointHoverRadius: 6
+                        fill: false
                     },
                     {
-                        label: 'Profit',
-                        data: monthlyData.map(d => d.profit),
-                        borderColor: '#48bb78',
-                        backgroundColor: 'rgba(72, 187, 120, 0.1)',
-                        borderWidth: 3,
-                        tension: 0.3,
-                        pointRadius: 4,
-                        pointHoverRadius: 6
-                    },
-                    {
-                        label: 'Break-even Line',
-                        data: Array(monthlyData.length).fill(0),
-                        borderColor: '#e53e3e',
-                        borderWidth: 2,
-                        borderDash: [5, 5],
-                        pointRadius: 0,
+                        label: 'Profit ($)',
+                        data: [1000, 1200, 1400, 1600, 1800, 2000, 2200, 2500, 2800, 3200, 3800, 4500],
+                        borderColor: '#764ba2',
                         fill: false
                     }
                 ]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
-                interaction: {
-                    mode: 'index',
-                    intersect: false
-                },
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top',
-                        labels: {
-                            usePointStyle: true,
-                            padding: 20
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        cornerRadius: 8,
-                        callbacks: {
-                            label: function(context) {
-                                if (context.dataset.label === 'Break-even Line') return null;
-                                return `${context.dataset.label}: $${context.parsed.y.toLocaleString()}`;
-                            }
-                        }
-                    }
-                },
                 scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
-                        ticks: {
-                            callback: function(value) {
-                                return '$' + value.toLocaleString();
-                            }
-                        }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        }
-                    }
+                    y: { beginAtZero: true }
                 }
             }
         });
 
-        // Member Growth Bar Chart
-        new Chart(document.getElementById('memberChart'), {
+        // Member Growth Chart
+        new Chart(document.getElementById('memberGrowthChart'), {
             type: 'bar',
             data: {
-                labels: monthlyData.map(d => `M${d.month}`),
-                datasets: [
-                    {
-                        label: 'Yoga Members',
-                        data: monthlyData.map(d => d.yogaMembers),
-                        backgroundColor: '#667eea',
-                        borderColor: '#5a67d8',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Pilates Members',
-                        data: monthlyData.map(d => d.pilatesMembers),
-                        backgroundColor: '#48bb78',
-                        borderColor: '#38a169',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Kids Programs',
-                        data: monthlyData.map(d => d.kidsPrograms),
-                        backgroundColor: '#ed64a6',
-                        borderColor: '#d53f8c',
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            usePointStyle: true,
-                            padding: 20
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        cornerRadius: 8,
-                        callbacks: {
-                            label: function(context) {
-                                return `${context.dataset.label}: ${context.parsed.y}`;
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
-                        ticks: {
-                            stepSize: 10
-                        }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        }
-                    }
-                }
-            }
-        });
-
-        // Revenue Sources Pie Chart
-        new Chart(document.getElementById('pieChart'), {
-            type: 'pie',
-            data: {
-                labels: ['Adult Programs', 'Kids Programs', 'Drop-Ins', 'Workshops'],
+                labels: ['Q3 2025', 'Q4 2025', 'Q1 2026', 'Q2 2026', 'Q3 2026', 'Q4 2026', 'Q1 2027', 'Q2 2027'],
                 datasets: [{
-                    data: [
-                        monthlyData[17].adultRevenue,
-                        monthlyData[17].kidsRevenue,
-                        monthlyData[17].dropIns,
-                        monthlyData[17].workshops
-                    ],
-                    backgroundColor: ['#667eea', '#ed64a6', '#48bb78', '#f6ad55'],
-                    borderColor: '#fff',
-                    borderWidth: 2
+                    label: 'Members',
+                    data: [30, 50, 80, 100, 120, 150, 180, 200],
+                    backgroundColor: '#667eea'
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            usePointStyle: true,
-                            padding: 20
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        cornerRadius: 8,
-                        callbacks: {
-                            label: function(context) {
-                                return `${context.label}: $${context.parsed.toLocaleString()}`;
-                            }
-                        }
-                    }
+                scales: {
+                    y: { beginAtZero: true }
                 }
+            }
+        });
+
+        // Revenue Sources Chart
+        new Chart(document.getElementById('revenueSourcesChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Adult Memberships', 'Kids Programs', 'Special Programs', 'Drop-Ins'],
+                datasets: [{
+                    data: [50, 20, 20, 10],
+                    backgroundColor: ['#667eea', '#48bb78', '#ed64a6', '#f6ad55']
+                }]
+            },
+            options: {
+                responsive: true
             }
         });
     </script>
