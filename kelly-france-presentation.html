@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelly's Dream — France Anniversary 2026 ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#c9a84c; --gold-light:#f0d98a; --gold-dark:#8b6914;
+  --deep:#080612; --card:#0f0c1e; --purple:#2d1b5e;
+  --lavender:#c8a2d8; --cream:#f5f0e8; --muted:#7a6890;
+  --border:rgba(201,168,76,0.18); --border-h:rgba(201,168,76,0.45);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:var(--deep);color:var(--cream);overflow-x:hidden;}
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55;}
+
+/* CURTAIN */
+#curtain{position:fixed;inset:0;background:var(--deep);z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1.4s ease;}
+#curtain.out{opacity:0;pointer-events:none;}
+.c-crown{font-size:4.5rem;animation:bob 3s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg);}50%{transform:translateY(-14px) rotate(4deg);}}
+.c-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,8vw,5rem);font-style:italic;color:var(--gold);text-align:center;line-height:1.1;margin:1.5rem 1.5rem .5rem;text-shadow:0 0 80px rgba(201,168,76,.45);animation:up 1s ease .3s both;}
+.c-sub{font-size:.9rem;letter-spacing:.4em;text-transform:uppercase;color:var(--lavender);animation:up 1s ease .6s both;}
+.c-btn{margin-top:2.5rem;padding:.9rem 3rem;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:.2em;cursor:pointer;transition:all .35s;animation:up 1s ease .9s both;}
+.c-btn:hover{background:var(--gold);color:var(--deep);box-shadow:0 0 40px rgba(201,168,76,.5);}
+@keyframes up{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* LAYOUT */
+main{position:relative;z-index:1;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem 2rem 4rem;position:relative;overflow:hidden;background:radial-gradient(ellipse 120% 100% at 50% 60%, #2d1b5e 0%, #1a0a3a 40%, #080612 100%);}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(45,27,94,.5) 0%,transparent 70%);}
+.hero>*{position:relative;}
+.h-over{font-size:.78rem;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;animation:up .8s ease .2s both;}
+.h-title{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,10vw,7rem);font-style:italic;line-height:1;animation:up .8s ease .4s both;}
+.h-title span{color:var(--gold);display:block;}
+.h-line{width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.8rem auto;animation:up .8s ease .6s both;}
+.h-sub{font-size:clamp(1rem,2.5vw,1.4rem);font-style:italic;color:rgba(245,240,232,.75);max-width:560px;line-height:1.75;animation:up .8s ease .8s both;}
+.h-pills{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:2rem;animation:up .8s ease 1s both;}
+.h-pill{padding:.45rem 1.1rem;border:1px solid rgba(201,168,76,.35);border-radius:30px;font-size:.82rem;color:var(--gold-light);background:rgba(201,168,76,.07);}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);animation:up 1s ease 1.4s both;}
+.s-box{width:18px;height:28px;border:1px solid rgba(201,168,76,.3);border-radius:9px;display:flex;align-items:flex-start;justify-content:center;padding-top:4px;}
+.s-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;animation:sdrop 2s ease-in-out infinite;}
+@keyframes sdrop{0%{transform:translateY(0);opacity:1}80%{transform:translateY(12px);opacity:0}100%{transform:translateY(0);opacity:0}}
+
+/* MAP STRIP */
+.map-strip{padding:3rem 2rem;text-align:center;}
+.map-label{font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:2.5rem;}
+.map-nodes{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;max-width:860px;margin:0 auto;}
+.map-node{display:flex;flex-direction:column;align-items:center;min-width:90px;cursor:pointer;}
+.mn-dot{width:13px;height:13px;border-radius:50%;background:var(--gold);border:2px solid var(--deep);box-shadow:0 0 14px rgba(201,168,76,.45);margin-bottom:.6rem;transition:transform .2s,box-shadow .2s;}
+.map-node:hover .mn-dot{transform:scale(1.4);box-shadow:0 0 24px rgba(201,168,76,.7);}
+.mn-dot.special{width:18px;height:18px;background:white;box-shadow:0 0 22px rgba(255,255,255,.6);}
+.mn-city{font-family:'Playfair Display',serif;font-size:.82rem;font-style:italic;color:white;}
+.mn-dates{font-size:.62rem;letter-spacing:.1em;color:var(--muted);margin-top:.15rem;}
+.map-line{flex:1;min-width:18px;max-width:55px;height:1px;background:linear-gradient(90deg,var(--gold-dark),var(--gold));margin-bottom:1.5rem;}
+
+/* SECTION HEAD */
+.sec-head{text-align:center;padding:4rem 2rem 2rem;position:relative;}
+.sec-head .bg-num{font-family:'Playfair Display',serif;font-size:7rem;font-style:italic;color:rgba(201,168,76,.05);position:absolute;top:1rem;left:50%;transform:translateX(-50%);white-space:nowrap;pointer-events:none;}
+.sec-head .stag{font-size:.72rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-style:italic;color:white;line-height:1.2;}
+.sec-head p{font-size:1rem;font-style:italic;color:rgba(200,162,216,.75);margin-top:.5rem;}
+
+/* DAY CARDS */
+.days-wrap{max-width:1060px;margin:0 auto;padding:0 1.5rem 5rem;}
+.day-card{border:1px solid var(--border);border-radius:4px;margin-bottom:1.5rem;overflow:hidden;background:var(--card);transition:border-color .3s;}
+.day-card:hover{border-color:var(--border-h);}
+.day-card.anniv{border-color:rgba(201,168,76,.4);}
+
+/* toggle header */
+.day-toggle{display:grid;grid-template-columns:56px 1fr auto;align-items:stretch;cursor:pointer;user-select:none;}
+.day-num-col{display:flex;align-items:center;justify-content:center;background:rgba(201,168,76,.08);border-right:1px solid var(--border);padding:1.4rem 0;font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;color:var(--gold);transition:background .3s;}
+.day-card.open .day-num-col,.day-card.anniv .day-num-col{background:rgba(201,168,76,.16);}
+.day-head-info{padding:1.2rem 1.5rem;}
+.day-date-tag{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;}
+.day-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);font-style:italic;color:white;line-height:1.25;}
+.day-tagline{font-size:.85rem;font-style:italic;color:rgba(200,162,216,.7);margin-top:.25rem;}
+.day-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem;}
+.chip{font-size:.67rem;padding:.18rem .6rem;border-radius:20px;letter-spacing:.06em;}
+.chip-bed{background:rgba(107,63,160,.25);border:1px solid rgba(107,63,160,.4);color:var(--lavender);}
+.chip-eat{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--gold-light);}
+.chip-train{background:rgba(50,100,200,.2);border:1px solid rgba(50,100,200,.4);color:#a0c0f8;}
+.chip-castle{background:rgba(200,162,216,.15);border:1px solid rgba(200,162,216,.3);color:var(--lavender);}
+.chip-anniv{background:linear-gradient(90deg,rgba(201,168,76,.3),rgba(255,255,255,.15));border:1px solid rgba(201,168,76,.5);color:white;}
+.day-arrow{padding:1.2rem 1.4rem;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.1rem;transition:transform .35s;}
+.day-card.open .day-arrow{transform:rotate(180deg);}
+
+/* body */
+.day-body{max-height:0;overflow:hidden;transition:max-height .65s cubic-bezier(.4,0,.2,1);}
+.day-card.open .day-body{max-height:4000px;border-top:1px solid var(--border);}
+.day-body-inner{padding:0;}
+
+/* TRAVEL BANNER */
+.travel-banner{background:rgba(20,40,100,.35);border-bottom:1px solid rgba(50,100,200,.2);padding:1rem 1.8rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.tb-icon{font-size:1.4rem;flex-shrink:0;}
+.tb-route{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:white;}
+.tb-detail{font-size:.8rem;color:rgba(160,192,248,.8);margin-top:.1rem;}
+.tb-time{margin-left:auto;text-align:right;flex-shrink:0;}
+.tb-time strong{display:block;font-family:'Playfair Display',serif;font-size:1.3rem;color:#a0c0f8;font-weight:400;}
+.tb-time span{font-size:.68rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
+.travel-steps{display:flex;gap:0;padding:.6rem 1.8rem .9rem;flex-wrap:wrap;}
+.ts-step{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:rgba(245,240,232,.7);white-space:nowrap;margin-bottom:.25rem;}
+.ts-step::after{content:'→';margin:0 .4rem;color:rgba(50,100,200,.5);font-size:.7rem;}
+.ts-step:last-child::after{display:none;}
+
+/* HOTEL BAND */
+.hotel-band{background:rgba(45,27,94,.25);border-bottom:1px solid rgba(107,63,160,.2);padding:1.2rem 1.8rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;}
+.hb-label{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--lavender);margin-bottom:.3rem;}
+.hb-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:white;}
+.hb-detail{font-size:.83rem;font-style:italic;color:rgba(200,162,216,.75);margin-top:.25rem;line-height:1.55;}
+.hb-perks{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem;}
+.hb-perk{font-size:.7rem;padding:.18rem .55rem;border:1px solid rgba(200,162,216,.25);border-radius:20px;color:rgba(200,162,216,.8);}
+
+
+/* MAIN GRID */
+.day-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+@media(max-width:700px){.day-grid{grid-template-columns:1fr;}}
+
+/* TIMELINE */
+.day-timeline{padding:1.8rem;border-right:1px solid var(--border);}
+.tl-head{font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.tl-item{display:flex;gap:1rem;margin-bottom:1.2rem;position:relative;}
+.tl-item::before{content:'';position:absolute;left:9px;top:22px;bottom:-1.2rem;width:1px;background:rgba(201,168,76,.1);}
+.tl-item:last-child::before{display:none;}
+.tl-dot{width:20px;height:20px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;margin-top:1px;border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.08);color:var(--gold);z-index:1;}
+.tl-dot.meal{background:rgba(201,168,76,.18);border-color:rgba(201,168,76,.45);}
+.tl-dot.transit{background:rgba(50,100,200,.18);border-color:rgba(50,100,200,.4);color:#a0c0f8;}
+.tl-dot.sight{background:rgba(200,162,216,.18);border-color:rgba(200,162,216,.4);color:var(--lavender);}
+.tl-dot.romance{background:rgba(200,80,120,.18);border-color:rgba(200,80,120,.4);color:#f0a0c0;}
+.tl-dot.star{background:rgba(201,168,76,.35);border-color:var(--gold);}
+.tl-content{flex:1;}
+.tl-time{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem;}
+.tl-name{font-size:.97rem;color:white;line-height:1.3;}
+.tl-name a{color:var(--gold-light);text-decoration:none;border-bottom:1px dotted rgba(201,168,76,.4);transition:color .2s;}
+.tl-name a:hover{color:var(--gold);}
+.tl-desc{font-size:.82rem;color:rgba(245,240,232,.67);line-height:1.65;margin-top:.25rem;font-style:italic;}
+
+
+/* RIGHT PANEL */
+.day-right{padding:1.8rem;display:flex;flex-direction:column;gap:1.4rem;}
+.vid-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:3px;overflow:hidden;background:#04020c;border:1px solid var(--border);}
+.vid-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+.vid-cover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;background:linear-gradient(135deg,rgba(13,10,26,.95),rgba(45,27,94,.75));cursor:pointer;transition:background .3s;z-index:2;border:none;width:100%;}
+.vid-cover:hover{background:linear-gradient(135deg,rgba(45,27,94,.95),rgba(107,63,160,.8));}
+.vid-cover:hover .play-ring{transform:scale(1.1);box-shadow:0 0 36px rgba(201,168,76,.7);}
+.vid-cover.loading .play-ring{animation:spin 1s linear infinite;}
+.vid-cover.hidden{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.vid-search-btn .vid-sub{color:rgba(201,168,76,.8);font-size:.72rem;letter-spacing:.2em;}
+/* keep old class for any remnants */
+.vid-btn{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;background:linear-gradient(135deg,rgba(13,10,26,.85),rgba(45,27,94,.6));text-decoration:none;transition:background .3s;}
+.play-ring{width:58px;height:58px;border-radius:50%;background:rgba(201,168,76,.88);display:flex;align-items:center;justify-content:center;transition:transform .3s,box-shadow .3s;box-shadow:0 0 20px rgba(201,168,76,.4);}
+.vid-label{font-family:'Cormorant Garamond',serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);text-align:center;padding:0 1rem;}
+.vid-sub{font-size:.7rem;color:rgba(200,162,216,.65);letter-spacing:.12em;}
+.romance-box{background:rgba(200,80,120,.08);border:1px solid rgba(200,80,120,.2);border-radius:3px;padding:1.2rem 1.4rem;}
+.rb-title{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:#f0a0c0;margin-bottom:.5rem;}
+.rb-text{font-size:.88rem;font-style:italic;color:rgba(240,160,192,.82);line-height:1.75;}
+.tip-box{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:3px;padding:1rem 1.2rem;}
+.tip-title{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;}
+.tip-text{font-size:.84rem;color:rgba(245,240,232,.72);line-height:1.7;}
+.tip-text li{margin-left:1.2rem;margin-bottom:.25rem;}
+
+/* ANNIV EXTRAS */
+.anniv-glow{background:linear-gradient(90deg,rgba(201,168,76,.22),transparent);padding:.55rem 1.8rem;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-light);text-align:center;}
+
+/* CLOSING */
+.closing{min-height:75vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem;position:relative;}
+.closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(45,27,94,.55) 0%,transparent 70%);}
+.closing>*{position:relative;}
+.closing-icon{font-size:3.5rem;margin-bottom:1.8rem;}
+.closing-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,3.8rem);font-style:italic;color:var(--gold);line-height:1.2;margin-bottom:1.2rem;text-shadow:0 0 60px rgba(201,168,76,.3);}
+.closing-line{width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.5rem auto;}
+.closing-body{font-size:1.1rem;font-style:italic;color:rgba(245,240,232,.7);max-width:480px;line-height:1.95;}
+.closing-dates{display:inline-block;border:1px solid rgba(201,168,76,.35);padding:.65rem 1.8rem;font-size:.95rem;letter-spacing:.18em;color:var(--gold-light);margin-top:1.8rem;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* MUSIC PLAYER */
+#music-player {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(13,10,26,0.88);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 40px;
+  padding: 0.55rem 1.1rem 0.55rem 0.65rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  user-select: none;
+}
+#music-player:hover {
+  border-color: rgba(201,168,76,0.6);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.5), 0 0 20px rgba(201,168,76,0.15);
+}
+#music-player.playing #mp-icon { animation: musicPulse 1.8s ease-in-out infinite; }
+@keyframes musicPulse {
+  0%,100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.18); opacity:0.85; }
+}
+#mp-icon {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b6914, #c9a84c);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+#mp-info { display: flex; flex-direction: column; gap: 0.1rem; }
+#mp-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  white-space: nowrap;
+}
+#mp-status {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+#mp-waves {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 16px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+#music-player.playing #mp-waves { opacity: 1; }
+#mp-waves span {
+  display: block;
+  width: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  animation: waveBar 1.2s ease-in-out infinite;
+}
+#mp-waves span:nth-child(1){ height:6px; animation-delay:0s; }
+#mp-waves span:nth-child(2){ height:12px; animation-delay:0.15s; }
+#mp-waves span:nth-child(3){ height:8px; animation-delay:0.3s; }
+#mp-waves span:nth-child(4){ height:14px; animation-delay:0.1s; }
+#mp-waves span:nth-child(5){ height:6px; animation-delay:0.25s; }
+@keyframes waveBar {
+  0%,100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.9); }
+}
+@media(max-width:600px){
+  #music-player { bottom:1rem; right:1rem; padding:0.5rem 0.9rem 0.5rem 0.55rem; }
+  #mp-info { display: none; }
+}
+
+/* IMAGE GALLERY */
+.day-gallery {
+  display:flex;
+  gap:0;
+  overflow-x:auto;
+  scrollbar-width:none;
+  border-bottom:1px solid var(--border);
+  height:220px;
+}
+.day-gallery::-webkit-scrollbar{display:none;}
+.day-gallery a {
+  flex:0 0 auto;
+  display:block;
+  position:relative;
+  overflow:hidden;
+  cursor:zoom-in;
+}
+.day-gallery a::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, transparent 50%, rgba(8,6,18,.65) 100%);
+  pointer-events:none;
+  transition:opacity .3s;
+}
+.day-gallery a:hover::after { opacity:.4; }
+.day-gallery a:hover img { transform:scale(1.05); }
+.day-gallery img {
+  height:220px;
+  width:auto;
+  min-width:260px;
+  max-width:420px;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+  filter:brightness(.88) saturate(1.1);
+}
+.day-gallery .img-cap {
+  position:absolute;
+  bottom:.55rem;
+  left:.75rem;
+  font-size:.62rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(245,240,232,.75);
+  z-index:1;
+  pointer-events:none;
+}
+
+/* hero banner image (full-width cinematic strip at top of each day) */
+.day-hero-img {
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
+  filter:brightness(.72) saturate(1.15);
+  border-bottom:1px solid var(--border);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .day-toggle{grid-template-columns:44px 1fr auto;}
+  .day-num-col{font-size:1.2rem;}
+  .day-right,.day-timeline{padding:1.2rem;}
+  .day-timeline{border-right:none;border-top:1px solid var(--border);}
+  .hotel-band{grid-template-columns:1fr;}
+  .travel-banner{padding:.9rem 1.2rem;}
+  .travel-steps{padding:.4rem 1.2rem .7rem;}
+  .day-gallery{height:160px;}
+  .day-gallery img{height:160px;min-width:200px;}
+  .day-hero-img{height:180px;}
+}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<!-- MUSIC PLAYER -->
+<div id="music-player" onclick="toggleMusic()" title="Play / Pause music">
+  <div id="mp-icon">♪</div>
+  <div id="mp-info">
+    <div id="mp-title">Kelly's Dream · France 2026</div>
+    <div id="mp-status">Click to play</div>
+  </div>
+  <div id="mp-waves">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+
+<div id="curtain">
+  <div class="c-crown">👑</div>
+  <h1 class="c-title">A Fairy Tale<br>for Kelly</h1>
+  <p class="c-sub">September 4 – 11, 2026 · France</p>
+  <button class="c-btn" id="begin-btn">Begin ✦</button>
+</div>
+
+<main>
+
+<section class="hero">
+  <p class="h-over">An anniversary adventure · Eight days · September 2026</p>
+  <h1 class="h-title">Kelly's Dream<br><span>Fairy-Tale France</span></h1>
+  <div class="h-line"></div>
+  <p class="h-sub">Castles from the movies, villages from the stories, and one perfect anniversary day at the most magical place on Earth.</p>
+  <div class="h-pills">
+    <span class="h-pill">🏰 3 Sleeping Beauty castles</span>
+    <span class="h-pill">🌹 2 Beauty &amp; the Beast days</span>
+    <span class="h-pill">💛 Anniversary at Disneyland Paris</span>
+    <span class="h-pill">🐀 Ratatouille farewell in Paris</span>
+    <span class="h-pill">🍷 Alsace wine country</span>
+  </div>
+  <div class="scroll-hint">
+    <span>Click any day to explore</span>
+    <div class="s-box"><div class="s-dot"></div></div>
+  </div>
+</section>
+
+<section class="map-strip reveal">
+  <p class="map-label">✦ Click a destination to jump to that day ✦</p>
+  <div class="map-nodes">
+    <div class="map-node" onclick="openDay('d1')"><div class="mn-dot"></div><div class="mn-city">Riquewihr</div><div class="mn-dates">Sep 4–6</div></div>
+    <div class="map-line"></div>
+    <div class="map-node" onclick="openDay('d4')"><div class="mn-dot"></div><div class="mn-city">Amboise</div><div class="mn-dates">Sep 7–9</div></div>
+    <div class="map-line"></div>
+    <div class="map-node" onclick="openDay('d6')"><div class="mn-dot"></div><div class="mn-city">Pierrefonds</div><div class="mn-dates">Sep 9</div></div>
+    <div class="map-line"></div>
+    <div class="map-node" onclick="openDay('d7')"><div class="mn-dot special"></div><div class="mn-city" style="color:var(--gold)">Disneyland</div><div class="mn-dates">Sep 10 ✦</div></div>
+    <div class="map-line"></div>
+    <div class="map-node" onclick="openDay('d8')"><div class="mn-dot"></div><div class="mn-city">Paris</div><div class="mn-dates">Sep 11</div></div>
+  </div>
+</section>
+
+<div class="sec-head reveal">
+  <div class="bg-num">Journey</div>
+  <p class="stag">Day by Day</p>
+  <h2>Eight Days in France</h2>
+  <p>Each day shows your hotel, how you travel, every meal, and the magic of where you are</p>
+</div>
+
+<div class="days-wrap">
+
+<!-- ═══════ DAY 1 ═══════ -->
+<div class="day-card reveal" id="d1">
+  <div class="day-toggle" onclick="toggle('d1')">
+    <div class="day-num-col">1</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Thursday · September 4, 2026</div>
+      <div class="day-title">Arrive Riquewihr — Step into Belle's Village</div>
+      <div class="day-tagline">Land at CDG · TGV through Champagne · fairy tale by nightfall</div>
+      <div class="day-chips">
+        <span class="chip chip-train">🚄 CDG → Colmar TGV</span>
+        <span class="chip chip-bed">🏨 Hôtel Saint-Nicolas</span>
+        <span class="chip chip-eat">🍽️ Le Caveau des Rois</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0825"/><stop offset="100%" stop-color="#2d1b5e"/></linearGradient>
+    <linearGradient id="gold1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8b6914"/><stop offset="50%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#8b6914"/></linearGradient>
+    <filter id="glow1"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- sky -->
+  <rect width="1200" height="220" fill="url(#sky1)"/>
+  <!-- stars -->
+  <circle cx="100" cy="20" r="1.2" fill="white" opacity=".7"/><circle cx="220" cy="35" r="1" fill="white" opacity=".5"/><circle cx="450" cy="15" r="1.5" fill="white" opacity=".6"/><circle cx="700" cy="28" r="1" fill="white" opacity=".4"/><circle cx="950" cy="18" r="1.3" fill="white" opacity=".7"/><circle cx="1100" cy="40" r="1" fill="white" opacity=".5"/><circle cx="1050" cy="12" r="0.8" fill="white" opacity=".6"/>
+  <!-- vineyard hills background -->
+  <path d="M0,120 Q150,90 300,110 Q450,90 600,105 Q750,90 900,108 Q1050,88 1200,100 L1200,220 L0,220Z" fill="#1a1035" opacity=".8"/>
+  <path d="M0,140 Q200,118 400,132 Q600,118 800,130 Q1000,118 1200,128 L1200,220 L0,220Z" fill="#0f0c22"/>
+  <!-- street cobblestones -->
+  <rect x="350" y="155" width="500" height="65" rx="2" fill="#16112e"/>
+  <line x1="350" y1="165" x2="850" y2="165" stroke="#2a2040" stroke-width="1.5"/><line x1="350" y1="175" x2="850" y2="175" stroke="#2a2040" stroke-width="1"/><line x1="350" y1="185" x2="850" y2="185" stroke="#2a2040" stroke-width="1.5"/><line x1="350" y1="195" x2="850" y2="195" stroke="#2a2040" stroke-width="1"/>
+  <line x1="380" y1="155" x2="380" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="420" y1="155" x2="420" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="460" y1="155" x2="460" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="500" y1="155" x2="500" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="560" y1="155" x2="560" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="620" y1="155" x2="620" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="680" y1="155" x2="680" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="740" y1="155" x2="740" y2="220" stroke="#2a2040" stroke-width="1"/><line x1="800" y1="155" x2="800" y2="220" stroke="#2a2040" stroke-width="1"/>
+  <!-- Left building - tall half-timbered -->
+  <rect x="120" y="80" width="90" height="140" fill="#1e1640"/><rect x="120" y="80" width="90" height="140" fill="none" stroke="#3d2d7a" stroke-width="1"/>
+  <polygon points="120,80 165,45 210,80" fill="#2a1e5e"/><polygon points="120,80 165,45 210,80" fill="none" stroke="#3d2d7a" stroke-width="1"/>
+  <!-- timber frame lines -->
+  <line x1="165" y1="80" x2="165" y2="220" stroke="#c9a84c" stroke-width="1.5" opacity=".5"/>
+  <line x1="120" y1="110" x2="210" y2="110" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <line x1="120" y1="140" x2="210" y2="140" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <line x1="120" y1="170" x2="210" y2="170" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <line x1="120" y1="80" x2="165" y2="110" stroke="#c9a84c" stroke-width="1" opacity=".3"/>
+  <line x1="210" y1="80" x2="165" y2="110" stroke="#c9a84c" stroke-width="1" opacity=".3"/>
+  <!-- windows left -->
+  <rect x="130" y="92" width="30" height="22" rx="3" fill="#f0d98a" opacity=".4" filter="url(#glow1)"/><rect x="168" y="92" width="30" height="22" rx="3" fill="#f0d98a" opacity=".3" filter="url(#glow1)"/>
+  <rect x="130" y="122" width="30" height="22" rx="3" fill="#f0d98a" opacity=".25"/><rect x="168" y="122" width="30" height="22" rx="3" fill="#f0d98a" opacity=".35" filter="url(#glow1)"/>
+  <!-- flower boxes left -->
+  <rect x="128" y="112" width="34" height="5" rx="2" fill="#7a3a1e"/>
+  <circle cx="133" cy="110" r="4" fill="#c04060" opacity=".8"/><circle cx="140" cy="109" r="3.5" fill="#e05070" opacity=".8"/><circle cx="147" cy="111" r="3" fill="#c04060" opacity=".7"/><circle cx="154" cy="109" r="4" fill="#ff6080" opacity=".8"/>
+  <!-- Centre building - taller -->
+  <rect x="490" y="55" width="120" height="165" fill="#221a48"/><rect x="490" y="55" width="120" height="165" fill="none" stroke="#3d2d7a" stroke-width="1"/>
+  <polygon points="490,55 550,20 610,55" fill="#2e2260"/><polygon points="490,55 550,20 610,55" fill="none" stroke="#3d2d7a" stroke-width="1"/>
+  <!-- timber frame centre -->
+  <line x1="550" y1="55" x2="550" y2="220" stroke="#c9a84c" stroke-width="1.5" opacity=".5"/>
+  <line x1="490" y1="90" x2="610" y2="90" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <line x1="490" y1="125" x2="610" y2="125" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <line x1="490" y1="160" x2="610" y2="160" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <!-- windows centre bright -->
+  <rect x="502" y="65" width="35" height="26" rx="3" fill="#f0d98a" opacity=".55" filter="url(#glow1)"/><rect x="563" y="65" width="35" height="26" rx="3" fill="#f0d98a" opacity=".45" filter="url(#glow1)"/>
+  <rect x="502" y="100" width="35" height="26" rx="3" fill="#f0d98a" opacity=".4" filter="url(#glow1)"/><rect x="563" y="100" width="35" height="26" rx="3" fill="#f0d98a" opacity=".6" filter="url(#glow1)"/>
+  <!-- Restaurant sign centre -->
+  <rect x="505" y="138" width="90" height="16" rx="3" fill="#7a3a1e" opacity=".9"/>
+  <text x="550" y="150" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#f0d98a" opacity=".9">WINSTUB</text>
+  <!-- flower boxes centre -->
+  <rect x="500" y="128" width="39" height="5" rx="2" fill="#7a3a1e"/>
+  <circle cx="505" cy="126" r="4" fill="#e05070" opacity=".9"/><circle cx="513" cy="125" r="3.5" fill="#ff8090" opacity=".9"/><circle cx="521" cy="127" r="4" fill="#c04060" opacity=".8"/><circle cx="529" cy="125" r="3" fill="#e05070" opacity=".9"/>
+  <rect x="561" y="128" width="39" height="5" rx="2" fill="#7a3a1e"/>
+  <circle cx="566" cy="126" r="4" fill="#c04060" opacity=".9"/><circle cx="574" cy="125" r="3.5" fill="#e05070" opacity=".8"/><circle cx="582" cy="127" r="4" fill="#ff8090" opacity=".9"/>
+  <!-- Right building -->
+  <rect x="870" y="70" width="100" height="150" fill="#1e1640"/><rect x="870" y="70" width="100" height="150" fill="none" stroke="#3d2d7a" stroke-width="1"/>
+  <polygon points="870,70 920,38 970,70" fill="#2a1e5e"/><polygon points="870,70 920,38 970,70" fill="none" stroke="#3d2d7a" stroke-width="1"/>
+  <line x1="920" y1="70" x2="920" y2="220" stroke="#c9a84c" stroke-width="1.5" opacity=".5"/>
+  <line x1="870" y1="105" x2="970" y2="105" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <line x1="870" y1="140" x2="970" y2="140" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <rect x="880" y="80" width="30" height="22" rx="3" fill="#f0d98a" opacity=".5" filter="url(#glow1)"/><rect x="924" y="80" width="30" height="22" rx="3" fill="#f0d98a" opacity=".35" filter="url(#glow1)"/>
+  <rect x="880" y="115" width="30" height="22" rx="3" fill="#f0d98a" opacity=".3" filter="url(#glow1)"/><rect x="924" y="115" width="30" height="22" rx="3" fill="#f0d98a" opacity=".45" filter="url(#glow1)"/>
+  <rect x="878" y="107" width="34" height="5" rx="2" fill="#7a3a1e"/>
+  <circle cx="883" cy="105" r="4" fill="#e05070" opacity=".9"/><circle cx="891" cy="104" r="3.5" fill="#c04060" opacity=".8"/><circle cx="899" cy="106" r="4" fill="#ff8090" opacity=".9"/>
+  <!-- Dolder Tower centre background -->
+  <rect x="575" y="10" width="24" height="60" fill="#1a1240" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="570" y="5" width="34" height="10" rx="1" fill="#2a1e5e" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="579" y="14" width="8" height="14" rx="2" fill="#f0d98a" opacity=".4" filter="url(#glow1)"/>
+  <!-- lamppost -->
+  <line x1="440" y1="110" x2="440" y2="220" stroke="#4a3860" stroke-width="3"/>
+  <path d="M435,112 Q440,100 445,112" fill="none" stroke="#4a3860" stroke-width="2"/>
+  <circle cx="440" cy="108" r="6" fill="#f0d98a" opacity=".7" filter="url(#glow1)"/>
+  <circle cx="440" cy="108" r="10" fill="#f0d98a" opacity=".15" filter="url(#glow1)"/>
+  <!-- lamppost 2 -->
+  <line x1="760" y1="110" x2="760" y2="220" stroke="#4a3860" stroke-width="3"/>
+  <path d="M755,112 Q760,100 765,112" fill="none" stroke="#4a3860" stroke-width="2"/>
+  <circle cx="760" cy="108" r="6" fill="#f0d98a" opacity=".6" filter="url(#glow1)"/>
+  <circle cx="760" cy="108" r="10" fill="#f0d98a" opacity=".12" filter="url(#glow1)"/>
+  <!-- moon -->
+  <circle cx="1050" cy="40" r="22" fill="#f0d98a" opacity=".15" filter="url(#glow1)"/>
+  <circle cx="1050" cy="40" r="14" fill="#f0e8b0" opacity=".55" filter="url(#glow1)"/>
+  <!-- caption -->
+  <rect x="0" y="185" width="1200" height="35" fill="url(#sky1)" opacity=".85"/>
+  <text x="600" y="207" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">RIQUEWIHR  ·  BELLE'S VILLAGE  ·  WHERE THE FAIRY TALE BEGINS</text>
+</svg>
+</div>
+
+    <div class="travel-banner">
+      <div class="tb-icon">✈️→🚄</div>
+      <div><div class="tb-route">CDG Airport → Colmar → Riquewihr</div><div class="tb-detail">TGV direct from below Terminal 2 · no need to go into Paris · then 15-min taxi to the village</div></div>
+      <div class="tb-time"><strong>~2h 15m</strong><span>total journey</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🛬</span>Land CDG ~8–10 AM</div>
+      <div class="ts-step"><span>🚄</span>TGV CDG→Colmar ~2h direct</div>
+      <div class="ts-step"><span>🚕</span>Taxi Colmar→Riquewihr ~15 min</div>
+      <div class="ts-step"><span>🏘️</span>In the village mid-afternoon</div>
+    </div>
+    <div class="hotel-band">
+      <div>
+        <div class="hb-label">Tonight's Hotel · Nights 1, 2 &amp; 3 — No Repacking</div>
+        <div class="hb-name">Hôtel Saint-Nicolas, Riquewihr</div>
+        <div class="hb-detail">Ask for Room 11 or 12 — reviewers describe a window onto "a street straight from a fairy tale." Three nights here means you unpack once and the room becomes home for the entire Alsace leg.</div>
+        <div class="hb-perks">
+          <span class="hb-perk">⭐ 4.4 stars</span>
+          <span class="hb-perk">🚶 Walk to everything</span>
+          <span class="hb-perk">🍷 Hotel arranges taxis &amp; day tours</span>
+          <span class="hb-perk">🥐 2 min to the best bakery in Alsace</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Today's Schedule</div>
+        <div class="tl-item">
+          <div class="tl-dot transit">🚄</div>
+          <div class="tl-content">
+            <div class="tl-time">Morning · land ~8–10 AM</div>
+            <div class="tl-name">TGV from CDG direct to Colmar</div>
+            <div class="tl-desc">CDG has its own TGV station below Terminal 2 — no bus into Paris needed. Book in advance on SNCF Connect. First class is worth it after an overnight transatlantic flight.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot transit">🚕</div>
+          <div class="tl-content">
+            <div class="tl-time">~2–3 PM · arrive</div>
+            <div class="tl-name">Taxi Colmar → Riquewihr · check in</div>
+            <div class="tl-desc">15 minutes through vineyard country. Drop bags, shower. Three nights in this room — you're home in Belle's village.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot romance">🌹</div>
+          <div class="tl-content">
+            <div class="tl-time">~5:00 PM</div>
+            <div class="tl-name">First walk through Belle's village</div>
+            <div class="tl-desc">Step out the hotel door and into 1697. The Dolder Tower, the cobblestones, the half-timbered houses. No agenda — just walk and let France arrive. Day-trippers leave after 5 PM. The village is yours.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Dinner · ~7:30 PM</div>
+            <div class="tl-name"><a href="https://maps.google.com/?cid=10924461396895499605" target="_blank">Le Caveau des Rois ⭐ 4.5</a></div>
+            <div class="tl-desc">Excellent local food, superb Riesling by the carafe, warm service. Reviewers call it the only restaurant they returned to twice. Steps from the hotel. Closed Mon/Tue — Thursday is perfect.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc0" onclick="findAndPlayVideo(0)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Riquewihr · Belle's Alsace Village</div>
+            <div class="vid-sub" id="vs0">▶ Play video</div>
+          </button>
+          <iframe id="vf0" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 Tonight's Feeling</div>
+          <div class="rb-text">You've been travelling for over 24 hours. A short walk, a good meal, an early night. Tomorrow morning you'll wake up in Belle's village for the first of three mornings. Let tonight be as quiet as it needs to be.</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ Rail Tip · Book Today</div>
+          <div class="tip-text">Book the TGV CDG→Colmar the same day as your flights — advance fares are far cheaper. Sit right-hand side arriving into Colmar for vineyard views through Alsace.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════ DAY 2 ═══════ -->
+<div class="day-card reveal" id="d2">
+  <div class="day-toggle" onclick="toggle('d2')">
+    <div class="day-num-col">2</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Friday · September 5, 2026</div>
+      <div class="day-title">🌹 The Beast's Castle — Haut-Koenigsbourg + Colmar</div>
+      <div class="day-tagline">A fortress at 757m above all of Alsace · then Little Venice by afternoon</div>
+      <div class="day-chips">
+        <span class="chip chip-castle">🏰 Haut-Koenigsbourg ⭐ 4.7</span>
+        <span class="chip chip-eat">🍽️ Au Tire Bouchon</span>
+        <span class="chip chip-bed">🏨 Saint-Nicolas (night 2)</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="msky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#060410"/><stop offset="60%" stop-color="#0f0c25"/><stop offset="100%" stop-color="#1a1035"/></linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c8a2d8" stop-opacity=".18"/><stop offset="100%" stop-color="#c8a2d8" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1200" height="220" fill="url(#msky)"/>
+  <!-- stars -->
+  <circle cx="80" cy="18" r="1.3" fill="white" opacity=".6"/><circle cx="200" cy="30" r="1" fill="white" opacity=".4"/><circle cx="380" cy="14" r="1.5" fill="white" opacity=".7"/><circle cx="600" cy="25" r="1" fill="white" opacity=".5"/><circle cx="820" cy="16" r="1.2" fill="white" opacity=".6"/><circle cx="1000" cy="32" r="1" fill="white" opacity=".4"/><circle cx="1150" cy="20" r="1.3" fill="white" opacity=".7"/>
+  <!-- mountain layers -->
+  <path d="M0,160 Q200,100 400,140 Q600,100 800,145 Q1000,105 1200,138 L1200,220 L0,220Z" fill="#0c0920"/>
+  <path d="M0,175 Q300,145 500,162 Q700,142 900,158 Q1050,140 1200,155 L1200,220 L0,220Z" fill="#100d28"/>
+  <!-- mist -->
+  <rect x="0" y="130" width="1200" height="50" fill="url(#mist)"/>
+  <!-- forest trees -->
+  <g opacity=".6">
+  <polygon points="50,175 65,140 80,175" fill="#0e1a10"/><polygon points="90,178 107,138 124,178" fill="#0e1a10"/><polygon points="130,175 148,135 166,175" fill="#0e1a10"/><polygon points="180,178 197,145 214,178" fill="#0e1a10"/>
+  <polygon points="980,175 997,140 1014,175" fill="#0e1a10"/><polygon points="1020,178 1038,138 1056,178" fill="#0e1a10"/><polygon points="1060,175 1078,135 1096,175" fill="#0e1a10"/><polygon points="1110,178 1128,145 1146,178" fill="#0e1a10"/>
+  </g>
+  <!-- castle mountain base -->
+  <path d="M400,125 Q500,90 600,85 Q700,90 800,125 L800,175 L400,175Z" fill="#120e2a"/>
+  <!-- castle walls -->
+  <rect x="450" y="95" width="300" height="80" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <!-- battlements top -->
+  <rect x="450" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="476" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="502" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="528" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="554" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="580" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="606" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="632" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="658" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="684" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="710" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <rect x="736" y="88" width="18" height="10" fill="#1a1640" stroke="#3d2d7a" stroke-width="1"/>
+  <!-- towers -->
+  <rect x="448" y="70" width="40" height="55" fill="#221a48" stroke="#3d2d7a" stroke-width="1.5"/>
+  <polygon points="448,70 468,48 488,70" fill="#2e2260" stroke="#3d2d7a" stroke-width="1"/>
+  <circle cx="468" cy="44" r="4" fill="#c9a84c" opacity=".8"/>
+  <rect x="712" y="70" width="40" height="55" fill="#221a48" stroke="#3d2d7a" stroke-width="1.5"/>
+  <polygon points="712,70 732,48 752,70" fill="#2e2260" stroke="#3d2d7a" stroke-width="1"/>
+  <circle cx="732" cy="44" r="4" fill="#c9a84c" opacity=".8"/>
+  <!-- centre keep taller -->
+  <rect x="565" y="52" width="70" height="73" fill="#251d50" stroke="#3d2d7a" stroke-width="1.5"/>
+  <polygon points="565,52 600,28 635,52" fill="#322660" stroke="#3d2d7a" stroke-width="1"/>
+  <circle cx="600" cy="24" r="5" fill="#c9a84c" opacity=".9"/>
+  <!-- windows castle - glowing -->
+  <rect x="458" y="82" width="18" height="14" rx="2" fill="#f0d98a" opacity=".5"/>
+  <rect x="480" y="82" width="18" height="14" rx="2" fill="#f0d98a" opacity=".35"/>
+  <rect x="575" y="62" width="18" height="16" rx="2" fill="#f0d98a" opacity=".55"/>
+  <rect x="605" y="62" width="18" height="16" rx="2" fill="#f0d98a" opacity=".4"/>
+  <rect x="722" y="82" width="18" height="14" rx="2" fill="#f0d98a" opacity=".45"/>
+  <rect x="744" y="82" width="18" height="14" rx="2" fill="#f0d98a" opacity=".3"/>
+  <!-- gate arch -->
+  <rect x="575" y="125" width="50" height="50" fill="#0e0c20"/>
+  <path d="M575,135 Q600,118 625,135" fill="#0e0c20" stroke="#3d2d7a" stroke-width="1"/>
+  <!-- panoramic view text hint -->
+  <text x="600" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#c8a2d8" opacity=".5" letter-spacing="3">FRANCE · GERMANY · SWITZERLAND</text>
+  <!-- plains below -->
+  <path d="M0,192 Q300,182 600,186 Q900,182 1200,188 L1200,220 L0,220Z" fill="#080612"/>
+  <!-- vineyards in distance -->
+  <g opacity=".3" fill="#1a3a10">
+  <rect x="0" y="185" width="80" height="5"/><rect x="90" y="185" width="80" height="5"/><rect x="180" y="185" width="80" height="5"/>
+  <rect x="850" y="185" width="80" height="5"/><rect x="940" y="185" width="80" height="5"/><rect x="1030" y="185" width="80" height="5"/>
+  </g>
+  <!-- caption -->
+  <rect x="0" y="188" width="1200" height="32" fill="#0d0a1e" opacity=".9"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">HAUT-KOENIGSBOURG  ·  THE BEAST'S CASTLE  ·  757 METRES ABOVE ALSACE</text>
+</svg>
+</div>
+
+    <div class="travel-banner">
+      <div class="tb-icon">🚗</div>
+      <div><div class="tb-route">Full-day taxi: Riquewihr → Haut-Koenigsbourg → Colmar → Riquewihr</div><div class="tb-detail">Arrange through Hôtel Saint-Nicolas the night before — they know the best local drivers</div></div>
+      <div class="tb-time"><strong>~3 hrs</strong><span>full day car</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🚗</span>Depart ~9:30 AM</div>
+      <div class="ts-step"><span>🏰</span>Haut-Koenigsbourg 45 min</div>
+      <div class="ts-step"><span>🏘️</span>Colmar afternoon ~30 min down</div>
+      <div class="ts-step"><span>🏠</span>Back by 5:30 PM · dinner at 7:30</div>
+    </div>
+    <div class="hotel-band">
+      <div>
+        <div class="hb-label">Tonight's Hotel · Night 2 of 3</div>
+        <div class="hb-name">Hôtel Saint-Nicolas — same room, no repacking</div>
+        <div class="hb-detail">Walk back from dinner in 3 minutes through the lamplit, silent village cobblestones. This is what staying in Riquewihr for three nights feels like.</div>
+        <div class="hb-perks"><span class="hb-perk">🌙 Village yours after 5 PM</span><span class="hb-perk">🔑 Your room, your home</span></div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Today's Schedule</div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🥐</div>
+          <div class="tl-content">
+            <div class="tl-time">Breakfast · 8:00 AM</div>
+            <div class="tl-name"><a href="https://maps.google.com/?cid=16023148804396519436" target="_blank">Kouglopf &amp; Cie ⭐ 4.7 · Best bakery in Alsace</a></div>
+            <div class="tl-desc">Buttery, flaky croissants — reviewers came back an hour later for more. Takeaway only. Grab pastries and eat at the Belle fountain, two minutes away.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot sight">🏰</div>
+          <div class="tl-content">
+            <div class="tl-time">~10:30 AM · 1.5–2 hours</div>
+            <div class="tl-name"><a href="https://tickets.haut-koenigsbourg.fr" target="_blank">Château du Haut-Koenigsbourg ⭐ 4.7</a></div>
+            <div class="tl-desc">A medieval fortress at 757m with views of France, Germany, and Switzerland. The isolation and drama immediately explain why this was the visual inspiration for the Beast's mountain castle. Audio guide available.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Lunch · ~12:30 PM · at the summit</div>
+            <div class="tl-name">Le 757 — Castle Terrace Café</div>
+            <div class="tl-desc">The castle's own terrace restaurant overlooking the entire Alsace wine valley. Tarte flambée, Munster cheese, Alsace wines. One of the most dramatically situated lunches of your lives.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot romance">🌹</div>
+          <div class="tl-content">
+            <div class="tl-time">Afternoon · ~2:30 PM</div>
+            <div class="tl-name">Colmar · Little Venice</div>
+            <div class="tl-desc">30-min drive down to Colmar's canal quarter — flower-draped bridges, colour-washed half-timbered houses. Browse, find a canal terrace, share a Gewurztraminer. Leave by 5:30 PM.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Dinner · ~7:30 PM</div>
+            <div class="tl-name"><a href="https://maps.google.com/?cid=17124527756481200854" target="_blank">Au Tire Bouchon ⭐ 4.4 · Riquewihr</a></div>
+            <div class="tl-desc">On the main street with the oldest wine cellar in Alsace next door. Choucroute garnie, escargot, baeckeoffe, local Riesling by the carafe. Open daily — book ahead for September.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc1" onclick="findAndPlayVideo(1)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Château Haut-Koenigsbourg</div>
+            <div class="vid-sub" id="vs1">▶ Play video</div>
+          </button>
+          <iframe id="vf1" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 The Fairy Tale Moment</div>
+          <div class="rb-text">Standing on the ramparts of Haut-Koenigsbourg with France stretching below you, you immediately understand why Disney chose this for the Beast's solitary fortress. Isolated, dramatic, beautiful — both terrifying and romantic at once.</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ Taxi Tip</div>
+          <div class="tip-text">Ask Hôtel Saint-Nicolas to arrange a full-day driver the evening before. A full-day car covering both Haut-Koenigsbourg and Colmar is much better value than individual rides and the driver will know all the good spots.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════ DAY 3 ═══════ -->
+<div class="day-card reveal" id="d3">
+  <div class="day-toggle" onclick="toggle('d3')">
+    <div class="day-num-col">3</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Saturday · September 6, 2026</div>
+      <div class="day-title">🌹 Ribeauvillé + AOR La Table — The Dinner of the Trip</div>
+      <div class="day-tagline">Gaston's town in the morning · Belle's village afternoon · Alsace's most romantic dinner tonight</div>
+      <div class="day-chips">
+        <span class="chip chip-castle">🌹 Ribeauvillé</span>
+        <span class="chip chip-eat">⭐ AOR La Table 4.9</span>
+        <span class="chip chip-bed">🏨 Saint-Nicolas (night 3)</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#08050f"/><stop offset="100%" stop-color="#1a1035"/></linearGradient>
+    <radialGradient id="candleG" cx="50%" cy="50%"><stop offset="0%" stop-color="#f0d98a" stop-opacity=".9"/><stop offset="60%" stop-color="#c9a84c" stop-opacity=".3"/><stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/></radialGradient>
+    <filter id="candleGlow"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="220" fill="url(#dsky)"/>
+  <!-- LEFT HALF: Ribeauvillé village exterior -->
+  <rect x="0" y="0" width="580" height="220" fill="#100d22"/>
+  <!-- ruined castle on hill left -->
+  <path d="M60,80 Q140,50 220,70 L220,130 L60,130Z" fill="#0e0c20"/>
+  <rect x="80" y="55" width="20" height="45" fill="#140f2e" stroke="#2d2060" stroke-width="1"/>
+  <rect x="80" y="50" width="6" height="8" fill="#140f2e" stroke="#2d2060" stroke-width="1"/>
+  <rect x="90" y="50" width="6" height="8" fill="#140f2e" stroke="#2d2060" stroke-width="1"/>
+  <rect x="170" y="45" width="25" height="50" fill="#140f2e" stroke="#2d2060" stroke-width="1"/>
+  <rect x="170" y="40" width="7" height="8" fill="#140f2e"/><rect x="181" y="40" width="7" height="8" fill="#140f2e"/>
+  <!-- buildings Ribeauvillé -->
+  <rect x="60" y="120" width="70" height="100" fill="#1a1438"/><rect x="60" y="120" width="70" height="100" fill="none" stroke="#2d2060" stroke-width="1"/>
+  <polygon points="60,120 95,100 130,120" fill="#221a48"/>
+  <rect x="75" y="128" width="20" height="16" rx="2" fill="#f0d98a" opacity=".45"/>
+  <rect x="100" y="128" width="20" height="16" rx="2" fill="#f0d98a" opacity=".3"/>
+  <rect x="160" y="105" width="80" height="115" fill="#1a1438"/><rect x="160" y="105" width="80" height="115" fill="none" stroke="#2d2060" stroke-width="1"/>
+  <polygon points="160,105 200,82 240,105" fill="#221a48"/>
+  <rect x="172" y="112" width="22" height="18" rx="2" fill="#f0d98a" opacity=".5"/>
+  <rect x="205" y="112" width="22" height="18" rx="2" fill="#f0d98a" opacity=".38"/>
+  <rect x="172" y="140" width="22" height="18" rx="2" fill="#f0d98a" opacity=".35"/>
+  <rect x="260" y="115" width="75" height="105" fill="#1a1438"/><polygon points="260,115 298,90 335,115" fill="#221a48"/>
+  <rect x="270" y="122" width="20" height="16" rx="2" fill="#f0d98a" opacity=".4"/>
+  <rect x="300" y="122" width="20" height="16" rx="2" fill="#f0d98a" opacity=".55"/>
+  <rect x="360" y="130" width="60" height="90" fill="#1a1438"/><polygon points="360,130 390,112 420,130" fill="#221a48"/>
+  <rect x="370" y="138" width="18" height="14" rx="2" fill="#f0d98a" opacity=".4"/>
+  <!-- cobbled street left -->
+  <ellipse cx="290" cy="200" rx="240" ry="20" fill="#16112e" opacity=".8"/>
+  <!-- DIVIDER LINE -->
+  <line x1="580" y1="0" x2="580" y2="220" stroke="#c9a84c" stroke-width="1" opacity=".3"/>
+  <!-- RIGHT HALF: AOR La Table candlelit dining room -->
+  <rect x="580" y="0" width="620" height="220" fill="#0c0918"/>
+  <!-- dining room walls with warm glow -->
+  <rect x="620" y="20" width="540" height="180" fill="#110e28" rx="4"/>
+  <!-- candle glow ambience -->
+  <circle cx="890" cy="120" r="90" fill="url(#candleG)" opacity=".25"/>
+  <!-- table -->
+  <ellipse cx="890" cy="155" rx="130" ry="28" fill="#1e1640" stroke="#4a3860" stroke-width="2"/>
+  <rect x="760" y="130" width="260" height="26" rx="4" fill="#1e1640" stroke="#4a3860" stroke-width="1.5"/>
+  <!-- white tablecloth -->
+  <ellipse cx="890" cy="148" rx="110" ry="18" fill="#f5f0e8" opacity=".08"/>
+  <!-- wine glasses -->
+  <g fill="none" stroke="#c9a84c" stroke-width="1.5" opacity=".8">
+    <ellipse cx="830" cy="130" rx="12" ry="6"/><line x1="830" y1="136" x2="830" y2="152"/><ellipse cx="830" cy="152" rx="14" ry="3"/>
+    <ellipse cx="950" cy="130" rx="12" ry="6"/><line x1="950" y1="136" x2="950" y2="152"/><ellipse cx="950" cy="152" rx="14" ry="3"/>
+  </g>
+  <!-- wine in glasses -->
+  <ellipse cx="830" cy="132" rx="9" ry="4" fill="#8b1a30" opacity=".7"/>
+  <ellipse cx="950" cy="132" rx="9" ry="4" fill="#8b1a30" opacity=".7"/>
+  <!-- candle centrepiece -->
+  <rect x="882" y="108" width="16" height="35" rx="2" fill="#f5f0e8" opacity=".9"/>
+  <ellipse cx="890" cy="108" rx="8" ry="3" fill="#f0d98a" opacity=".9" filter="url(#candleGlow)"/>
+  <circle cx="890" cy="103" r="6" fill="#f0d98a" opacity=".95" filter="url(#candleGlow)"/>
+  <circle cx="890" cy="100" r="12" fill="#f0d98a" opacity=".3" filter="url(#candleGlow)"/>
+  <!-- plates -->
+  <ellipse cx="845" cy="148" rx="28" ry="8" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <ellipse cx="935" cy="148" rx="28" ry="8" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+  <!-- wall decor -->
+  <rect x="660" y="35" width="55" height="70" rx="2" fill="#1a1640" stroke="#4a3860" stroke-width="1.5"/>
+  <rect x="670" y="45" width="35" height="50" rx="1" fill="#c8a2d8" opacity=".12"/>
+  <rect x="1080" y="35" width="55" height="70" rx="2" fill="#1a1640" stroke="#4a3860" stroke-width="1.5"/>
+  <rect x="1090" y="45" width="35" height="50" rx="1" fill="#c8a2d8" opacity=".12"/>
+  <!-- AOR sign -->
+  <rect x="830" y="32" width="120" height="28" rx="4" fill="#1e1640" stroke="#c9a84c" stroke-width="1" opacity=".9"/>
+  <text x="890" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#c9a84c" opacity=".95">AOR La Table ⭐ 4.9</text>
+  <!-- caption -->
+  <rect x="0" y="188" width="1200" height="32" fill="#0d0a1e" opacity=".9"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">RIBEAUVILLÉ  ·  GASTON'S TOWN  ·  AOR LA TABLE  ·  THE DINNER OF THE TRIP</text>
+</svg>
+</div>
+
+    <div class="travel-banner">
+      <div class="tb-icon">🚕</div>
+      <div><div class="tb-route">Riquewihr ↔ Ribeauvillé · quick taxi both ways</div><div class="tb-detail">Only 5km apart — cheap, easy, no planning needed</div></div>
+      <div class="tb-time"><strong>~10 min</strong><span>each way</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🚕</span>Taxi to Ribeauvillé ~10 min</div>
+      <div class="ts-step"><span>🌹</span>Explore + lunch in Gaston's town</div>
+      <div class="ts-step"><span>🚕</span>Taxi back ~2:30 PM</div>
+      <div class="ts-step"><span>🌹</span>Afternoon free in Belle's village</div>
+      <div class="ts-step"><span>🔔</span>Ring AOR's doorbell at 8 PM</div>
+    </div>
+    <div class="hotel-band">
+      <div>
+        <div class="hb-label">Tonight's Hotel · Night 3 · Last Morning in Alsace Tomorrow</div>
+        <div class="hb-name">Hôtel Saint-Nicolas · final Alsace night</div>
+        <div class="hb-detail">After AOR La Table the village will be completely silent. The best 3-minute walk home of your lives — cobblestones and lamplight. Tomorrow: checkout and onward to the Loire.</div>
+        <div class="hb-perks"><span class="hb-perk">🌙 Silent village after 9 PM</span><span class="hb-perk">🛏️ Checkout ~11 AM tomorrow</span></div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Today's Schedule</div>
+        <div class="tl-item">
+          <div class="tl-dot sight">🌹</div>
+          <div class="tl-content">
+            <div class="tl-time">~11:00 AM</div>
+            <div class="tl-name">Ribeauvillé — Gaston's Town</div>
+            <div class="tl-desc">Dominated by three ruined castles on the hillside above (Saint-Ulrich, Girsberg, Haut-Ribeaupierre). Walk the Grand'Rue, stop for a Pinot Noir at a winstub. The rough-edged contrast to Belle's gentle Riquewihr is immediate.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Lunch · ~12:30 PM</div>
+            <div class="tl-name"><a href="https://maps.google.com/?cid=16461011843296127747" target="_blank">Winstub Zum Pfifferhus ⭐ 4.2</a></div>
+            <div class="tl-desc">Legendary winstub on the Grand'Rue — wooden interior, sausages, baeckeoffe, local wine poured freely. The exact energy where Gaston's mob would have plotted. The deliberate contrast to AOR tonight. Confirm Saturday hours when booking.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot romance">🌹</div>
+          <div class="tl-content">
+            <div class="tl-time">Afternoon · back ~2:30 PM</div>
+            <div class="tl-name">Riquewihr · last unhurried afternoon</div>
+            <div class="tl-desc">Famille Hugel wine cellar tasting (free), climb the Dolder Tower for views, or simply sit with a Riesling as the day-trippers slowly leave the village to you.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot star">⭐</div>
+          <div class="tl-content">
+            <div class="tl-time">Dinner · 8:00 PM · Ring the doorbell</div>
+            <div class="tl-name"><a href="https://www.thefork.com/restaurant/aor-la-table-riquewihr/r607659" target="_blank">AOR La Table ⭐ 4.9 — THE DINNER OF THE TRIP</a></div>
+            <div class="tl-desc">Ring the doorbell. Step into a candlelit, bohemian room. Chef Serge presents a tasting menu — no à la carte, just course after course of magic. 4.9 stars from every single reviewer. Tell them it's your anniversary trip. The most romantic dinner in all of Alsace — and then a 3-minute walk home through a sleeping fairy-tale village.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc2" onclick="findAndPlayVideo(2)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Ribeauvillé · Wine Route</div>
+            <div class="vid-sub" id="vs2">▶ Play video</div>
+          </button>
+          <iframe id="vf2" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 After AOR</div>
+          <div class="rb-text">The village will be completely silent by the time you leave — no cars, no crowds, just cobblestones and lamplight. Walk slowly back. This is the best three minutes of the trip. The most romantic dinner in Alsace, followed by a silent walk through a sleeping fairy-tale village. Nothing could be better.</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ Book AOR First — Today</div>
+          <div class="tip-text">AOR La Table is the single most important reservation of the entire trip. It sells out weeks ahead in September. Book via TheFork or direct contact the moment your dates are confirmed. Tell Chef Serge it's an anniversary trip when booking.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════ DAY 4 ═══════ -->
+<div class="day-card reveal" id="d4">
+  <div class="day-toggle" onclick="toggle('d4')">
+    <div class="day-num-col">4</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Sunday · September 7, 2026</div>
+      <div class="day-title">Travel Day — Alsace to the Loire Valley</div>
+      <div class="day-tagline">TGV through the heart of France · arrive at a 4.9★ vineyard manor · do nothing on purpose</div>
+      <div class="day-chips">
+        <span class="chip chip-train">🚄 Colmar → Tours TGV</span>
+        <span class="chip chip-bed">🏨 Château de Nazelles ⭐ 4.9</span>
+        <span class="chip chip-eat">🍽️ Le 36 Amboise</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="tsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0c1a30"/><stop offset="100%" stop-color="#1a2a4a"/></linearGradient>
+    <linearGradient id="sunsetL" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0c1a30"/><stop offset="40%" stop-color="#2d1b5e"/><stop offset="70%" stop-color="#8b4510" stop-opacity=".6"/><stop offset="100%" stop-color="#c9a84c" stop-opacity=".4"/></linearGradient>
+  </defs>
+  <rect width="1200" height="220" fill="url(#tsky)"/>
+  <!-- sunset glow right -->
+  <rect x="0" y="0" width="1200" height="220" fill="url(#sunsetL)"/>
+  <!-- French countryside hills -->
+  <path d="M0,140 Q200,110 400,130 Q600,108 800,128 Q1000,108 1200,122 L1200,220 L0,220Z" fill="#0a1428"/>
+  <path d="M0,160 Q300,142 500,155 Q700,142 900,152 Q1100,142 1200,150 L1200,220 L0,220Z" fill="#080e1e"/>
+  <!-- vineyards -->
+  <g opacity=".5">
+  <line x1="0" y1="165" x2="1200" y2="165" stroke="#1a3010" stroke-width="1.5"/>
+  <line x1="0" y1="172" x2="1200" y2="172" stroke="#1a3010" stroke-width="1"/>
+  <line x1="0" y1="179" x2="1200" y2="179" stroke="#1a3010" stroke-width="1.5"/>
+  <line x1="0" y1="186" x2="1200" y2="186" stroke="#1a3010" stroke-width="1"/>
+  </g>
+  <g opacity=".4">
+  <line x1="80" y1="162" x2="80" y2="192" stroke="#1a3010" stroke-width="1"/><line x1="130" y1="162" x2="130" y2="192" stroke="#1a3010" stroke-width="1"/><line x1="180" y1="162" x2="180" y2="192" stroke="#1a3010" stroke-width="1"/>
+  <line x1="350" y1="162" x2="350" y2="192" stroke="#1a3010" stroke-width="1"/><line x1="400" y1="162" x2="400" y2="192" stroke="#1a3010" stroke-width="1"/>
+  <line x1="700" y1="162" x2="700" y2="192" stroke="#1a3010" stroke-width="1"/><line x1="750" y1="162" x2="750" y2="192" stroke="#1a3010" stroke-width="1"/><line x1="800" y1="162" x2="800" y2="192" stroke="#1a3010" stroke-width="1"/>
+  <line x1="1000" y1="162" x2="1000" y2="192" stroke="#1a3010" stroke-width="1"/><line x1="1050" y1="162" x2="1050" y2="192" stroke="#1a3010" stroke-width="1"/>
+  </g>
+  <!-- TGV TRAIN -->
+  <!-- track -->
+  <rect x="0" y="108" width="1200" height="5" fill="#1a1640" opacity=".8"/>
+  <rect x="0" y="115" width="1200" height="5" fill="#1a1640" opacity=".8"/>
+  <!-- sleepers -->
+  <g fill="#100e22" opacity=".6">
+  <rect x="10" y="106" width="12" height="16"/><rect x="50" y="106" width="12" height="16"/><rect x="90" y="106" width="12" height="16"/><rect x="130" y="106" width="12" height="16"/>
+  <rect x="200" y="106" width="12" height="16"/><rect x="240" y="106" width="12" height="16"/><rect x="280" y="106" width="12" height="16"/>
+  <rect x="480" y="106" width="12" height="16"/><rect x="520" y="106" width="12" height="16"/>
+  <rect x="800" y="106" width="12" height="16"/><rect x="840" y="106" width="12" height="16"/>
+  <rect x="1100" y="106" width="12" height="16"/><rect x="1140" y="106" width="12" height="16"/>
+  </g>
+  <!-- TGV body - sleek silver-blue -->
+  <rect x="150" y="75" width="580" height="40" rx="6" fill="#d0d8e8"/>
+  <!-- nose -->
+  <path d="M150,82 Q120,95 150,108" fill="#c0c8d8"/>
+  <!-- tail -->
+  <path d="M730,82 Q755,95 730,108" fill="#c0c8d8"/>
+  <!-- windows strip -->
+  <rect x="175" y="80" width="530" height="18" rx="3" fill="#a8b8d0" opacity=".4"/>
+  <!-- individual windows lit -->
+  <rect x="178" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".7"/>
+  <rect x="214" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".6"/>
+  <rect x="250" y="82" width="28" height="14" rx="2" fill="#f0d98a" opacity=".55"/>
+  <rect x="286" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".65"/>
+  <rect x="322" y="82" width="28" height="14" rx="2" fill="#f0d98a" opacity=".5"/>
+  <rect x="358" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".6"/>
+  <rect x="394" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".55"/>
+  <rect x="430" y="82" width="28" height="14" rx="2" fill="#f0d98a" opacity=".5"/>
+  <rect x="466" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".65"/>
+  <rect x="502" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".6"/>
+  <rect x="538" y="82" width="28" height="14" rx="2" fill="#f0d98a" opacity=".5"/>
+  <rect x="574" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".6"/>
+  <rect x="610" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".55"/>
+  <rect x="646" y="82" width="28" height="14" rx="2" fill="#f0d98a" opacity=".5"/>
+  <rect x="682" y="82" width="28" height="14" rx="2" fill="#e8f0ff" opacity=".6"/>
+  <!-- SNCF stripe -->
+  <rect x="155" y="108" width="575" height="7" rx="3" fill="#c0392b" opacity=".8"/>
+  <!-- motion blur lines -->
+  <line x1="0" y1="90" x2="145" y2="90" stroke="#a8b8d0" stroke-width="1.5" opacity=".3"/>
+  <line x1="0" y1="95" x2="145" y2="95" stroke="#a8b8d0" stroke-width="1" opacity=".2"/>
+  <line x1="0" y1="100" x2="145" y2="100" stroke="#a8b8d0" stroke-width="2" opacity=".25"/>
+  <!-- Château de Nazelles - right side -->
+  <rect x="880" y="55" width="200" height="130" fill="#1a1438" stroke="#3d2d7a" stroke-width="1.5" rx="2"/>
+  <polygon points="880,55 980,25 1080,55" fill="#221a48" stroke="#3d2d7a" stroke-width="1"/>
+  <!-- manor windows -->
+  <rect x="895" y="65" width="35" height="30" rx="3" fill="#f0d98a" opacity=".5"/>
+  <rect x="940" y="65" width="35" height="30" rx="3" fill="#f0d98a" opacity=".65"/>
+  <rect x="985" y="65" width="35" height="30" rx="3" fill="#f0d98a" opacity=".45"/>
+  <rect x="1030" y="65" width="35" height="30" rx="3" fill="#f0d98a" opacity=".55"/>
+  <rect x="895" y="105" width="35" height="28" rx="3" fill="#f0d98a" opacity=".4"/>
+  <rect x="985" y="105" width="35" height="28" rx="3" fill="#f0d98a" opacity=".5"/>
+  <!-- door -->
+  <rect x="960" y="148" width="40" height="37" rx="3" fill="#120f28"/>
+  <path d="M960,152 Q980,140 1000,152" fill="#120f28" stroke="#4a3860" stroke-width="1"/>
+  <!-- vineyard terrace in front -->
+  <rect x="850" y="183" width="270" height="15" rx="3" fill="#1a3010" opacity=".6"/>
+  <line x1="870" y1="183" x2="870" y2="198" stroke="#2a4a18" stroke-width="2" opacity=".6"/>
+  <line x1="920" y1="183" x2="920" y2="198" stroke="#2a4a18" stroke-width="2" opacity=".6"/>
+  <line x1="970" y1="183" x2="970" y2="198" stroke="#2a4a18" stroke-width="2" opacity=".6"/>
+  <line x1="1020" y1="183" x2="1020" y2="198" stroke="#2a4a18" stroke-width="2" opacity=".6"/>
+  <line x1="1070" y1="183" x2="1070" y2="198" stroke="#2a4a18" stroke-width="2" opacity=".6"/>
+  <!-- label -->
+  <text x="980" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-style="italic" fill="#c9a84c" opacity=".8">Château de Nazelles ⭐ 4.9</text>
+  <!-- caption -->
+  <rect x="0" y="188" width="1200" height="32" fill="#0d0a1e" opacity=".9"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">TGV THROUGH FRANCE  ·  CHÂTEAU DE NAZELLES  ·  VINEYARD POOL  ·  REST</text>
+</svg>
+</div>
+
+    <div class="travel-banner">
+      <div class="tb-icon">🚄</div>
+      <div><div class="tb-route">Riquewihr → Colmar → Paris → Tours · Loire Valley</div><div class="tb-detail">Longest travel day — sit back and watch France transform outside the window</div></div>
+      <div class="tb-time"><strong>~3–4h</strong><span>total rail</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🚕</span>Taxi Riquewihr→Colmar ~15 min</div>
+      <div class="ts-step"><span>🚄</span>TGV Colmar→Paris ~2h 20m</div>
+      <div class="ts-step"><span>🚇</span>Cross-Paris ~30 min</div>
+      <div class="ts-step"><span>🚄</span>TGV Paris→Tours ~1h</div>
+      <div class="ts-step"><span>🚕</span>Taxi→Château de Nazelles ~30 min</div>
+    </div>
+    <div class="hotel-band">
+      <div>
+        <div class="hb-label">Tonight's Hotel · Nights 4 &amp; 5 · Loire Valley Base</div>
+        <div class="hb-name">Château de Nazelles ⭐ 4.9 · Amboise</div>
+        <div class="hb-detail">"I don't think I have the words to describe how beautiful this château is — it felt like we were staying in a fairytale castle." 16th-century manor, heated pool, cave dining carved into the hillside, and hosts who treat every guest like family.</div>
+        <div class="hb-perks">
+          <span class="hb-perk">🏊 Heated pool</span>
+          <span class="hb-perk">🍳 Legendary terrace breakfast</span>
+          <span class="hb-perk">⛏️ Cave carved in the hillside</span>
+          <span class="hb-perk">🗺️ Hosts book your restaurants</span>
+          <span class="hb-perk">🍷 Vouvray wine country</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Today's Schedule</div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🥐</div>
+          <div class="tl-content">
+            <div class="tl-time">~8:30 AM · last Riquewihr morning</div>
+            <div class="tl-name">Village boulangerie · final Alsatian croissant</div>
+            <div class="tl-desc">One last slow morning before checkout. Pack, take a final look at the fairy-tale street. Taxi to Colmar station ~11 AM.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot transit">🚄</div>
+          <div class="tl-content">
+            <div class="tl-time">~11:30 AM · the long journey</div>
+            <div class="tl-name">TGV — Alsace to the Loire</div>
+            <div class="tl-desc">Watch France transform outside the window — Alsatian vineyards to Champagne plains to the gentle Loire. Bring a book, a playlist, pastry snacks. Allow 60–90 minutes for the Paris cross-connection between Gare de Lyon and Montparnasse.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot romance">🌿</div>
+          <div class="tl-content">
+            <div class="tl-time">Early afternoon · arrive ~2–3 PM</div>
+            <div class="tl-name">Château de Nazelles · pool · vineyard terrace</div>
+            <div class="tl-desc">Check in. Put your feet up. Swim in the heated pool. Lie under the vines with a glass of Vouvray. Watch the horses in the pasture. You've done three stimulating fairy-tale days — this afternoon of pure nothing is the entire point.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Dinner · ~7:30 PM</div>
+            <div class="tl-name"><a href="https://www.chateaudepray.fr/en/restaurant/" target="_blank">Le 36 · Amboise ⭐ 4.6</a></div>
+            <div class="tl-desc">5-minute taxi into Amboise. Loire Valley fish, duck, goat cheese, excellent Vouvray wine list, riverside terrace. Ask the Nazelles hosts to book for you — they know the best tables.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc3" onclick="findAndPlayVideo(3)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Loire Valley · Amboise</div>
+            <div class="vid-sub" id="vs3">▶ Play video</div>
+          </button>
+          <iframe id="vf3" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 The Rest Day Gift</div>
+          <div class="rb-text">Arriving at Château de Nazelles and doing absolutely nothing is the whole point of today. The pool, the vines, the evening light over the Loire plain. Two breakfasts on the vineyard terrace ahead. The hosts are brilliant — they'll have recommendations, wine, and warmth. This is where the trip breathes.</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ Rail Tips</div>
+          <div class="tip-text">Book both TGV segments on SNCF Connect at the same time. Allow 60–90 min for Paris cross-connection — Gare de Lyon to Montparnasse with luggage needs time. First class is worth it for this longer leg.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════ DAY 5 ═══════ -->
+<div class="day-card reveal" id="d5">
+  <div class="day-toggle" onclick="toggle('d5')">
+    <div class="day-num-col">5</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Monday · September 8, 2026</div>
+      <div class="day-title">🏰 Château d'Ussé — Where the Story Was Written</div>
+      <div class="day-tagline">Visit the castle that inspired Sleeping Beauty · back to the vineyard for a last Loire evening</div>
+      <div class="day-chips">
+        <span class="chip chip-castle">🏰 Château d'Ussé ⭐ 4.5</span>
+        <span class="chip chip-train">🚕 Taxi round trip</span>
+        <span class="chip chip-eat">🍽️ La Pause du Temps</span>
+        <span class="chip chip-bed">🏨 Château de Nazelles (night 5)</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="ussesky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0818"/><stop offset="50%" stop-color="#1a1438"/><stop offset="100%" stop-color="#2d1b5e" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="mistyL" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c8a2d8" stop-opacity=".2"/><stop offset="100%" stop-color="#c8a2d8" stop-opacity="0"/></linearGradient>
+    <filter id="castleGlow2"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="220" fill="url(#ussesky)"/>
+  <!-- stars -->
+  <circle cx="120" cy="22" r="1.4" fill="white" opacity=".65"/><circle cx="280" cy="14" r="1" fill="white" opacity=".5"/><circle cx="500" cy="28" r="1.5" fill="white" opacity=".7"/><circle cx="780" cy="16" r="1" fill="white" opacity=".45"/><circle cx="1050" cy="24" r="1.3" fill="white" opacity=".6"/>
+  <!-- Loire forest dark trees background -->
+  <path d="M0,130 Q60,100 120,120 Q180,100 240,118 Q300,100 360,115 Q420,98 480,112 Q540,98 600,110 Q660,98 720,112 Q780,100 840,115 Q900,100 960,118 Q1020,102 1080,120 Q1140,105 1200,118 L1200,220 L0,220Z" fill="#0a1208" opacity=".9"/>
+  <!-- mist layer -->
+  <rect x="0" y="118" width="1200" height="40" fill="url(#mistyL)"/>
+  <!-- Loire river reflection -->
+  <path d="M0,175 Q300,168 600,172 Q900,168 1200,174 L1200,220 L0,220Z" fill="#0c1828" opacity=".7"/>
+  <path d="M200,180 Q400,175 600,178 Q800,175 1000,180" fill="none" stroke="#c8a2d8" stroke-width="1" opacity=".2"/>
+  <!-- castle - Ussé white towers centre -->
+  <!-- main body -->
+  <rect x="420" y="80" width="360" height="100" fill="#e8e0f0" opacity=".9" stroke="#c8b8e0" stroke-width="1"/>
+  <!-- roof/battlements -->
+  <rect x="420" y="72" width="360" height="12" fill="#d0c8e8"/>
+  <g fill="#c8c0e0">
+    <rect x="422" y="63" width="14" height="12"/><rect x="442" y="63" width="14" height="12"/><rect x="462" y="63" width="14" height="12"/><rect x="482" y="63" width="14" height="12"/><rect x="502" y="63" width="14" height="12"/>
+    <rect x="522" y="63" width="14" height="12"/><rect x="542" y="63" width="14" height="12"/><rect x="562" y="63" width="14" height="12"/>
+    <rect x="620" y="63" width="14" height="12"/><rect x="640" y="63" width="14" height="12"/><rect x="660" y="63" width="14" height="12"/><rect x="680" y="63" width="14" height="12"/>
+    <rect x="700" y="63" width="14" height="12"/><rect x="720" y="63" width="14" height="12"/><rect x="740" y="63" width="14" height="12"/><rect x="760" y="63" width="14" height="12"/>
+  </g>
+  <!-- tall towers left -->
+  <rect x="395" y="42" width="45" height="138" fill="#ede8f8" stroke="#c8b8e0" stroke-width="1.5"/>
+  <polygon points="395,42 418,15 440,42" fill="#d8d0f0" stroke="#c8b8e0" stroke-width="1"/>
+  <circle cx="418" cy="11" r="5" fill="#c9a84c" opacity=".9"/>
+  <!-- tower windows left -->
+  <rect x="404" y="55" width="15" height="22" rx="2" fill="#4a3870" opacity=".7"/><rect x="406" y="54" width="11" height="10" rx="2" fill="#6a58a0" opacity=".5"/>
+  <rect x="404" y="85" width="15" height="22" rx="2" fill="#4a3870" opacity=".7"/>
+  <!-- tall towers right -->
+  <rect x="760" y="42" width="45" height="138" fill="#ede8f8" stroke="#c8b8e0" stroke-width="1.5"/>
+  <polygon points="760,42 783,15 805,42" fill="#d8d0f0" stroke="#c8b8e0" stroke-width="1"/>
+  <circle cx="783" cy="11" r="5" fill="#c9a84c" opacity=".9"/>
+  <rect x="770" y="55" width="15" height="22" rx="2" fill="#4a3870" opacity=".7"/>
+  <rect x="770" y="85" width="15" height="22" rx="2" fill="#4a3870" opacity=".7"/>
+  <!-- smaller flanking towers -->
+  <rect x="450" y="55" width="32" height="125" fill="#e8e2f5" stroke="#c8b8e0" stroke-width="1"/>
+  <polygon points="450,55 466,38 482,55" fill="#d8d0f0" stroke="#c8b8e0" stroke-width="1"/>
+  <circle cx="466" cy="35" r="4" fill="#c9a84c" opacity=".8"/>
+  <rect x="680" y="55" width="32" height="125" fill="#e8e2f5" stroke="#c8b8e0" stroke-width="1"/>
+  <polygon points="680,55 696,38 712,55" fill="#d8d0f0" stroke="#c8b8e0" stroke-width="1"/>
+  <circle cx="696" cy="35" r="4" fill="#c9a84c" opacity=".8"/>
+  <!-- centre keep taller -->
+  <rect x="548" y="32" width="104" height="148" fill="#ede8f8" stroke="#c8b8e0" stroke-width="1.5"/>
+  <polygon points="548,32 600,5 652,32" fill="#d8d0f0" stroke="#c8b8e0" stroke-width="1"/>
+  <circle cx="600" cy="1" r="6" fill="#c9a84c" opacity=".95"/>
+  <!-- windows main building -->
+  <rect x="435" y="88" width="22" height="30" rx="2" fill="#4a3870" opacity=".65"/>
+  <rect x="435" y="84" width="22" height="8" rx="2" fill="#6a58a0" opacity=".4"/>
+  <rect x="475" y="88" width="22" height="30" rx="2" fill="#4a3870" opacity=".55"/>
+  <rect x="561" y="42" width="22" height="28" rx="2" fill="#4a3870" opacity=".6"/>
+  <rect x="561" y="40" width="22" height="8" rx="2" fill="#6a58a0" opacity=".4"/>
+  <rect x="617" y="42" width="22" height="28" rx="2" fill="#4a3870" opacity=".6"/>
+  <rect x="680" y="88" width="22" height="30" rx="2" fill="#4a3870" opacity=".55"/>
+  <rect x="720" y="88" width="22" height="30" rx="2" fill="#4a3870" opacity=".65"/>
+  <!-- gate arch -->
+  <rect x="574" y="148" width="52" height="32" fill="#2d2060"/>
+  <path d="M574,155 Q600,138 626,155" fill="#2d2060" stroke="#c8b8e0" stroke-width="1"/>
+  <!-- castle reflection in Loire -->
+  <rect x="420" y="183" width="360" height="30" fill="#ede8f8" opacity=".07"/>
+  <line x1="600" y1="183" x2="600" y2="210" stroke="#c8a2d8" stroke-width="0.5" opacity=".2"/>
+  <!-- gardens -->
+  <rect x="340" y="175" width="520" height="12" fill="#1a3010" opacity=".5"/>
+  <g fill="#2a5020" opacity=".7">
+    <circle cx="380" cy="172" r="8"/><circle cx="420" cy="170" r="10"/><circle cx="460" cy="171" r="7"/>
+    <circle cx="740" cy="171" r="7"/><circle cx="780" cy="170" r="10"/><circle cx="820" cy="172" r="8"/>
+  </g>
+  <!-- caption -->
+  <rect x="0" y="188" width="1200" height="32" fill="#0d0a1e" opacity=".9"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">CHÂTEAU D'USSÉ  ·  WHERE CHARLES PERRAULT WROTE SLEEPING BEAUTY  ·  1697</text>
+</svg>
+</div>
+
+    <div class="travel-banner">
+      <div class="tb-icon">🚕</div>
+      <div><div class="tb-route">Château de Nazelles → Château d'Ussé → optional Chinon → Nazelles</div><div class="tb-detail">Pre-book return pickup — rural location, no passing taxis. Nazelles hosts can arrange this for you.</div></div>
+      <div class="tb-time"><strong>~30 min</strong><span>each way</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🍳</span>Terrace breakfast ~9 AM</div>
+      <div class="ts-step"><span>🚕</span>Depart ~10:30 AM</div>
+      <div class="ts-step"><span>🏰</span>Ussé opens 10 AM · allow 2h</div>
+      <div class="ts-step"><span>🍷</span>Chinon lunch optional · pick up a bottle</div>
+      <div class="ts-step"><span>🏠</span>Back by ~4:30 PM · pool + vines</div>
+    </div>
+    <div class="hotel-band">
+      <div>
+        <div class="hb-label">Tonight's Hotel · Night 5 · Last Loire Evening</div>
+        <div class="hb-name">Château de Nazelles · final vineyard night</div>
+        <div class="hb-detail">Last evening on the terrace. Open the Chinon you picked up today. Pool, vines going golden in the September light. Tomorrow the trip moves toward Paris.</div>
+        <div class="hb-perks"><span class="hb-perk">🌅 Golden hour on the vines</span><span class="hb-perk">🍷 Open your Chinon here</span><span class="hb-perk">🏊 Heated pool</span></div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Today's Schedule</div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍳</div>
+          <div class="tl-content">
+            <div class="tl-time">Breakfast · ~9:00 AM</div>
+            <div class="tl-name">Château de Nazelles terrace breakfast</div>
+            <div class="tl-desc">Vineyard views, fresh pastries, château jams. The hosts are renowned for their morning hospitality. The castle opens at 10 AM and is only 30 minutes away — no rush.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot sight">🏰</div>
+          <div class="tl-content">
+            <div class="tl-time">~11:00 AM · 2 hours</div>
+            <div class="tl-name"><a href="https://www.chateaudusse.fr/en/" target="_blank">Château d'Ussé ⭐ 4.5 — Where Perrault wrote Sleeping Beauty</a></div>
+            <div class="tl-desc">Charles Perrault wrote La Belle au Bois Dormant here in 1697, inspired by this Loire château. Inside: a full Sleeping Beauty exhibition through the tower rooms — wax scenes of every key moment, from the fairies to the spindle to the prince's kiss. The Loire River gardens in September are stunning.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Lunch · ~2:00 PM</div>
+            <div class="tl-name">Chinon riverside · goat cheese &amp; red wine</div>
+            <div class="tl-desc">15-min taxi to Chinon — a beautiful medieval village with riverside restaurants, famous Sainte-Maure goat cheese, and Chinon red wine. Pick up a bottle to open later on the Nazelles terrace.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot romance">🌿</div>
+          <div class="tl-content">
+            <div class="tl-time">Afternoon · back ~4:30 PM</div>
+            <div class="tl-name">Château de Nazelles · pool · last Loire afternoon</div>
+            <div class="tl-desc">Last afternoon in the Loire. Nowhere to be. The château pool, the vineyard terrace, the garden. Open the Chinon. Watch the September evening light on the vines.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Dinner · ~7:30 PM</div>
+            <div class="tl-name"><a href="https://maps.google.com/?q=La+Pause+du+Temps+Amboise" target="_blank">La Pause du Temps ⭐ 4.5 · Amboise</a></div>
+            <div class="tl-desc">Small, family-run, daily specials. Reviewers call it "one of the best meals in France" for quality and value. Roquefort tart, duck confit, fresh Loire fish, wines by the carafe. 5-min taxi each way.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc4" onclick="findAndPlayVideo(4)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Château d'Ussé · Sleeping Beauty</div>
+            <div class="vid-sub" id="vs4">▶ Play video</div>
+          </button>
+          <iframe id="vf4" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 The Story Moment</div>
+          <div class="rb-text">Standing in the tower rooms where Perrault dreamed up Sleeping Beauty in 1697, looking out at the Loire forest below — the same forest that became the enchanted woods — is one of those moments that makes the whole trip feel inevitable. You're inside the original story.</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ Taxi Tip</div>
+          <div class="tip-text">Pre-book your return taxi when booking the outward journey. Ask for pickup at ~2:30 PM to allow time at Chinon. The Nazelles hosts can arrange this entire day's transport for you — just ask at breakfast.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════ DAY 6 ═══════ -->
+<div class="day-card reveal" id="d6">
+  <div class="day-toggle" onclick="toggle('d6')">
+    <div class="day-num-col">6</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Tuesday · September 9, 2026</div>
+      <div class="day-title">🏰 Château de Pierrefonds → Paris · Anniversary Eve</div>
+      <div class="day-tagline">The third Sleeping Beauty castle en route · wine bar in Paris tonight · early night before the big day</div>
+      <div class="day-chips">
+        <span class="chip chip-castle">🏰 Pierrefonds ⭐ 4.6</span>
+        <span class="chip chip-train">🚄 Tours → Paris → Compiègne</span>
+        <span class="chip chip-bed">🏨 Marriott Gare de Lyon · Platinum</span>
+        <span class="chip chip-eat">🍷 Le Baron Rouge</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="psky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#060410"/><stop offset="100%" stop-color="#120d28"/></linearGradient>
+    <linearGradient id="lakeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1438" stop-opacity=".6"/><stop offset="100%" stop-color="#0a0818" stop-opacity=".9"/></linearGradient>
+  </defs>
+  <rect width="1200" height="220" fill="url(#psky)"/>
+  <!-- stars dense -->
+  <circle cx="50" cy="15" r="1.2" fill="white" opacity=".6"/><circle cx="150" cy="8" r="1" fill="white" opacity=".5"/><circle cx="250" cy="20" r="1.4" fill="white" opacity=".7"/><circle cx="350" cy="12" r="1" fill="white" opacity=".4"/><circle cx="440" cy="7" r="1.3" fill="white" opacity=".6"/><circle cx="560" cy="18" r="1" fill="white" opacity=".5"/><circle cx="670" cy="10" r="1.5" fill="white" opacity=".7"/><circle cx="790" cy="22" r="1" fill="white" opacity=".4"/><circle cx="880" cy="14" r="1.2" fill="white" opacity=".6"/><circle cx="980" cy="6" r="1" fill="white" opacity=".5"/><circle cx="1100" cy="19" r="1.4" fill="white" opacity=".7"/>
+  <!-- forest dark backdrop -->
+  <path d="M0,110 Q100,85 200,100 Q300,82 400,98 Q500,80 600,95 Q700,80 800,97 Q900,82 1000,100 Q1100,85 1200,98 L1200,220 L0,220Z" fill="#080c08" opacity=".95"/>
+  <!-- lake reflection -->
+  <path d="M0,168 Q300,160 600,164 Q900,160 1200,168 L1200,220 L0,220Z" fill="url(#lakeG)"/>
+  <!-- lake shimmer -->
+  <line x1="100" y1="178" x2="300" y2="178" stroke="#c8a2d8" stroke-width="0.8" opacity=".15"/>
+  <line x1="400" y1="182" x2="700" y2="182" stroke="#c8a2d8" stroke-width="0.8" opacity=".12"/>
+  <line x1="800" y1="180" x2="1100" y2="180" stroke="#c8a2d8" stroke-width="0.8" opacity=".15"/>
+  <!-- PIERREFONDS - massive dark gothic fortress -->
+  <!-- base platform -->
+  <rect x="200" y="130" width="800" height="60" fill="#0e0c20" stroke="#2d2060" stroke-width="1"/>
+  <!-- main curtain wall -->
+  <rect x="220" y="90" width="760" height="100" fill="#120e2a" stroke="#2d2060" stroke-width="1.5"/>
+  <!-- battlements on wall -->
+  <g fill="#140f2e" stroke="#2d2060" stroke-width="1">
+    <rect x="222" y="82" width="16" height="12"/><rect x="244" y="82" width="16" height="12"/><rect x="266" y="82" width="16" height="12"/>
+    <rect x="310" y="82" width="16" height="12"/><rect x="332" y="82" width="16" height="12"/><rect x="354" y="82" width="16" height="12"/>
+    <rect x="420" y="82" width="16" height="12"/><rect x="442" y="82" width="16" height="12"/>
+    <rect x="560" y="82" width="16" height="12"/><rect x="582" y="82" width="16" height="12"/>
+    <rect x="640" y="82" width="16" height="12"/><rect x="662" y="82" width="16" height="12"/><rect x="684" y="82" width="16" height="12"/>
+    <rect x="740" y="82" width="16" height="12"/><rect x="762" y="82" width="16" height="12"/>
+    <rect x="830" y="82" width="16" height="12"/><rect x="852" y="82" width="16" height="12"/><rect x="874" y="82" width="16" height="12"/>
+    <rect x="930" y="82" width="16" height="12"/><rect x="952" y="82" width="16" height="12"/>
+  </g>
+  <!-- eight massive round towers -->
+  <g fill="#160d30" stroke="#2d2060" stroke-width="1.5">
+    <ellipse cx="220" cy="95" rx="32" ry="32"/><ellipse cx="370" cy="88" rx="28" ry="28"/>
+    <ellipse cx="510" cy="92" rx="30" ry="30"/><ellipse cx="600" cy="85" rx="32" ry="32"/>
+    <ellipse cx="690" cy="92" rx="30" ry="30"/><ellipse cx="830" cy="88" rx="28" ry="28"/>
+    <ellipse cx="980" cy="92" rx="28" ry="28"/>
+  </g>
+  <!-- tower cone roofs -->
+  <g fill="#1e1640" stroke="#2d2060" stroke-width="1">
+    <polygon points="188,64 220,40 252,64"/><polygon points="342,58 370,36 398,58"/>
+    <polygon points="480,62 510,40 540,62"/><polygon points="568,53 600,28 632,53"/>
+    <polygon points="660,62 690,40 720,62"/><polygon points="802,58 830,36 858,58"/>
+    <polygon points="952,60 980,38 1008,60"/>
+  </g>
+  <!-- finials on towers -->
+  <g fill="#c9a84c" opacity=".85"><circle cx="220" cy="38" r="4"/><circle cx="370" cy="34" r="3.5"/><circle cx="510" cy="38" r="4"/><circle cx="600" cy="26" r="4.5"/><circle cx="690" cy="38" r="4"/><circle cx="830" cy="34" r="3.5"/><circle cx="980" cy="36" r="3.5"/></g>
+  <!-- windows in towers - gothic arched -->
+  <g fill="#f0d98a" opacity=".35">
+    <rect x="212" y="72" width="16" height="22" rx="3"/><rect x="362" y="66" width="16" height="20" rx="3"/>
+    <rect x="502" y="70" width="16" height="22" rx="3"/><rect x="592" y="58" width="16" height="22" rx="3"/>
+    <rect x="682" y="70" width="16" height="22" rx="3"/><rect x="822" y="66" width="16" height="20" rx="3"/>
+    <rect x="972" y="68" width="16" height="20" rx="3"/>
+  </g>
+  <!-- main gate -->
+  <rect x="570" y="130" width="60" height="60" fill="#0a0818"/>
+  <path d="M570,140 Q600,118 630,140" fill="#0a0818" stroke="#2d2060" stroke-width="1.5"/>
+  <!-- portcullis lines -->
+  <line x1="580" y1="138" x2="580" y2="190" stroke="#2d2060" stroke-width="1.5" opacity=".6"/>
+  <line x1="592" y1="138" x2="592" y2="190" stroke="#2d2060" stroke-width="1.5" opacity=".6"/>
+  <line x1="604" y1="138" x2="604" y2="190" stroke="#2d2060" stroke-width="1.5" opacity=".6"/>
+  <line x1="616" y1="138" x2="616" y2="190" stroke="#2d2060" stroke-width="1.5" opacity=".6"/>
+  <line x1="570" y1="152" x2="628" y2="152" stroke="#2d2060" stroke-width="1.5" opacity=".6"/>
+  <line x1="570" y1="165" x2="628" y2="165" stroke="#2d2060" stroke-width="1.5" opacity=".6"/>
+  <!-- castle reflection in lake -->
+  <rect x="200" y="170" width="800" height="40" fill="#120e2a" opacity=".15"/>
+  <line x1="220" y1="172" x2="980" y2="172" stroke="#2d2060" stroke-width="0.5" opacity=".3"/>
+  <!-- caption -->
+  <rect x="0" y="188" width="1200" height="32" fill="#0d0a1e" opacity=".9"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">CHÂTEAU DE PIERREFONDS  ·  WALT DISNEY'S SLEEPING BEAUTY INSPIRATION</text>
+</svg>
+</div>
+
+    <div class="travel-banner">
+      <div class="tb-icon">🚄</div>
+      <div><div class="tb-route">Amboise → Tours → Paris → Compiègne → Pierrefonds → Paris</div><div class="tb-detail">Most complex day logistically — but Pierrefonds is entirely worth the detour</div></div>
+      <div class="tb-time"><strong>~4h</strong><span>total travel</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🚕</span>Taxi Nazelles→Tours ~30 min</div>
+      <div class="ts-step"><span>🚄</span>TGV Tours→Paris ~1h</div>
+      <div class="ts-step"><span>🚇</span>Metro Nord ~20 min</div>
+      <div class="ts-step"><span>🚄</span>TER→Compiègne ~45 min</div>
+      <div class="ts-step"><span>🚕</span>Taxi→Pierrefonds ~20 min</div>
+      <div class="ts-step"><span>🏰</span>Visit + lake café</div>
+      <div class="ts-step"><span>🚄</span>TER back · taxi to Marriott</div>
+    </div>
+    <div class="hotel-band">
+      <div>
+        <div class="hb-label">Tonight's Hotel · Nights 6 &amp; 7 · Paris Base</div>
+        <div class="hb-name">Courtyard by Marriott Paris Gare de Lyon</div>
+        <div class="hb-detail">RER A to Disneyland Paris leaves directly below this hotel — 40 minutes, straight to the park gates, no changes. Platinum covers free breakfast on both Paris mornings. Upgrade on arrival is likely with Platinum status.</div>
+        <div class="hb-perks">
+          <span class="hb-perk">✦ Platinum free breakfast × 2</span>
+          <span class="hb-perk">🚇 RER A to Disneyland below</span>
+          <span class="hb-perk">⬆️ Upgrade likely</span>
+          <span class="hb-perk">🍷 Le Baron Rouge 10 min walk</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Today's Schedule</div>
+        <div class="tl-item">
+          <div class="tl-dot transit">🚄</div>
+          <div class="tl-content">
+            <div class="tl-time">~11:30 AM · via Paris</div>
+            <div class="tl-name">Trains to Compiègne</div>
+            <div class="tl-desc">TGV to Paris Montparnasse, then Metro to Gare du Nord, then TER regional to Compiègne (~45 min — much cheaper than TGV). Taxi from Compiègne to Pierrefonds village, 20 minutes.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot sight">🏰</div>
+          <div class="tl-content">
+            <div class="tl-time">~2:00 PM · 1.5 hours</div>
+            <div class="tl-name"><a href="https://maps.google.com/?cid=18071026432561459202" target="_blank">Château de Pierrefonds ⭐ 4.6 · Closed Mondays — Tuesday ✓</a></div>
+            <div class="tl-desc">Eight soaring white towers, restored by Viollet-le-Duc for Napoleon III. Walt Disney used this as a primary visual reference for Sleeping Beauty's exterior. Standing before it, you immediately see why. Set above a mirror-lake village — surreally beautiful.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">☕</div>
+          <div class="tl-content">
+            <div class="tl-time">~4:00 PM</div>
+            <div class="tl-name">Village café · castle reflected in the lake</div>
+            <div class="tl-desc">The village sits beside a beautiful mirror lake. Sit at a café terrace with a tarte tatin and watch the castle reflected in the water before heading back to the train.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍷</div>
+          <div class="tl-content">
+            <div class="tl-time">Dinner · ~8:00 PM · Anniversary Eve</div>
+            <div class="tl-name"><a href="https://maps.google.com/?q=Le+Baron+Rouge+Paris+Bastille" target="_blank">Le Baron Rouge ⭐ 4.3 · Bastille</a></div>
+            <div class="tl-desc">A beloved neighbourhood wine bar — barrels as tables, natural wines by the glass, charcuterie, cheese boards. 10 minutes' walk from the Marriott. The perfect low-key eve. No reservations — arrive before 7:30 PM. Order the Sancerre.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc5" onclick="findAndPlayVideo(5)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Château de Pierrefonds</div>
+            <div class="vid-sub" id="vs5">▶ Play video</div>
+          </button>
+          <iframe id="vf5" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 Anniversary Eve</div>
+          <div class="rb-text">A quiet wine bar, a gentle evening, an early night. Tomorrow is the big day — Aurora's castle, princess lunch, and the Illuminations fireworks on your anniversary night. Arrive rested. One glass of good Burgundy and each other. That's all tonight needs.</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ Rail Tip</div>
+          <div class="tip-text">Pre-book a taxi for the evening leg from Paris Nord to the Marriott Gare de Lyon — it's 20 minutes and worth having arranged after a long day. Check in, drop bags, walk to Le Baron Rouge.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════ DAY 7 — ANNIVERSARY ═══════ -->
+<div class="day-card anniv reveal" id="d7">
+  <div class="anniv-glow">✦ Your Anniversary · September 10, 2026 ✦</div>
+  <div class="day-toggle" onclick="toggle('d7')">
+    <div class="day-num-col">7</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Wednesday · September 10, 2026 — YOUR ANNIVERSARY ✦</div>
+      <div class="day-title">Disneyland Paris — Aurora's Castle, Princess Lunch &amp; Fireworks</div>
+      <div class="day-tagline">The day everything has been building toward · RER A from Gare de Lyon · 40 minutes to magic</div>
+      <div class="day-chips">
+        <span class="chip chip-anniv">✦ Anniversary Day</span>
+        <span class="chip chip-train">🚇 RER A · 40 min direct</span>
+        <span class="chip chip-eat">👸 Auberge de Cendrillon</span>
+        <span class="chip chip-eat">🎆 Illuminations fireworks</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <radialGradient id="fwGlow" cx="50%" cy="20%"><stop offset="0%" stop-color="#f0d98a" stop-opacity=".6"/><stop offset="40%" stop-color="#c9a84c" stop-opacity=".2"/><stop offset="100%" stop-color="#0d0a1e" stop-opacity="0"/></radialGradient>
+    <linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#04020c"/><stop offset="40%" stop-color="#1a0a3a"/><stop offset="100%" stop-color="#2d0a50"/></linearGradient>
+    <filter id="fwBlur"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="castleGlowD"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="220" fill="url(#dsky)"/>
+  <!-- fireworks glow centre -->
+  <circle cx="600" cy="40" r="180" fill="url(#fwGlow)"/>
+  <!-- firework bursts -->
+  <g opacity=".9" filter="url(#fwBlur)">
+    <!-- burst 1 gold -->
+    <g transform="translate(600,40)">
+      <g stroke="#f0d98a" stroke-width="2" fill="none">
+        <line x1="0" y1="0" x2="0" y2="-55"/><line x1="0" y1="0" x2="39" y2="-39"/><line x1="0" y1="0" x2="55" y2="0"/><line x1="0" y1="0" x2="39" y2="39"/><line x1="0" y1="0" x2="0" y2="55"/><line x1="0" y1="0" x2="-39" y2="39"/><line x1="0" y1="0" x2="-55" y2="0"/><line x1="0" y1="0" x2="-39" y2="-39"/>
+        <line x1="0" y1="0" x2="20" y2="-52"/><line x1="0" y1="0" x2="52" y2="-20"/><line x1="0" y1="0" x2="52" y2="20"/><line x1="0" y1="0" x2="20" y2="52"/><line x1="0" y1="0" x2="-20" y2="52"/><line x1="0" y1="0" x2="-52" y2="20"/><line x1="0" y1="0" x2="-52" y2="-20"/><line x1="0" y1="0" x2="-20" y2="-52"/>
+      </g>
+      <g fill="#f0d98a"><circle cx="0" cy="-55" r="3"/><circle cx="39" cy="-39" r="3"/><circle cx="55" cy="0" r="3"/><circle cx="39" cy="39" r="3"/><circle cx="0" cy="55" r="3"/><circle cx="-39" cy="39" r="3"/><circle cx="-55" cy="0" r="3"/><circle cx="-39" cy="-39" r="3"/></g>
+    </g>
+    <!-- burst 2 pink left -->
+    <g transform="translate(320,60)" opacity=".8">
+      <g stroke="#f080c0" stroke-width="1.5" fill="none">
+        <line x1="0" y1="0" x2="0" y2="-38"/><line x1="0" y1="0" x2="27" y2="-27"/><line x1="0" y1="0" x2="38" y2="0"/><line x1="0" y1="0" x2="27" y2="27"/><line x1="0" y1="0" x2="0" y2="38"/><line x1="0" y1="0" x2="-27" y2="27"/><line x1="0" y1="0" x2="-38" y2="0"/><line x1="0" y1="0" x2="-27" y2="-27"/>
+      </g>
+      <g fill="#f080c0"><circle cx="0" cy="-38" r="2.5"/><circle cx="27" cy="-27" r="2.5"/><circle cx="38" cy="0" r="2.5"/><circle cx="27" cy="27" r="2.5"/><circle cx="0" cy="38" r="2.5"/><circle cx="-27" cy="27" r="2.5"/><circle cx="-38" cy="0" r="2.5"/><circle cx="-27" cy="-27" r="2.5"/></g>
+    </g>
+    <!-- burst 3 blue right -->
+    <g transform="translate(880,55)" opacity=".8">
+      <g stroke="#80c0f8" stroke-width="1.5" fill="none">
+        <line x1="0" y1="0" x2="0" y2="-42"/><line x1="0" y1="0" x2="30" y2="-30"/><line x1="0" y1="0" x2="42" y2="0"/><line x1="0" y1="0" x2="30" y2="30"/><line x1="0" y1="0" x2="0" y2="42"/><line x1="0" y1="0" x2="-30" y2="30"/><line x1="0" y1="0" x2="-42" y2="0"/><line x1="0" y1="0" x2="-30" y2="-30"/>
+      </g>
+      <g fill="#80c0f8"><circle cx="0" cy="-42" r="2.5"/><circle cx="30" cy="-30" r="2.5"/><circle cx="42" cy="0" r="2.5"/><circle cx="30" cy="30" r="2.5"/><circle cx="0" cy="42" r="2.5"/><circle cx="-30" cy="30" r="2.5"/><circle cx="-42" cy="0" r="2.5"/><circle cx="-30" cy="-30" r="2.5"/></g>
+    </g>
+    <!-- smaller bursts -->
+    <g transform="translate(200,80)" opacity=".6"><g stroke="#c9a84c" stroke-width="1" fill="none"><line x1="0" y1="0" x2="0" y2="-25"/><line x1="0" y1="0" x2="18" y2="-18"/><line x1="0" y1="0" x2="25" y2="0"/><line x1="0" y1="0" x2="18" y2="18"/><line x1="0" y1="0" x2="0" y2="25"/><line x1="0" y1="0" x2="-18" y2="18"/><line x1="0" y1="0" x2="-25" y2="0"/><line x1="0" y1="0" x2="-18" y2="-18"/></g></g>
+    <g transform="translate(1000,72)" opacity=".6"><g stroke="#f0a0d8" stroke-width="1" fill="none"><line x1="0" y1="0" x2="0" y2="-28"/><line x1="0" y1="0" x2="20" y2="-20"/><line x1="0" y1="0" x2="28" y2="0"/><line x1="0" y1="0" x2="20" y2="20"/><line x1="0" y1="0" x2="0" y2="28"/><line x1="0" y1="0" x2="-20" y2="20"/><line x1="0" y1="0" x2="-28" y2="0"/><line x1="0" y1="0" x2="-20" y2="-20"/></g></g>
+  </g>
+  <!-- Main Street ground -->
+  <rect x="0" y="175" width="1200" height="45" fill="#0a0818"/>
+  <line x1="0" y1="175" x2="1200" y2="175" stroke="#2d2060" stroke-width="1"/>
+  <!-- crowd silhouettes -->
+  <g fill="#050310">
+    <ellipse cx="80" cy="178" rx="25" ry="6"/><rect x="55" y="158" width="14" height="22"/><ellipse cx="62" cy="158" rx="10" ry="5"/>
+    <ellipse cx="160" cy="178" rx="22" ry="6"/><rect x="140" y="160" width="12" height="20"/><ellipse cx="146" cy="160" rx="9" ry="4.5"/>
+    <ellipse cx="240" cy="178" rx="28" ry="6"/><rect x="215" y="156" width="16" height="24"/><ellipse cx="223" cy="156" rx="11" ry="5.5"/>
+    <ellipse cx="340" cy="178" rx="20" ry="5"/><rect x="325" y="162" width="11" height="18"/><ellipse cx="330" cy="162" rx="8" ry="4"/>
+    <ellipse cx="1080" cy="178" rx="25" ry="6"/><rect x="1058" y="158" width="14" height="22"/><ellipse cx="1065" cy="158" rx="10" ry="5"/>
+    <ellipse cx="1000" cy="178" rx="22" ry="6"/><rect x="982" y="160" width="12" height="20"/><ellipse cx="988" cy="160" rx="9" ry="4.5"/>
+    <ellipse cx="920" cy="178" rx="28" ry="6"/><rect x="896" y="156" width="16" height="24"/><ellipse cx="904" cy="156" rx="11" ry="5.5"/>
+  </g>
+  <!-- CASTLE - Disneyland Paris Sleeping Beauty -->
+  <!-- base -->
+  <rect x="420" y="135" width="360" height="65" fill="#1e1840" stroke="#4a4080" stroke-width="1"/>
+  <!-- main building -->
+  <rect x="450" y="105" width="300" height="95" fill="#2d2660" stroke="#5a50a0" stroke-width="1.5"/>
+  <!-- castle windows with blue glow -->
+  <rect x="465" y="115" width="28" height="38" rx="3" fill="#60a0ff" opacity=".5"/><path d="M465,118 Q479,108 493,118" fill="#60a0ff" opacity=".5"/>
+  <rect x="510" y="115" width="28" height="38" rx="3" fill="#60a0ff" opacity=".45"/><path d="M510,118 Q524,108 538,118" fill="#60a0ff" opacity=".45"/>
+  <rect x="660" y="115" width="28" height="38" rx="3" fill="#60a0ff" opacity=".5"/><path d="M660,118 Q674,108 688,118" fill="#60a0ff" opacity=".5"/>
+  <rect x="705" y="115" width="28" height="38" rx="3" fill="#60a0ff" opacity=".45"/>
+  <!-- towers -->
+  <rect x="445" y="78" width="42" height="62" fill="#28225e" stroke="#5a50a0" stroke-width="1.5"/>
+  <polygon points="445,78 466,52 487,78" fill="#3830a0" stroke="#7a70c0" stroke-width="1"/>
+  <circle cx="466" cy="49" r="4" fill="#f0d98a"/>
+  <rect x="713" y="78" width="42" height="62" fill="#28225e" stroke="#5a50a0" stroke-width="1.5"/>
+  <polygon points="713,78 734,52 755,78" fill="#3830a0" stroke="#7a70c0" stroke-width="1"/>
+  <circle cx="734" cy="49" r="4" fill="#f0d98a"/>
+  <!-- centre spire tall -->
+  <rect x="568" y="58" width="64" height="102" fill="#322870" stroke="#5a50a0" stroke-width="1.5"/>
+  <polygon points="568,58 600,22 632,58" fill="#4840b0" stroke="#7a70c0" stroke-width="1.5"/>
+  <circle cx="600" cy="18" r="5.5" fill="#f0d98a" opacity=".95"/>
+  <!-- blue window on centre tower -->
+  <rect x="581" y="68" width="20" height="28" rx="3" fill="#60a0ff" opacity=".6"/><path d="M581,72 Q591,60 601,72" fill="#60a0ff" opacity=".6"/>
+  <rect x="608" y="68" width="20" height="28" rx="3" fill="#60a0ff" opacity=".5"/>
+  <!-- gate -->
+  <rect x="575" y="158" width="50" height="42" fill="#0a0818"/>
+  <path d="M575,166 Q600,150 625,166" fill="#0a0818" stroke="#5a50a0" stroke-width="1.5"/>
+  <!-- gold and sparkle text overlay -->
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="0">✦</text>
+  <!-- caption -->
+  <rect x="0" y="188" width="1200" height="32" fill="#0d0a1e" opacity=".9"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">DISNEYLAND PARIS  ·  YOUR ANNIVERSARY  ·  ILLUMINATIONS OVER AURORA'S CASTLE</text>
+</svg>
+</div>
+
+    <div class="travel-banner" style="background:rgba(139,105,20,.25);border-bottom-color:rgba(201,168,76,.3);">
+      <div class="tb-icon">🚇</div>
+      <div><div class="tb-route">RER A · Gare de Lyon → Marne-la-Vallée/Chessy · Disneyland Paris</div><div class="tb-detail">Departs directly below the Marriott · straight to the park gates · no changes</div></div>
+      <div class="tb-time"><strong>40 min</strong><span>door to castle</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🥐</span>Free Platinum breakfast ~7:30 AM</div>
+      <div class="ts-step"><span>🚇</span>RER A depart ~8:15 AM</div>
+      <div class="ts-step"><span>🏰</span>Park gates ~9 AM · rope drop</div>
+      <div class="ts-step"><span>👸</span>Auberge de Cendrillon ~1 PM</div>
+      <div class="ts-step"><span>🎆</span>Illuminations ~9:30 PM</div>
+      <div class="ts-step"><span>🚇</span>RER A home · Marriott by 11 PM</div>
+    </div>
+    <div class="hotel-band" style="background:rgba(139,105,20,.15);border-bottom-color:rgba(201,168,76,.25);">
+      <div>
+        <div class="hb-label">Tonight's Hotel · Anniversary Night</div>
+        <div class="hb-name">Courtyard Marriott Gare de Lyon · back after the fireworks</div>
+        <div class="hb-detail">After the Illuminations (~10 PM), RER A back — in the hotel by 11 PM. A glass of champagne at the bar, or just the quiet of your Paris room and the knowledge of what today was. Happy anniversary.</div>
+        <div class="hb-perks"><span class="hb-perk">✦ Platinum free breakfast tomorrow too</span><span class="hb-perk">🥂 Champagne on arrival?</span></div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Your Anniversary Day</div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🥐</div>
+          <div class="tl-content">
+            <div class="tl-time">7:30 AM · free via Platinum</div>
+            <div class="tl-name">Marriott breakfast · anniversary morning fuel</div>
+            <div class="tl-desc">Eat well and early. Rope drop at Disneyland is worth the early start — empty Fantasyland at 9 AM is the best of the day. RER A by 8:15 AM.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot sight">🏰</div>
+          <div class="tl-content">
+            <div class="tl-time">~9:00 AM · Rope Drop</div>
+            <div class="tl-name"><a href="https://www.disneylandparis.com/en-gb/tickets/" target="_blank">Le Château de la Belle au Bois Dormant ⭐ 4.7</a></div>
+            <div class="tl-desc">Walk straight to the castle while Fantasyland is empty. Explore the stained-glass Sleeping Beauty gallery inside and the dragon's lair underneath. Having spent a week visiting the real castles that inspired this one, you'll see it in a completely different way.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot star">👸</div>
+          <div class="tl-content">
+            <div class="tl-time">Lunch · ~1:00–1:30 PM · BOOK MONTHS AHEAD</div>
+            <div class="tl-name"><a href="https://www.disneylandparis.com/en-gb/restaurants/disneyland-park/auberge-de-cendrillon/" target="_blank">Auberge de Cendrillon ⭐ 4.5 — Anniversary Lunch</a></div>
+            <div class="tl-desc">Inside Sleeping Beauty's castle. Tell them it's your anniversary when booking. 3-course French cuisine with Cinderella and Disney princesses visiting your table — Belle may appear. Sells out months ahead. Book immediately via the Disney website.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot romance">💕</div>
+          <div class="tl-content">
+            <div class="tl-time">Afternoon · ~3:00–7:00 PM</div>
+            <div class="tl-name">Fantasyland · your pace · your day</div>
+            <div class="tl-desc">September crowds are lighter. Rides, the carousel, Phantom Manor, or simply walk through the park and find a quiet corner. Share a churro. Sit by the castle and just look at it. No rush — dinner and fireworks are still ahead.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Dinner · ~7:00 PM</div>
+            <div class="tl-name">Walt's — An American Restaurant ⭐ 4.3</div>
+            <div class="tl-desc">Named after Walt Disney himself, on Main Street with windows facing the castle. Book via the Disney app ~2 months ahead. Having dinner in the park means you're perfectly positioned for the night show.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot star">🎆</div>
+          <div class="tl-content">
+            <div class="tl-time">~9:30 PM · the moment</div>
+            <div class="tl-name">Disney Illuminations — Fireworks Over Aurora's Castle</div>
+            <div class="tl-desc">20 HD projectors, Disney stories in light, then fireworks. On your anniversary. After a week of visiting the real castles that inspired this one. Find a spot on Main Street, left of centre, facing the castle. Happy anniversary, Kelly.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc6" onclick="findAndPlayVideo(6)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Disneyland Paris · Anniversary</div>
+            <div class="vid-sub" id="vs6">▶ Play video</div>
+          </button>
+          <iframe id="vf6" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 Happy Anniversary</div>
+          <div class="rb-text">After the fireworks, RER A home — Marriott by 11 PM. A glass of champagne, or simply the quiet of your Paris room and the knowledge that you just watched fireworks over Aurora's castle on your anniversary, in France, after a week of visiting every real place that inspired it all. Hard to beat. Happy anniversary, Kelly. ❤️</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ Book These Now — In Order</div>
+          <div class="tip-text"><ul>
+            <li>1. Auberge de Cendrillon — book immediately at disneylandparis.com</li>
+            <li>2. Disneyland Paris dated tickets — Wednesday = cheapest day</li>
+            <li>3. Walt's Restaurant — Disney app, ~2 months ahead</li>
+            <li>4. Premier Access for castle gallery — buy in app on the day</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ═══════ DAY 8 ═══════ -->
+<div class="day-card reveal" id="d8">
+  <div class="day-toggle" onclick="toggle('d8')">
+    <div class="day-num-col">8</div>
+    <div class="day-head-info">
+      <div class="day-date-tag">Thursday · September 11, 2026</div>
+      <div class="day-title">🐀 Montmartre Farewell — Ratatouille's Paris</div>
+      <div class="day-tagline">Remy's market · Sacré-Cœur rooftop · Le Poulbot farewell lunch · flight home</div>
+      <div class="day-chips">
+        <span class="chip chip-castle">🐀 Montmartre</span>
+        <span class="chip chip-eat">🍽️ Le Poulbot ⭐ 4.7</span>
+        <span class="chip chip-train">✈️ CDG · Air Canada home</span>
+      </div>
+    </div>
+    <div class="day-arrow">▾</div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+  <div class="day-gallery" style="height:220px;overflow:hidden;background:#0d0a1e;position:relative;">
+<svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="parissky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0d20"/><stop offset="50%" stop-color="#1a2040"/><stop offset="100%" stop-color="#2a304a"/></linearGradient>
+    <radialGradient id="sunG" cx="80%" cy="30%"><stop offset="0%" stop-color="#f0d98a" stop-opacity=".4"/><stop offset="60%" stop-color="#c9a84c" stop-opacity=".1"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+  </defs>
+  <rect width="1200" height="220" fill="url(#parissky)"/>
+  <!-- soft morning sun glow top right -->
+  <rect width="1200" height="220" fill="url(#sunG)"/>
+  <!-- Paris rooftop skyline far distance -->
+  <g fill="#0f1228" opacity=".7">
+    <rect x="0" y="130" width="50" height="70"/><rect x="60" y="120" width="40" height="80"/><rect x="110" y="135" width="30" height="65"/>
+    <rect x="750" y="125" width="45" height="75"/><rect x="810" y="118" width="55" height="82"/><rect x="880" y="132" width="35" height="68"/>
+    <rect x="940" y="120" width="50" height="80"/><rect x="1000" y="128" width="40" height="72"/><rect x="1050" y="115" width="60" height="85"/>
+    <rect x="1120" y="130" width="80" height="90"/>
+  </g>
+  <!-- Eiffel Tower silhouette small far right -->
+  <g fill="#0f1228" opacity=".6" transform="translate(1050,85)">
+    <polygon points="15,0 20,90 10,90" />
+    <polygon points="15,0 22,90 8,90" fill="none" stroke="#0f1228" stroke-width="1"/>
+    <rect x="6" y="30" width="18" height="2"/>
+    <rect x="8" y="55" width="14" height="2"/>
+    <rect x="9" y="70" width="12" height="2"/>
+  </g>
+  <!-- Montmartre hill -->
+  <path d="M200,115 Q400,80 600,90 Q700,85 750,115 L750,220 L200,220Z" fill="#121028"/>
+  <path d="M0,150 Q200,130 300,145 L300,220 L0,220Z" fill="#0e0c22"/>
+  <!-- SACRÉ-CŒUR -->
+  <!-- steps cascade -->
+  <rect x="400" y="145" width="200" height="10" fill="#1a1840" rx="2"/>
+  <rect x="390" y="153" width="220" height="10" fill="#161636" rx="2"/>
+  <rect x="380" y="161" width="240" height="10" fill="#141430" rx="2"/>
+  <rect x="370" y="169" width="260" height="10" fill="#121228" rx="2"/>
+  <!-- main basilica body -->
+  <rect x="420" y="80" width="160" height="75" fill="#e8e4f8" opacity=".92" stroke="#c8b8e8" stroke-width="1.5"/>
+  <!-- arches on basilica -->
+  <path d="M432,100 Q445,88 458,100" fill="none" stroke="#c8b8e8" stroke-width="1.5"/>
+  <path d="M462,100 Q475,88 488,100" fill="none" stroke="#c8b8e8" stroke-width="1.5"/>
+  <path d="M492,100 Q505,88 518,100" fill="none" stroke="#c8b8e8" stroke-width="1.5"/>
+  <path d="M522,100 Q535,88 548,100" fill="none" stroke="#c8b8e8" stroke-width="1.5"/>
+  <!-- columns -->
+  <rect x="433" y="100" width="8" height="55" fill="#d8d0f0"/>
+  <rect x="462" y="100" width="8" height="55" fill="#d8d0f0"/>
+  <rect x="491" y="100" width="8" height="55" fill="#d8d0f0"/>
+  <rect x="520" y="100" width="8" height="55" fill="#d8d0f0"/>
+  <rect x="549" y="100" width="8" height="55" fill="#d8d0f0"/>
+  <!-- MAIN DOME centre -->
+  <rect x="470" y="45" width="60" height="55" fill="#ede8f8" stroke="#c8b8e8" stroke-width="1.5"/>
+  <ellipse cx="500" cy="45" rx="30" ry="28" fill="#ede8f8" stroke="#c8b8e8" stroke-width="1.5"/>
+  <ellipse cx="500" cy="30" rx="20" ry="18" fill="#e8e2f5" stroke="#c8b8e8" stroke-width="1"/>
+  <circle cx="500" cy="13" r="8" fill="#d8d0f0" stroke="#c8b8e8" stroke-width="1"/>
+  <!-- cross on top -->
+  <line x1="500" y1="3" x2="500" y2="-8" stroke="#c9a84c" stroke-width="2.5"/>
+  <line x1="493" y1="-2" x2="507" y2="-2" stroke="#c9a84c" stroke-width="2.5"/>
+  <circle cx="500" cy="3" r="2" fill="#c9a84c"/>
+  <!-- flanking smaller domes -->
+  <ellipse cx="432" cy="80" rx="18" ry="16" fill="#e8e2f5" stroke="#c8b8e8" stroke-width="1"/>
+  <circle cx="432" cy="65" r="5" fill="#d8d0f0" stroke="#c8b8e8" stroke-width="1"/>
+  <ellipse cx="568" cy="80" rx="18" ry="16" fill="#e8e2f5" stroke="#c8b8e8" stroke-width="1"/>
+  <circle cx="568" cy="65" r="5" fill="#d8d0f0" stroke="#c8b8e8" stroke-width="1"/>
+  <!-- bell towers sides -->
+  <rect x="380" y="60" width="38" height="75" fill="#e0daf5" stroke="#c8b8e8" stroke-width="1"/>
+  <polygon points="380,60 399,40 418,60" fill="#d8d0f0" stroke="#c8b8e8" stroke-width="1"/>
+  <circle cx="399" cy="37" r="4" fill="#c9a84c"/>
+  <rect x="582" y="60" width="38" height="75" fill="#e0daf5" stroke="#c8b8e8" stroke-width="1"/>
+  <polygon points="582,60 601,40 620,60" fill="#d8d0f0" stroke="#c8b8e8" stroke-width="1"/>
+  <circle cx="601" cy="37" r="4" fill="#c9a84c"/>
+  <!-- windows SC -->
+  <rect x="438" y="95" width="18" height="26" rx="2" fill="#4a3870" opacity=".6"/>
+  <rect x="544" y="95" width="18" height="26" rx="2" fill="#4a3870" opacity=".6"/>
+  <rect x="483" y="55" width="14" height="20" rx="2" fill="#4a3870" opacity=".5"/>
+  <rect x="503" y="55" width="14" height="20" rx="2" fill="#4a3870" opacity=".5"/>
+  <!-- cobblestone Place du Tertre -->
+  <ellipse cx="500" cy="195" rx="300" ry="25" fill="#0e0c20" opacity=".7"/>
+  <!-- café tables -->
+  <g opacity=".6">
+    <ellipse cx="280" cy="185" rx="18" ry="5" fill="#1e1640"/><rect x="275" y="185" width="10" height="15" fill="#1a1438"/>
+    <ellipse cx="340" cy="183" rx="18" ry="5" fill="#1e1640"/><rect x="335" y="183" width="10" height="17" fill="#1a1438"/>
+    <ellipse cx="650" cy="185" rx="18" ry="5" fill="#1e1640"/><rect x="645" y="185" width="10" height="15" fill="#1a1438"/>
+    <ellipse cx="720" cy="183" rx="18" ry="5" fill="#1e1640"/><rect x="715" y="183" width="10" height="17" fill="#1a1438"/>
+  </g>
+  <!-- morning light beam -->
+  <line x1="1200" y1="0" x2="500" y2="13" stroke="#f0d98a" stroke-width="0.5" opacity=".1"/>
+  <line x1="1200" y1="20" x2="500" y2="13" stroke="#f0d98a" stroke-width="0.5" opacity=".08"/>
+  <!-- caption -->
+  <rect x="0" y="188" width="1200" height="32" fill="#0d0a1e" opacity=".9"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#c9a84c" letter-spacing="4">MONTMARTRE  ·  SACRÉ-CŒUR  ·  LE POULBOT  ·  AU REVOIR, FRANCE</text>
+</svg>
+</div>
+
+    <div class="travel-banner">
+      <div class="tb-icon">✈️</div>
+      <div><div class="tb-route">Paris Marriott → CDG → Toronto YYZ · Air Canada nonstop</div><div class="tb-detail">Allow 2.5 hours at CDG — it can be chaotic. Do not cut it close. Depart for airport by 3 PM.</div></div>
+      <div class="tb-time"><strong>~3:00 PM</strong><span>depart for CDG</span></div>
+    </div>
+    <div class="travel-steps">
+      <div class="ts-step"><span>🥐</span>Free Platinum breakfast ~8:30 AM</div>
+      <div class="ts-step"><span>🛒</span>Marché d'Aligre market ~10 AM</div>
+      <div class="ts-step"><span>🚇</span>Metro to Montmartre ~11:30 AM</div>
+      <div class="ts-step"><span>🍽️</span>Le Poulbot lunch ~1 PM</div>
+      <div class="ts-step"><span>🚕</span>Collect bags · taxi/RER B to CDG ~3 PM</div>
+      <div class="ts-step"><span>🛫</span>Air Canada nonstop home</div>
+    </div>
+    <div class="hotel-band">
+      <div>
+        <div class="hb-label">Checkout · Platinum Late Checkout Available</div>
+        <div class="hb-name">Courtyard Marriott · one last free Platinum breakfast</div>
+        <div class="hb-detail">Eat well — long travel day ahead. Platinum late checkout at 12 PM means no rush. Leave bags with the concierge after checkout and head out light for the morning.</div>
+        <div class="hb-perks"><span class="hb-perk">🥐 Final free breakfast</span><span class="hb-perk">🧳 Leave bags with concierge</span><span class="hb-perk">⏰ 12 PM late checkout</span></div>
+      </div>
+      
+    </div>
+    <div class="day-grid">
+      <div class="day-timeline">
+        <div class="tl-head">Final Morning in France</div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🛒</div>
+          <div class="tl-content">
+            <div class="tl-time">~10:00 AM · 10 min walk from hotel</div>
+            <div class="tl-name">Marché d'Aligre — Remy's Market</div>
+            <div class="tl-desc">The vibrant covered market that channels everything Ratatouille — fresh produce, cheese, charcuterie, flowers, baguettes. Browse, buy a little something, watch Parisian Thursday morning life. Open Tue–Sun.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot romance">🐀</div>
+          <div class="tl-content">
+            <div class="tl-time">~11:30 AM</div>
+            <div class="tl-name">Sacré-Cœur · Montmartre · last look</div>
+            <div class="tl-desc">Metro Line 12 to Abbesses. Walk up to the steps of Sacré-Cœur. Sit with a coffee and look out over all of Paris. Eight days of fairy tales — three castles, the vineyard terrace, the anniversary fireworks — all of it visible from here. Take a breath.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot meal">🍽️</div>
+          <div class="tl-content">
+            <div class="tl-time">Lunch · ~1:00 PM</div>
+            <div class="tl-name"><a href="https://www.thefork.com/restaurant/le-poulbot-paris/r430329" target="_blank">Le Poulbot ⭐ 4.7 — Farewell to France</a></div>
+            <div class="tl-desc">Steps from Sacré-Cœur. Duck confit, onion soup, crème brûlée, good Burgundy. Tell them it's the last meal of an anniversary trip in France — they'll make a fuss. Finish by 2:30 PM. Reserve via TheFork a few days ahead.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot transit">✈️</div>
+          <div class="tl-content">
+            <div class="tl-time">~3:00 PM · allow 2.5 hours at CDG</div>
+            <div class="tl-name">To CDG · Air Canada nonstop YYZ</div>
+            <div class="tl-desc">RER B from Châtelet to CDG (~35 min) or taxi direct (~45–60 min). CDG is enormous and security queues can be long. Stop in the CDG shops for Alsatian Riesling, jam, and macarons for the journey home.</div>
+          </div>
+        </div>
+      </div>
+      <div class="day-right">
+        <div class="vid-wrap">
+          <button class="vid-cover" id="vc7" onclick="findAndPlayVideo(7)">
+            <div class="play-ring"><svg width="20" height="20" viewBox="0 0 24 24" fill="#080612"><polygon points="5,3 19,12 5,21"/></svg></div>
+            <div class="vid-label">Montmartre · Sacré-Cœur</div>
+            <div class="vid-sub" id="vs7">▶ Play video</div>
+          </button>
+          <iframe id="vf7" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none"></iframe>
+        </div>
+        <div class="romance-box">
+          <div class="rb-title">💕 The Goodbye</div>
+          <div class="rb-text">Sitting on the steps of Sacré-Cœur with Paris spread below, thinking back over eight days — the cobblestones of Riquewihr, the vineyard terrace at Nazelles, the fireworks over Aurora's castle — this is the moment to just hold each other and be grateful. What a trip.</div>
+        </div>
+        <div class="tip-box">
+          <div class="tip-title">✦ CDG Tips</div>
+          <div class="tip-text">Allow 2.5 hours minimum. Priority access helps if you have it. Pick up Alsatian Riesling and local jams in the airside shops — they travel perfectly and make the best souvenirs. Welcome home.</div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+</div><!-- end days-wrap -->
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-icon">✨👑✨</div>
+  <h2 class="closing-title">Eight Days.<br>A Lifetime of Memories.</h2>
+  <div class="closing-line"></div>
+  <p class="closing-body">
+    Three castles from the stories.<br>
+    Two Beauty &amp; the Beast days in Alsace.<br>
+    One perfect anniversary at Disneyland.<br>
+    And a farewell lunch in Ratatouille's Paris.<br><br>
+    <em>This is your trip, Kelly. ❤️</em>
+  </p>
+  <div class="closing-dates">September 4 – 11, 2026</div>
+</section>
+
+</main>
+
+<script>
+// STARS
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');
+let stars=[];
+function rsz(){canvas.width=innerWidth;canvas.height=innerHeight;}
+function init(){stars=Array.from({length:200},()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.3+.2,a:Math.random()*.7+.1,spd:Math.random()*.003+.001,off:Math.random()*Math.PI*2}));}
+function draw(t){ctx.clearRect(0,0,canvas.width,canvas.height);stars.forEach(s=>{const a=s.a*(.5+.5*Math.sin(t*s.spd*1000+s.off));ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,255,220,${a})`;ctx.fill();});requestAnimationFrame(ts=>draw(ts/1000));}
+rsz();init();draw(0);
+window.addEventListener('resize',()=>{rsz();init();});
+
+// CURTAIN + MUSIC AUTO-START
+document.getElementById('begin-btn').addEventListener('click',()=>{
+  document.getElementById('curtain').classList.add('out');
+  setTimeout(()=>{
+    document.getElementById('d1').classList.add('open');
+    setTimeout(()=>{ if(!musicPlaying) toggleMusic(); }, 800);
+  },1500);
+});
+
+// TOGGLE
+function toggle(id){
+  const c=document.getElementById(id);
+  c.classList.toggle('open');
+}
+
+// OPEN + SCROLL from map
+function openDay(id){
+  const c=document.getElementById(id);
+  if(c){ c.classList.add('open'); setTimeout(()=>c.scrollIntoView({behavior:'smooth',block:'start'}),60); }
+}
+
+// REVEAL
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.06});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── MUSIC ENGINE ──
+// Romantic ambient French waltz melody — Web Audio API, no external files
+
+let audioCtx=null, musicPlaying=false, masterGain=null, musicNodes=[], musicTimeout=null;
+
+function initAudio(){
+  if(audioCtx) return;
+  audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+  masterGain=audioCtx.createGain();
+  masterGain.gain.setValueAtTime(0,audioCtx.currentTime);
+  masterGain.connect(audioCtx.destination);
+
+  // Hall reverb via impulse response
+  const convolver=audioCtx.createConvolver();
+  const len=audioCtx.sampleRate*3.5;
+  const buf=audioCtx.createBuffer(2,len,audioCtx.sampleRate);
+  for(let c=0;c<2;c++){const d=buf.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.6);}
+  convolver.buffer=buf;
+  const dry=audioCtx.createGain(); dry.gain.value=0.7;
+  const wet=audioCtx.createGain(); wet.gain.value=0.38;
+  dry.connect(masterGain);
+  convolver.connect(wet); wet.connect(masterGain);
+  audioCtx._dry=dry; audioCtx._wet=convolver;
+}
+
+function note(freq,start,dur,vol,type='sine',det=0){
+  if(!audioCtx||!musicPlaying) return;
+  const osc=audioCtx.createOscillator();
+  const env=audioCtx.createGain();
+  osc.type=type; osc.frequency.value=freq; osc.detune.value=det;
+  const atk=0.08, rel=Math.min(dur*0.4,0.6);
+  env.gain.setValueAtTime(0,start);
+  env.gain.linearRampToValueAtTime(vol,start+atk);
+  env.gain.setValueAtTime(vol,start+dur-rel);
+  env.gain.exponentialRampToValueAtTime(0.0001,start+dur);
+  osc.connect(env); env.connect(audioCtx._dry); env.connect(audioCtx._wet);
+  osc.start(start); osc.stop(start+dur+0.1);
+  musicNodes.push(osc);
+}
+
+function chord(freqs,start,dur,vol){
+  freqs.forEach((f,i)=>note(f,start,dur,vol*(i===0?0.5:0.32),'triangle',(Math.random()-0.5)*5));
+}
+
+function bass(freq,start,dur,vol){
+  note(freq/2,start,dur,vol*0.65,'triangle');
+  note(freq,start,dur*0.55,vol*0.25,'sine');
+}
+
+function arp(freqs,start,gap,dur,vol){
+  freqs.forEach((f,i)=>note(f,start+i*gap,dur,vol,'sine'));
+}
+
+function scheduleMelody(){
+  if(!audioCtx||!musicPlaying) return;
+  const t=audioCtx.currentTime+0.05;
+  const bpm=69;
+  const b=60/bpm;      // one beat
+  const m=b*3;         // one bar (3/4 waltz)
+
+  // Note frequencies
+  const [C3,D3,E3,F3,G3,A3,B3]=[130.81,146.83,164.81,174.61,196,220,246.94];
+  const [C4,D4,E4,F4,G4,A4,B4]=[261.63,293.66,329.63,349.23,392,440,493.88];
+  const [C5,D5,E5,F5,G5,A5,B5]=[523.25,587.33,659.25,698.46,783.99,880,987.77];
+  const Bb4=466.16, Eb5=622.25;
+
+  // ── MELODY (16 bars, A+B phrases) ──
+  const mel=[
+    // Phrase A — tender, rising
+    {f:E5,t:0,      d:m*.9},  {f:D5,t:b,    d:b*.85}, {f:C5,t:b*2,  d:b*.85},
+    {f:D5,t:m,      d:m*.9},  {f:C5,t:m+b,  d:b*.85}, {f:B4,t:m+b*2,d:b*.85},
+    {f:C5,t:m*2,    d:b*1.1}, {f:E5,t:m*2+b,d:b*.85}, {f:G5,t:m*2+b*2,d:b*.85},
+    {f:A5,t:m*3,    d:m*1.7},
+    {f:G5,t:m*4+b,  d:b*.85}, {f:F5,t:m*4+b*2,d:b*.85},
+    {f:E5,t:m*5,    d:b*1.1}, {f:D5,t:m*5+b,d:b*.85}, {f:C5,t:m*5+b*2,d:b*.85},
+    {f:D5,t:m*6,    d:b*1.1}, {f:F5,t:m*6+b,d:b*.85}, {f:E5,t:m*6+b*2,d:b*.85},
+    {f:C5,t:m*7,    d:m*1.8},
+    // Phrase B — expressive, longing
+    {f:A4,t:m*8,    d:b*1.1}, {f:C5,t:m*8+b,d:b*.85}, {f:E5,t:m*8+b*2,d:b*.85},
+    {f:F5,t:m*9,    d:m*.9},  {f:E5,t:m*9+b,d:b*.85}, {f:D5,t:m*9+b*2,d:b*.85},
+    {f:E5,t:m*10,   d:b*1.1}, {f:G5,t:m*10+b,d:b*.85},{f:F5,t:m*10+b*2,d:b*.85},
+    {f:A5,t:m*11,   d:m*1.6},
+    {f:G5,t:m*12,   d:b*.85}, {f:F5,t:m*12+b,d:b*.85},{f:E5,t:m*12+b*2,d:b*.85},
+    {f:D5,t:m*13,   d:b*1.1}, {f:C5,t:m*13+b,d:b*.85},{f:B4,t:m*13+b*2,d:b*.85},
+    {f:C5,t:m*14,   d:b*1.1}, {f:G4,t:m*14+b,d:b*.85},{f:A4,t:m*14+b*2,d:b*.85},
+    {f:C5,t:m*15,   d:m*2.4},
+  ];
+  mel.forEach(n=>{ note(n.f,t+n.t,n.d,0.19,'sine',2); note(n.f*2,t+n.t,n.d*0.45,0.035,'sine',-3); });
+
+  // ── WALTZ ACCOMPANIMENT ──
+  const prog=[
+    [[A3,C4,E4],[D3,F3,A3],[G3,B3,D4],[C3,E4,G3]],
+    [[A3,C4,E4],[E3,B3,D4],[A3,C4,E4],[G3,C4,E4]],
+    [[F3,A3,C4],[C3,G3,E4],[D3,F3,A3],[G3,B3,F4]],
+    [[C3,G3,E4],[A3,E4,A4],[F3,C4,A4],[G3,D4,B4]],
+  ];
+  for(let bi=0;bi<16;bi++){
+    const ch=prog[Math.floor(bi/4)%4][bi%4];
+    const bs=t+bi*m;
+    bass(ch[0],bs,b*1.1,0.30);
+    chord(ch,bs+b,b*0.82,0.10);
+    chord(ch,bs+b*2,b*0.82,0.085);
+    if(bi%2===0) arp([ch[0],ch[1],ch[2],ch[2]*1.5],bs+b*0.45,b*0.26,b*1.5,0.065);
+  }
+
+  // ── HIGH SHIMMER / SPARKLE ──
+  const shimmer=[
+    {f:G5*1.5,t:m*.5,d:m},{f:E5*1.5,t:m*2.5,d:m},{f:C5*1.5,t:m*4.5,d:m},{f:A4*1.5,t:m*6.5,d:m},
+    {f:F5*1.5,t:m*8.5,d:m},{f:D5*1.5,t:m*10.5,d:m},{f:E5*1.5,t:m*12.5,d:m},{f:C5*1.5,t:m*14,d:m*2},
+  ];
+  shimmer.forEach(n=>note(n.f,t+n.t,n.d,0.042,'sine',6));
+
+  // Loop
+  musicTimeout=setTimeout(scheduleMelody,(m*16-0.9)*1000);
+}
+
+function toggleMusic(){
+  const player=document.getElementById('music-player');
+  const status=document.getElementById('mp-status');
+  if(!audioCtx) initAudio();
+  if(audioCtx.state==='suspended') audioCtx.resume();
+  if(!musicPlaying){
+    musicPlaying=true;
+    player.classList.add('playing');
+    status.textContent='Now playing ♪';
+    masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+    masterGain.gain.setValueAtTime(masterGain.gain.value,audioCtx.currentTime);
+    masterGain.gain.linearRampToValueAtTime(0.75,audioCtx.currentTime+2);
+    scheduleMelody();
+  } else {
+    musicPlaying=false;
+    player.classList.remove('playing');
+    status.textContent='Click to play';
+    masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+    masterGain.gain.setValueAtTime(masterGain.gain.value,audioCtx.currentTime);
+    masterGain.gain.linearRampToValueAtTime(0,audioCtx.currentTime+1.5);
+    if(musicTimeout) clearTimeout(musicTimeout);
+    setTimeout(()=>{ musicNodes.forEach(n=>{try{n.stop();}catch(e){}}); musicNodes=[]; },1800);
+  }
+}
+
+// ── VIDEO ENGINE ──
+// Finds real YouTube video IDs via Claude API, then embeds inline
+const VID_DATA = [
+  {idx:0, label:"Riquewihr · Belle's Alsace Village", query:'Riquewihr Alsace village walking tour 4K', confirmed:null},
+  {idx:1, label:'Château Haut-Koenigsbourg', query:'Chateau Haut Koenigsbourg Alsace castle tour 4K', confirmed:null},
+  {idx:2, label:'Ribeauvillé · Wine Route', query:'Ribeauville Alsace France medieval village tour 4K', confirmed:null},
+  {idx:3, label:'Loire Valley · Amboise', query:'Loire Valley chateau Amboise France walking tour 4K', confirmed:null},
+  {idx:4, label:"Château d'Ussé · Sleeping Beauty", query:'Chateau Usse Sleeping Beauty Loire Valley tour', confirmed:null},
+  {idx:5, label:'Château de Pierrefonds', query:'Chateau Pierrefonds castle France medieval walking tour', confirmed:null},
+  {idx:6, label:'Disneyland Paris · Anniversary', query:'Disneyland Paris Sleeping Beauty Castle walking tour', confirmed:"nwndpD7U4c0"},
+  {idx:7, label:'Montmartre · Sacré-Cœur', query:'Montmartre Paris Sacre Coeur walking tour 4K', confirmed:null},
+];
+const vidState = {};  // idx -> 'idle'|'loading'|'ready'
+
+async function findAndPlayVideo(idx) {
+  const v = VID_DATA[idx];
+  const cover = document.getElementById('vc' + idx);
+  const iframe = document.getElementById('vf' + idx);
+  if (!cover || !iframe) return;
+
+  // Duck music
+  if (musicPlaying && masterGain && audioCtx) {
+    masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+    masterGain.gain.setValueAtTime(masterGain.gain.value, audioCtx.currentTime);
+    masterGain.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.8);
+  }
+
+  // If already have an ID, just play
+  if (v.confirmed) {
+    embedVideo(idx, v.confirmed);
+    return;
+  }
+
+  // Show loading spinner
+  cover.classList.add('loading');
+  const statusEl = document.getElementById('vs' + idx);
+  if (statusEl) statusEl.textContent = 'Finding best video…';
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 100,
+        system: 'You are a YouTube video ID finder. The user gives you a search query. You must respond with ONLY a valid YouTube video ID (11 characters, letters/numbers/hyphens/underscores) — nothing else. No explanation, no markdown, just the ID. Find a high quality travel/walking tour video that matches the query.',
+        messages: [{role: 'user', content: 'Find a YouTube video ID for: ' + v.query}]
+      })
+    });
+    const data = await resp.json();
+    const raw = (data.content?.[0]?.text || '').trim().replace(/[^A-Za-z0-9_\-]/g, '');
+    if (raw.length >= 9 && raw.length <= 12) {
+      v.confirmed = raw;
+      embedVideo(idx, raw);
+    } else {
+      showVideoFallback(idx);
+    }
+  } catch(e) {
+    showVideoFallback(idx);
+  }
+}
+
+function embedVideo(idx, videoId) {
+  const cover = document.getElementById('vc' + idx);
+  const iframe = document.getElementById('vf' + idx);
+  iframe.style.display = '';
+  iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&color=white';
+  cover.classList.add('hidden');
+}
+
+function showVideoFallback(idx) {
+  const v = VID_DATA[idx];
+  const cover = document.getElementById('vc' + idx);
+  cover.classList.remove('loading');
+  const statusEl = document.getElementById('vs' + idx);
+  if (statusEl) statusEl.textContent = '▶ Watch on YouTube ↗';
+  cover.onclick = () => window.open('https://www.youtube.com/results?search_query=' + encodeURIComponent(v.query), '_blank');
+}
+
+</script>
+</body>
+</html>
