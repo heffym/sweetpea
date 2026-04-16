@@ -182,6 +182,17 @@ main{position:relative;z-index:1;}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.in{opacity:1;transform:translateY(0);}
 
+/* TRIP DETAIL LINK */
+.trip-link-wrap{display:flex;justify-content:center;padding:3rem 2rem 1rem;}
+.trip-link-btn{display:flex;align-items:center;gap:1.4rem;padding:1.4rem 2.4rem;border:1px solid rgba(201,168,76,0.45);border-radius:4px;text-decoration:none;background:rgba(201,168,76,0.05);color:var(--cream);transition:all 0.35s;max-width:560px;width:100%;}
+.trip-link-btn:hover{background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.7);box-shadow:0 0 40px rgba(201,168,76,0.15);transform:translateY(-2px);}
+.trip-link-icon{font-size:2rem;flex-shrink:0;}
+.trip-link-text{display:flex;flex-direction:column;gap:.2rem;flex:1;}
+.trip-link-title{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;color:var(--gold-light);}
+.trip-link-sub{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.trip-link-arrow{font-size:1.5rem;color:var(--gold);transition:transform 0.3s;flex-shrink:0;}
+.trip-link-btn:hover .trip-link-arrow{transform:translateX(5px);}
+
 /* MUSIC PLAYER */
 #music-player {
   position: fixed;
@@ -1905,6 +1916,18 @@ main{position:relative;z-index:1;}
     <em>This is your trip, Kelly. ❤️</em>
   </p>
   <div class="closing-dates">September 4 – 11, 2026</div>
+
+  <div class="trip-link-wrap">
+    <a href="trip.html" class="trip-link-btn" id="trip-detail-link">
+      <span class="trip-link-icon">📖</span>
+      <span class="trip-link-text">
+        <span class="trip-link-title">Read the Full Trip Plan</span>
+        <span class="trip-link-sub">Every day · every restaurant · every château · every tip</span>
+      </span>
+      <span class="trip-link-arrow">→</span>
+    </a>
+  </div>
+
 </section>
 
 </main>
