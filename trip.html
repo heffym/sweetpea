@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelly's Disney France Anniversary ✨</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: #faf8f5; color: #2c2416; min-height: 100vh; }
+
+.hero { background: linear-gradient(135deg, #2c1654 0%, #6b3fa0 50%, #c8a2d8 100%); color: white; padding: 2.5rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='20' cy='20' r='1.5' fill='white' opacity='0.4'/%3E%3Ccircle cx='60' cy='10' r='1' fill='white' opacity='0.3'/%3E%3Ccircle cx='100' cy='30' r='2' fill='white' opacity='0.25'/%3E%3Ccircle cx='150' cy='15' r='1' fill='white' opacity='0.35'/%3E%3Ccircle cx='180' cy='40' r='1.5' fill='white' opacity='0.3'/%3E%3C/svg%3E"); background-size: 200px 200px; }
+.hero-crown { font-size: 2.8rem; margin-bottom: 0.4rem; position: relative; }
+.hero h1 { font-size: 2rem; font-weight: normal; letter-spacing: 0.02em; position: relative; }
+.hero p { margin-top: 0.4rem; opacity: 0.85; font-size: 0.95rem; font-style: italic; position: relative; }
+.hero-dates { display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 0.4rem 1.2rem; font-size: 1rem; font-weight: bold; margin-top: 0.75rem; position: relative; }
+.hero-sub { display: flex; gap: 0.75rem; justify-content: center; margin-top: 0.75rem; flex-wrap: wrap; position: relative; }
+.hero-pill { background: rgba(255,255,255,0.13); border: 1px solid rgba(255,255,255,0.28); border-radius: 20px; padding: 0.3rem 0.85rem; font-size: 0.8rem; }
+
+.day-nav { display: flex; border-bottom: 2px solid #e8e0f0; background: white; position: sticky; top: 0; z-index: 100; overflow-x: auto; scrollbar-width: none; }
+.day-nav::-webkit-scrollbar { display: none; }
+.day-btn { flex: 0 0 auto; padding: 0.7rem 0.9rem; border: none; background: none; cursor: pointer; font-family: Georgia, serif; font-size: 0.8rem; color: #7a6890; border-bottom: 3px solid transparent; transition: all 0.2s; white-space: nowrap; }
+.day-btn:hover { background: #f5f0fa; color: #4a2878; }
+.day-btn.active { color: #4a2878; border-bottom-color: #6b3fa0; font-weight: bold; }
+.day-btn.anniv { color: #b8860b; }
+.day-btn.anniv.active { border-bottom-color: #b8860b; color: #7a5800; }
+
+.container { max-width: 860px; margin: 0 auto; padding: 1.75rem 1.5rem; }
+.day-section { display: none; }
+.day-section.active { display: block; }
+
+.day-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid #e8e0f0; }
+.day-circle { background: #6b3fa0; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; flex-shrink: 0; }
+.day-circle.gold { background: #b8860b; }
+.day-date { font-size: 0.78rem; color: #a090b8; text-transform: uppercase; letter-spacing: 0.07em; }
+.day-title { font-size: 1.35rem; color: #2c1654; line-height: 1.3; }
+.day-subtitle { font-size: 0.88rem; color: #8a70a0; font-style: italic; margin-top: 0.15rem; }
+
+.pace-bar { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.2rem; }
+.pace-label { font-size: 0.75rem; color: #a090b8; white-space: nowrap; }
+.pace-dots { display: flex; gap: 4px; }
+.pace-dot { width: 10px; height: 10px; border-radius: 50%; background: #e0d0f0; }
+.pace-dot.on { background: #6b3fa0; }
+.pace-dot.gold { background: #b8860b !important; }
+.pace-note { font-size: 0.75rem; color: #8a70a0; font-style: italic; }
+
+.film-badge { display: inline-flex; align-items: center; gap: 0.4rem; border-radius: 20px; padding: 0.28rem 0.8rem; font-size: 0.78rem; font-weight: bold; margin-bottom: 0.6rem; margin-right: 0.4rem; }
+.film-sleeping { background: #f0e8fa; color: #4a2878; border: 1px solid #c8a2d8; }
+.film-beauty { background: #fde8f5; color: #7a1550; border: 1px solid #e8a0d0; }
+.film-ratatouille { background: #e8f5e8; color: #1a5c1a; border: 1px solid #90c890; }
+
+.stops { display: flex; flex-direction: column; }
+.stop { display: flex; }
+.tl { display: flex; flex-direction: column; align-items: center; width: 44px; flex-shrink: 0; }
+.dot { width: 13px; height: 13px; border-radius: 50%; border: 2.5px solid #6b3fa0; background: white; z-index: 1; flex-shrink: 0; margin-top: 1.4rem; }
+.dot.meal { background: #f5c842; border-color: #c9960a; }
+.dot.hotel { background: #6b3fa0; }
+.dot.transit { background: #b0c8f0; border-color: #4070c0; }
+.dot.romance { background: #f0a0c0; border-color: #c04080; }
+.dot.rest { background: #90d890; border-color: #2a8a2a; }
+.line { width: 2px; background: #e0d0f0; flex: 1; margin-top: 2px; }
+.stop:last-child .line { display: none; }
+.sc { flex: 1; background: white; border-radius: 12px; border: 1px solid #e8e0f0; padding: 1rem 1.2rem; margin-bottom: 0.85rem; margin-left: 0.7rem; transition: border-color 0.15s; }
+.sc:hover { border-color: #c8a2d8; }
+.sc.romance-card { border-color: #f0c0d8; background: #fff8fc; }
+.sc.rest-card { border-color: #c0e0c0; background: #f8fff8; }
+.stop-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.25rem; flex-wrap: wrap; }
+.stop-time { font-size: 0.72rem; color: #a090b8; letter-spacing: 0.04em; }
+.stop-name { font-size: 1rem; color: #2c1654; font-weight: bold; }
+.pp { display: inline-flex; align-items: center; border-radius: 20px; padding: 0.18rem 0.6rem; font-size: 0.73rem; font-weight: bold; white-space: nowrap; flex-shrink: 0; }
+.pp-free { background: #1a5c1a; color: white; }
+.pp-incl { background: #b8860b; color: white; }
+.pp-var { background: #3a2460; color: white; }
+.pp-rom { background: #c04080; color: white; }
+.tag { display: inline-block; font-size: 0.7rem; padding: 0.12rem 0.5rem; border-radius: 8px; margin-bottom: 0.35rem; margin-right: 0.25rem; }
+.tag-sight { background: #eee8fa; color: #4a2878; }
+.tag-meal { background: #fff5cc; color: #886600; }
+.tag-transit { background: #e8f0ff; color: #1a3a8a; }
+.tag-hotel { background: #f0ffe8; color: #1a5c1a; }
+.tag-rom { background: #fde8f5; color: #7a1550; }
+.tag-rest { background: #e8f5e8; color: #1a5c1a; }
+.desc { font-size: 0.87rem; color: #5a4870; line-height: 1.65; }
+.hours { font-size: 0.75rem; color: #8a70a0; margin-top: 0.3rem; font-style: italic; }
+.lnk { display: inline-block; margin-top: 0.45rem; font-size: 0.77rem; color: #6b3fa0; text-decoration: none; border-bottom: 1px dotted #6b3fa0; margin-right: 0.9rem; }
+.lnk:hover { color: #4a2878; }
+.mbadge { display: inline-flex; align-items: center; background: #f5f0e8; border: 1px solid #c8a870; color: #7a5820; border-radius: 8px; padding: 0.3rem 0.65rem; font-size: 0.75rem; margin-top: 0.4rem; }
+
+.tc { background: #e8f0ff; border: 1px solid #b0c4f4; border-radius: 10px; padding: 0.85rem 1.1rem; margin: 0.2rem 0 0.85rem 1.1rem; }
+.tc-t { font-size: 0.82rem; font-weight: bold; color: #1a3a8a; margin-bottom: 0.3rem; }
+.tc-b { font-size: 0.82rem; color: #2a4a8a; line-height: 1.65; }
+
+.day-budget { display: flex; align-items: center; justify-content: space-between; background: #f5f0fa; border-radius: 10px; padding: 0.65rem 1rem; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.4rem; }
+.db-label { font-size: 0.78rem; color: #8a70a0; }
+.db-amount { font-size: 1rem; font-weight: bold; color: #4a2878; }
+
+.tip { background: #fff9e8; border: 1px solid #f0d890; border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 1.2rem; }
+.tip h3 { font-size: 0.86rem; color: #886600; margin-bottom: 0.4rem; }
+.tip ul { list-style: none; }
+.tip li { font-size: 0.82rem; color: #664a00; padding: 0.18rem 0; }
+.tip li::before { content: "✦ "; color: #cc9900; }
+
+.romance-box { background: #fff0f8; border: 1px solid #e8a0c8; border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 1rem; }
+.romance-box h3 { font-size: 0.86rem; color: #9a1060; margin-bottom: 0.35rem; }
+.romance-box p { font-size: 0.83rem; color: #6a1050; line-height: 1.6; }
+
+.anniv-banner { background: linear-gradient(135deg, #7a5800, #b8860b, #d4a017); color: white; border-radius: 12px; padding: 1.1rem 1.4rem; margin-bottom: 1.3rem; text-align: center; }
+.anniv-banner h2 { font-size: 1.2rem; font-weight: normal; }
+.anniv-banner p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.3rem; font-style: italic; }
+
+/* OVERVIEW */
+.ov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.9rem; margin-bottom: 1.5rem; }
+.ov-card { background: white; border-radius: 12px; border: 1px solid #e8e0f0; padding: 1.1rem; cursor: pointer; transition: all 0.18s; }
+.ov-card:hover { border-color: #6b3fa0; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107,63,160,0.1); }
+.ov-card.anniv { border-color: #d4a017; background: #fffbf0; }
+.ov-date { font-size: 0.72rem; color: #a090b8; letter-spacing: 0.07em; text-transform: uppercase; }
+.ov-title { font-size: 1rem; color: #2c1654; font-weight: bold; margin: 0.25rem 0; }
+.ov-film { font-size: 0.82rem; color: #6b3fa0; font-style: italic; }
+.ov-hotel { font-size: 0.78rem; color: #5a4870; margin-top: 0.35rem; }
+.gold-txt { color: #b8860b; }
+
+/* ROUTE STRIP */
+.route-strip { display: flex; align-items: center; overflow-x: auto; padding: 0.75rem 0 0.5rem; margin-bottom: 1.3rem; scrollbar-width: none; gap: 0; }
+.route-strip::-webkit-scrollbar { display: none; }
+.rs-city { display: flex; flex-direction: column; align-items: center; min-width: 80px; }
+.rs-dot { width: 12px; height: 12px; border-radius: 50%; background: #6b3fa0; margin-bottom: 0.3rem; }
+.rs-dot.gold { background: #b8860b; }
+.rs-name { font-size: 0.72rem; color: #4a2878; text-align: center; font-weight: bold; }
+.rs-date { font-size: 0.67rem; color: #a090b8; }
+.rs-arr { font-size: 1.2rem; color: #c8b0e0; padding: 0 0.15rem; flex-shrink: 0; margin-bottom: 1.1rem; }
+
+/* BUDGET */
+.budget-hero { background: linear-gradient(135deg, #1a3a2c, #2a6044); color: white; border-radius: 14px; padding: 1.4rem; margin-bottom: 1.3rem; }
+.budget-total { font-size: 2.2rem; font-weight: bold; margin: 0.6rem 0 0.2rem; }
+.bg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0.85rem; margin-bottom: 1.3rem; }
+.bg-card { background: white; border-radius: 10px; border: 1px solid #e8e0f0; padding: 0.9rem 1rem; }
+.bg-label { font-size: 0.72rem; color: #a090b8; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.22rem; }
+.bg-amount { font-size: 1.35rem; font-weight: bold; color: #2c1654; }
+.bg-note { font-size: 0.72rem; color: #8a70a0; margin-top: 0.15rem; }
+.bg-card.savings .bg-amount { color: #1a5c1a; }
+.bb { background: white; border-radius: 12px; border: 1px solid #e8e0f0; overflow: hidden; margin-bottom: 1.3rem; }
+.bb-hd { display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; padding: 0.65rem 1.1rem; background: #f5f0fa; font-size: 0.72rem; font-weight: bold; color: #7a6890; text-transform: uppercase; letter-spacing: 0.05em; }
+.bb-row { display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; padding: 0.65rem 1.1rem; border-top: 1px solid #f0ecf8; align-items: center; }
+.bb-row:hover { background: #faf8ff; }
+.bb-name { font-size: 0.85rem; color: #2c1654; }
+.bb-sub { font-size: 0.71rem; color: #a090b8; margin-top: 0.07rem; }
+.bb-each { font-size: 0.79rem; color: #7a6890; text-align: right; }
+.bb-total { font-size: 0.88rem; font-weight: bold; color: #2c1654; text-align: right; min-width: 80px; }
+.bb-total.grn { color: #1a5c1a; }
+.bb-sec { background: #f9f7ff; padding: 0.42rem 1.1rem; border-top: 1px solid #e8e0f0; }
+.bb-sec-lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.07em; color: #a090b8; font-weight: bold; }
+.cad-note { background: #e8f0ff; border: 1px solid #b0c4f4; border-radius: 10px; padding: 0.7rem 0.95rem; font-size: 0.82rem; color: #1a3a8a; margin-bottom: 1.3rem; }
+
+/* CHECKLIST */
+.section-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #a090b8; margin: 1.3rem 0 0.6rem; }
+.progress-bar { background: #e8e0f0; border-radius: 10px; height: 7px; margin: 0.9rem 0; overflow: hidden; }
+.progress-fill { background: #6b3fa0; height: 100%; border-radius: 10px; transition: width 0.4s; }
+.ci { display: flex; align-items: flex-start; gap: 0.7rem; padding: 0.6rem; border-radius: 8px; cursor: pointer; }
+.ci:hover { background: #f5f0fa; }
+.ci input[type=checkbox] { margin-top: 0.12rem; accent-color: #6b3fa0; width: 15px; height: 15px; flex-shrink: 0; }
+.ci label { font-size: 0.86rem; color: #3a2458; cursor: pointer; line-height: 1.5; }
+.ci.done label { text-decoration: line-through; color: #b0a0c8; }
+
+/* MEAL GRID — for quick meal reference */
+.meal-grid { display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 0; border: 1px solid #e8e0f0; border-radius: 12px; overflow: hidden; margin-bottom: 1.3rem; background: white; }
+.mg-hd { background: #f5f0fa; font-size: 0.72rem; font-weight: bold; color: #7a6890; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.6rem 0.85rem; }
+.mg-cell { font-size: 0.8rem; color: #3a2458; padding: 0.6rem 0.85rem; border-top: 1px solid #f0ecf8; line-height: 1.4; }
+.mg-cell.date { color: #a090b8; font-size: 0.75rem; font-style: italic; border-top: 1px solid #f0ecf8; padding: 0.6rem 0.85rem; }
+.mg-cell a { color: #6b3fa0; text-decoration: none; }
+.mg-cell a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .container { padding: 1.2rem 0.9rem; }
+  .day-btn { padding: 0.6rem 0.7rem; font-size: 0.75rem; }
+  .budget-total { font-size: 1.6rem; }
+  .bb-hd, .bb-row { grid-template-columns: 1fr auto; }
+  .bb-each { display: none; }
+  .meal-grid { grid-template-columns: auto 1fr; }
+  .mg-hd:nth-child(3), .mg-hd:nth-child(4), .mg-cell:nth-child(4n+3), .mg-cell:nth-child(4n) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-crown">👑</div>
+  <h1>Kelly's Disney France Anniversary</h1>
+  <p>Eight days of fairy tales, wine, castles, and romance</p>
+  <div class="hero-dates">Sep 4 – 11, 2025 · Riquewihr → Loire → Paris · No backtracking</div>
+  <div class="hero-sub">
+    <span class="hero-pill">🏰 3 Sleeping Beauty castles</span>
+    <span class="hero-pill">🌹 2 full Beauty &amp; the Beast days</span>
+    <span class="hero-pill">💛 Sep 10 anniversary at Disneyland</span>
+    <span class="hero-pill">🐀 Ratatouille Paris farewell</span>
+  </div>
+</div>
+
+<div class="day-nav">
+  <button class="day-btn active" onclick="showDay('overview')">Overview</button>
+  <button class="day-btn" onclick="showDay('meals')">🍽 All Meals</button>
+  <button class="day-btn" onclick="showDay('budget')">💰 Budget</button>
+  <button class="day-btn" onclick="showDay('flights')">✈️ Flights</button>
+  <button class="day-btn" onclick="showDay('d1')">Sep 4 · Arrive</button>
+  <button class="day-btn" onclick="showDay('d2')">Sep 5 · Beast's Castle 🌹</button>
+  <button class="day-btn" onclick="showDay('d3')">Sep 6 · Belle's Village 🌹</button>
+  <button class="day-btn" onclick="showDay('d4')">Sep 7 · Loire Rest</button>
+  <button class="day-btn" onclick="showDay('d5')">Sep 8 · Château d'Ussé 🏰</button>
+  <button class="day-btn" onclick="showDay('d6')">Sep 9 · Pierrefonds 🏰</button>
+  <button class="day-btn anniv" onclick="showDay('d7')">Sep 10 ✦ Anniversary 🏰</button>
+  <button class="day-btn" onclick="showDay('d8')">Sep 11 · Paris &amp; Fly 🐀</button>
+  <button class="day-btn" onclick="showDay('checklist')">☑ Checklist</button>
+</div>
+
+<!-- ========== OVERVIEW ========== -->
+<div id="overview" class="day-section active">
+<div class="container">
+  <h2 style="color:#2c1654;margin-bottom:0.4rem;">Your 8-day fairy-tale arc</h2>
+  <p style="color:#7a6890;font-style:italic;margin-bottom:1.2rem;">Fly into CDG, TGV straight to Riquewihr. Three nights in Belle's village as your base. Then Loire, then Paris. One clean sweep west — zero backtracking.</p>
+
+  <div style="background:white;border-radius:12px;border:1px solid #e8e0f0;padding:1rem 1.2rem;margin-bottom:1.2rem;">
+    <div style="font-size:0.8rem;color:#7a6890;font-weight:bold;margin-bottom:0.6rem;">🗺 Route — Riquewihr base → Loire → Paris → fly home</div>
+    <div class="route-strip">
+      <div class="rs-city"><div class="rs-dot"></div><div class="rs-name">Riquewihr</div><div class="rs-date">Sep 4–6 · 3 nights</div></div>
+      <div class="rs-arr">→</div>
+      <div class="rs-city"><div class="rs-dot"></div><div class="rs-name">Amboise</div><div class="rs-date">Sep 7–8 · 2 nights</div></div>
+      <div class="rs-arr">→</div>
+      <div class="rs-city"><div class="rs-dot"></div><div class="rs-name">Pierrefonds</div><div class="rs-date">Sep 9 · day trip</div></div>
+      <div class="rs-arr">→</div>
+      <div class="rs-city"><div class="rs-dot gold"></div><div class="rs-name" style="color:#7a5800;">Paris</div><div class="rs-date" style="color:#b8860b;">Sep 9–10 · 2 nights</div></div>
+      <div class="rs-arr">→</div>
+      <div class="rs-city"><div class="rs-dot"></div><div class="rs-name">CDG Home</div><div class="rs-date">Sep 11</div></div>
+    </div>
+  </div>
+
+  <div class="ov-grid">
+    <div class="ov-card" onclick="showDay('d1')"><div class="ov-date">Sep 4 · Day 1</div><div class="ov-title">Arrive Riquewihr</div><div class="ov-film">— TGV CDG→Colmar, taxi to the village. Gentle first evening.</div><div class="ov-hotel">🏨 Hôtel Saint-Nicolas, Riquewihr · Night 1 of 3</div></div>
+    <div class="ov-card" onclick="showDay('d2')"><div class="ov-date">Sep 5 · Day 2</div><div class="ov-title">Haut-Koenigsbourg + Colmar</div><div class="ov-film">🌹 Beauty &amp; the Beast · Beast's castle + Belle's broader region</div><div class="ov-hotel">🏨 Hôtel Saint-Nicolas, Riquewihr · Night 2 of 3</div></div>
+    <div class="ov-card" onclick="showDay('d3')"><div class="ov-date">Sep 6 · Day 3</div><div class="ov-title">Ribeauvillé + Riquewihr + AOR</div><div class="ov-film">🌹 Beauty &amp; the Beast · Gaston's town + Belle's village all day</div><div class="ov-hotel">🏨 Hôtel Saint-Nicolas, Riquewihr · Night 3 · AOR dinner</div></div>
+    <div class="ov-card" onclick="showDay('d4')"><div class="ov-date">Sep 7 · Day 4</div><div class="ov-title">Loire Valley Rest Day</div><div class="ov-film">— Amboise arrival. River walk. Pool. Breathe. Château dinner.</div><div class="ov-hotel">🏨 Château de Pray, Amboise · Night 1 of 2</div></div>
+    <div class="ov-card" onclick="showDay('d5')"><div class="ov-date">Sep 8 · Day 5</div><div class="ov-title">Château d'Ussé</div><div class="ov-film">🏰 Sleeping Beauty #3 · Where Perrault wrote the story in 1697</div><div class="ov-hotel">🏨 Château de Pray, Amboise · Night 2 of 2</div></div>
+    <div class="ov-card" onclick="showDay('d6')"><div class="ov-date">Sep 9 · Day 6</div><div class="ov-title">Pierrefonds → Arrive Paris</div><div class="ov-film">🏰 Sleeping Beauty #2 · Walt's visual inspiration, then Paris</div><div class="ov-hotel">🏨 Courtyard Marriott Paris Gare de Lyon <span class="gold-txt">✦ Platinum</span></div></div>
+    <div class="ov-card anniv" onclick="showDay('d7')"><div class="ov-date" style="color:#b8860b;">Sep 10 · Day 7 ✦ ANNIVERSARY</div><div class="ov-title">Disneyland Paris</div><div class="ov-film">🏰 Sleeping Beauty #1 · Aurora's castle + fireworks on your anniversary night</div><div class="ov-hotel">🏨 Courtyard Marriott Paris <span class="gold-txt">✦ Platinum · free breakfast</span></div></div>
+    <div class="ov-card" onclick="showDay('d8')"><div class="ov-date">Sep 11 · Day 8</div><div class="ov-title">Paris Morning + Fly Home</div><div class="ov-film">🐀 Ratatouille · Marché d'Aligre + Montmartre farewell</div><div class="ov-hotel">✈️ CDG → Toronto YYZ afternoon</div></div>
+  </div>
+
+  <div style="background:white;border-radius:12px;border:1px solid #e8e0f0;padding:1rem 1.2rem;margin-bottom:1.2rem;">
+    <div style="font-size:0.82rem;font-weight:bold;color:#2c1654;margin-bottom:0.65rem;">🏨 Hotels — 7 nights total</div>
+    <table style="width:100%;font-size:0.83rem;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid #f0ecf8;"><td style="padding:0.42rem 0.5rem 0.42rem 0;color:#5a4870;width:28%;">Sep 4–6 (3 nights)</td><td style="color:#2c1654;">Hôtel Saint-Nicolas, Riquewihr · room 11 or 12</td><td style="color:#a090b8;text-align:right;">~€110–140/room/night</td></tr>
+      <tr style="border-bottom:1px solid #f0ecf8;"><td style="padding:0.42rem 0.5rem 0.42rem 0;color:#5a4870;">Sep 7–8 (2 nights)</td><td style="color:#2c1654;">Château de Pray, Amboise · romantic Loire château</td><td style="color:#a090b8;text-align:right;">~€130–180/room/night</td></tr>
+      <tr><td style="padding:0.42rem 0.5rem 0.42rem 0;color:#5a4870;">Sep 9–10 (2 nights)</td><td style="color:#2c1654;">Courtyard Marriott Paris Gare de Lyon</td><td style="color:#b8860b;text-align:right;">✦ Platinum · free breakfast ×2</td></tr>
+    </table>
+    <div style="font-size:0.79rem;color:#8a70a0;margin-top:0.6rem;">No Marriott in Riquewihr or Amboise — but both independent hotels are the right choice. Marriott Platinum on the 2 Paris nights earns free breakfast on your anniversary morning and the morning you fly home.</div>
+  </div>
+
+  <div style="background:#fff0f8;border:1px solid #e8a0c8;border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.2rem;">
+    <div style="font-size:0.84rem;font-weight:bold;color:#9a1060;margin-bottom:0.45rem;">💕 Why Riquewihr first makes it better</div>
+    <div style="font-size:0.84rem;color:#6a1050;line-height:1.7;">Arriving straight into the fairy-tale village after your overnight flight means the first thing you wake up to in France is Belle's cobblestoned street outside your window. Three nights as a base means no packing and unpacking stress for the first three days — you come home to the same room each evening. And it means AOR La Table, the best dinner of the trip, happens on Day 3 when you're fully rested and settled, not exhausted from a week of travel.</div>
+  </div>
+
+  <div style="background:#e8f5e8;border:1px solid #90b890;border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.2rem;">
+    <div style="font-size:0.84rem;font-weight:bold;color:#1a4a1a;margin-bottom:0.35rem;">🛌 Pace — built-in rest</div>
+    <div style="font-size:0.84rem;color:#2a5a2a;line-height:1.7;">Day 1 is gentle arrival only. Day 4 is a deliberate rest day with no castles. No day starts before 9 AM. No day has more than 2 major activities. The trip arc flows one direction the whole time — east to west — so you're never retracing steps or rushing to catch connections you booked on a tighter schedule.</div>
+  </div>
+
+  <div class="tip"><h3>⭐ Book these the moment you have dates confirmed</h3><ul>
+    <li>AOR La Table, Riquewihr — Sep 6 dinner · the best meal of the trip · sells out weeks ahead</li>
+    <li>Auberge de Cendrillon, Disneyland Paris — Sep 10 anniversary lunch · books out months ahead</li>
+    <li>Château de Pray, Amboise — Sep 7–8 (2 nights) · romantic and limited rooms</li>
+    <li>Hôtel Saint-Nicolas, Riquewihr — Sep 4–6 (3 nights) · request room 11 or 12</li>
+    <li>Air Canada YYZ→CDG Sep 3 overnight · return Sep 11 · book ~86 days in advance (mid-June)</li>
+  </ul></div>
+</div>
+</div>
+
+<!-- ========== ALL MEALS ========== -->
+<div id="meals" class="day-section">
+<div class="container">
+  <h2 style="color:#2c1654;margin-bottom:0.3rem;">Every meal, every day</h2>
+  <p style="color:#7a6890;font-style:italic;margin-bottom:1.2rem;">Every breakfast, lunch and dinner with a specific recommendation. Scroll days for full context.</p>
+
+  <div class="meal-grid">
+    <div class="mg-hd">Date</div>
+    <div class="mg-hd">🌅 Breakfast</div>
+    <div class="mg-hd">☀️ Lunch</div>
+    <div class="mg-hd">🌙 Dinner</div>
+
+    <div class="mg-cell date">Sep 4 · Thu<br>Arrive</div>
+    <div class="mg-cell">In flight / airport snack on arrival. First meal is dinner.</div>
+    <div class="mg-cell">—  (arrive afternoon; settle in)</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?cid=10924461396895499605" target="_blank">Le Caveau des Rois ⭐4.5</a><br>Rue Hederich, Riquewihr<br>Local Alsatian · ~€35/person</div>
+
+    <div class="mg-cell date">Sep 5 · Fri<br>Beast's Castle</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?cid=15487574855477030487" target="_blank">Kouglopf &amp; Cie ⭐4.7</a><br>Opens 7 AM · best croissants in the village · takeaway, eat on the cobblestones</div>
+    <div class="mg-cell">Le 757 — castle terrace café, Haut-Koenigsbourg<br>Lunch at 714m · local specialities</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?cid=17124527756481200854" target="_blank">Au Tire Bouchon ⭐4.4</a><br>Rue du Général de Gaulle · Riquewihr<br>Choucroute, escargot · ~€30/person · open daily</div>
+
+    <div class="mg-cell date">Sep 6 · Sat<br>Belle's Village</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?cid=15487574855477030487" target="_blank">Kouglopf &amp; Cie ⭐4.7</a><br>Opens 7 AM · pain au chocolat · café from Boulangerie nearby</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?cid=16461011843296127747" target="_blank">Winstub Zum Pfifferhus ⭐4.2</a><br>Ribeauvillé · Gaston's tavern energy · ~€25/person<br>Book ahead · confirm Sat hours</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?cid=3172268484014026543" target="_blank">AOR La Table ⭐4.9</a><br>Riquewihr · tasting menu · ~€100–130/person<br>⭐ Book immediately · the dinner of the trip</div>
+
+    <div class="mg-cell date">Sep 7 · Sun<br>Loire Rest</div>
+    <div class="mg-cell">Boulangerie in Riquewihr before taxi · croissant on the train · unhurried</div>
+    <div class="mg-cell">Snack on train or light lunch in Amboise on arrival (~2 PM)</div>
+    <div class="mg-cell"><a href="https://www.chateaudepray.fr/en/restaurant/" target="_blank">Château de Pray restaurant ⭐4.4</a><br>Dinner in the château itself · walk from your room · ~€45–55/person</div>
+
+    <div class="mg-cell date">Sep 8 · Mon<br>Château d'Ussé</div>
+    <div class="mg-cell">Château de Pray terrace breakfast · Loire valley views · ~€18–22/person</div>
+    <div class="mg-cell">Castle café at Château d'Ussé · or Chinon riverside (~€20–30/person)</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?q=La+Pause+du+Temps+Amboise" target="_blank">La Pause du Temps ⭐4.5</a><br>Amboise · family bistro · daily specials · Loire wine · ~€30–40/person</div>
+
+    <div class="mg-cell date">Sep 9 · Tue<br>Pierrefonds → Paris</div>
+    <div class="mg-cell">Château de Pray terrace · final Loire breakfast</div>
+    <div class="mg-cell">Village café in Pierrefonds · terrace by the lake · ~€15–20/person</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?q=Le+Baron+Rouge+Paris+Bastille" target="_blank">Le Baron Rouge ⭐4.3</a><br>Bastille, Paris · wine bar · charcuterie · ~€25–35/person · anniversary eve</div>
+
+    <div class="mg-cell date">Sep 10 · Wed<br>✦ Anniversary</div>
+    <div class="mg-cell">Courtyard Marriott breakfast · free Platinum · fuel up for Disneyland by 7:30 AM</div>
+    <div class="mg-cell"><a href="https://www.disneylandparis.com/en-gb/restaurants/disneyland-park/auberge-de-cendrillon/" target="_blank">Auberge de Cendrillon ⭐4.5</a><br>Disneyland · princess character dining · €95/person · ⭐ book months ahead</div>
+    <div class="mg-cell"><a href="https://maps.google.com/?q=Walt's+Restaurant+Disneyland+Paris" target="_blank">Walt's Restaurant ⭐4.3</a><br>Main Street, Disneyland · stay in park for fireworks · ~€45–55/person</div>
+
+    <div class="mg-cell date">Sep 11 · Thu<br>Fly Home</div>
+    <div class="mg-cell">Courtyard Marriott breakfast · free Platinum · last French breakfast</div>
+    <div class="mg-cell"><a href="https://www.thefork.com/restaurant/le-poulbot-paris/r430329" target="_blank">Le Poulbot ⭐4.7</a><br>Montmartre · farewell lunch · duck confit · ~€45–60/person</div>
+    <div class="mg-cell">Airport snacks at CDG</div>
+  </div>
+
+  <div class="tip"><h3>📋 Reservation priority order</h3><ul>
+    <li>1st — AOR La Table, Riquewihr (Sep 6): book the moment dates are confirmed</li>
+    <li>2nd — Auberge de Cendrillon, Disneyland (Sep 10): books months ahead, limited seats</li>
+    <li>3rd — Walt's Restaurant, Disneyland (Sep 10): book via Disney app ~2 months ahead</li>
+    <li>4th — Château de Pray restaurant (Sep 7–8): book with hotel reservation</li>
+    <li>5th — Le Caveau des Rois (Sep 4): closed Mon/Tue, fine for Thursday arrival</li>
+    <li>6th — Au Tire Bouchon (Sep 5): open daily, still book ahead for September</li>
+    <li>7th — Winstub Zum Pfifferhus (Sep 6 lunch): confirm Saturday hours when booking</li>
+    <li>8th — Le Baron Rouge (Sep 9): no reservations typically, arrive before 7:30 PM</li>
+    <li>9th — Le Poulbot (Sep 11): reserve via TheFork a few days ahead</li>
+  </ul></div>
+</div>
+</div>
+
+<!-- ========== FLIGHTS ========== -->
+<div id="flights" class="day-section">
+<div class="container" style="max-width:700px;">
+  <h2 style="color:#2c1654;margin-bottom:0.3rem;">Flights — Wed Sep 3 depart · Thu Sep 11 return</h2>
+  <p style="color:#7a6890;font-style:italic;margin-bottom:1.2rem;">Wednesday is consistently one of the cheapest days to fly internationally. Book ~86 days before departure (mid-June 2025) for the best Air Canada fare on this route.</p>
+
+  <div style="background:white;border-radius:12px;border:1px solid #e8e0f0;padding:1.3rem;margin-bottom:1rem;">
+    <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+      <div><div style="font-size:1.05rem;color:#2c1654;font-weight:bold;">🛫 Wed Sep 3 — Toronto YYZ → Paris CDG</div>
+      <div style="font-size:0.86rem;color:#5a4870;margin-top:0.3rem;line-height:1.6;">Air Canada nonstop · ~7h45 · Airbus A330 · evening departure<br>Arrive CDG ~8–10 AM Sep 4 · TGV to Colmar then taxi to Riquewihr</div></div>
+      <div style="text-align:right;"><div style="font-size:1.2rem;color:#2c1654;font-weight:bold;">~C$820/person</div><div style="font-size:0.73rem;color:#a090b8;">~C$1,640 for 2 · Wed fare</div></div>
+    </div>
+    <a style="display:inline-block;background:#6b3fa0;color:white;text-decoration:none;border-radius:8px;padding:0.45rem 1rem;font-size:0.82rem;margin-top:0.65rem;" href="https://www.aircanada.com/en/ca/aco/home/book/flights.html" target="_blank">Search Air Canada ↗</a>
+    &nbsp;<a style="display:inline-block;background:#e8750a;color:white;text-decoration:none;border-radius:8px;padding:0.45rem 1rem;font-size:0.82rem;margin-top:0.65rem;" href="https://www.google.com/travel/flights" target="_blank">Google Flights ↗</a>
+  </div>
+
+  <div style="background:white;border-radius:12px;border:1px solid #e8e0f0;padding:1.3rem;margin-bottom:1rem;">
+    <div style="font-size:1.05rem;color:#2c1654;font-weight:bold;margin-bottom:0.3rem;">🛬 Thu Sep 11 — Paris CDG → Toronto YYZ</div>
+    <div style="font-size:0.86rem;color:#5a4870;line-height:1.6;">Morning Paris farewell, Le Poulbot lunch, afternoon to CDG<br>Air Canada nonstop · arrive Toronto evening</div>
+  </div>
+
+  <div style="background:white;border-radius:12px;border:1px solid #e8e0f0;padding:1.3rem;margin-bottom:1rem;">
+    <div style="font-size:1.05rem;color:#2c1654;font-weight:bold;margin-bottom:0.3rem;">🚄 Arrival transfer: CDG → Colmar → Riquewihr</div>
+    <div style="font-size:0.86rem;color:#5a4870;line-height:1.6;">TGV from CDG Airport direct to Colmar · ~2h · ~€30–50/person · book same day as flights<br>Then taxi Colmar → Riquewihr · ~15 min · ~€20 for the car<br>You'll arrive in Riquewihr by early-to-mid afternoon</div>
+    <a style="display:inline-block;margin-top:0.6rem;font-size:0.77rem;color:#6b3fa0;text-decoration:none;border-bottom:1px dotted #6b3fa0;" href="https://www.sncf-connect.com/en-en/search/offer?originCode=FRQCD&destinationCode=FRCO2" target="_blank">Book TGV CDG → Colmar ↗</a>
+  </div>
+
+  <div class="tip"><h3>✈️ Tips</h3><ul>
+    <li>Book both the flights and the CDG→Colmar TGV on the same day — TGV advance fares drop fast.</li>
+    <li>Wednesday departures are typically 10–13% cheaper than Friday/Sunday on this route.</li>
+    <li>Set a Google Flights price alert now and book when the fare drops to your target.</li>
+    <li>Allow 2.5 hours at CDG on departure day (Sep 11) — it's a big and sometimes chaotic airport.</li>
+  </ul></div>
+</div>
+</div>
+
+<!-- ========== DAY 1 ========== -->
+<div id="d1" class="day-section">
+<div class="container">
+  <div class="day-header">
+    <div class="day-circle">1</div>
+    <div>
+      <div class="day-date">Thursday, September 4</div>
+      <div class="day-title">Arrive Riquewihr — Gentle First Evening</div>
+      <div class="day-subtitle">Land, train, taxi, and step straight into Belle's village.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on"></div><div class="pace-dot"></div><div class="pace-dot"></div><div class="pace-dot"></div><div class="pace-dot"></div></div><span class="pace-note">Arrival day — very easy. No agenda beyond settling in.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today</div><div class="db-amount">~€90–130 for 2</div></div>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">MORNING · land ~8–10 AM</div><div class="stop-name">Arrive CDG · TGV to Colmar · Taxi to Riquewihr</div></div><span class="pp pp-var">~€35–55/person TGV + €20 taxi</span></div>
+      <span class="tag tag-transit">🚄 CDG → Colmar ~2h direct · then 15 min taxi</span>
+      <div class="desc">Step off the plane at CDG and straight onto the TGV at CDG's own train station — no need to go into Paris at all. Two hours through Champagne and Burgundy, then a short taxi from Colmar into the village. You'll arrive in Riquewihr mid-afternoon.</div>
+      <a class="lnk" href="https://www.sncf-connect.com/en-en" target="_blank">Book TGV in advance ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot hotel"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">AFTERNOON · CHECK-IN</div><div class="stop-name">Hôtel Saint-Nicolas, Riquewihr ⭐ 4.4</div></div><span class="pp pp-var">~€110–140/room/night</span></div>
+      <span class="tag tag-hotel">🏨 Nights 1, 2 &amp; 3 · 3 nights — no packing/unpacking stress</span>
+      <div class="desc">Request room 11 or 12 — reviewers describe a window looking onto "a street straight from a fairy tale." Drop your bags, shower, lie down if needed. Three nights here means this room is your home for the Alsace leg — the most restful way to do it.</div>
+      <a class="lnk" href="https://www.hotel-saintnicolas.com" target="_blank">Hotel website ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot romance"></div><div class="line"></div></div>
+    <div class="sc romance-card">
+      <div class="stop-top"><div><div class="stop-time">LATE AFTERNOON · ~5:00 PM</div><div class="stop-name">First walk through Riquewihr</div></div><span class="pp pp-rom">Free · the arrival moment</span></div>
+      <span class="tag tag-rom">🌹 Belle's village · your first step</span>
+      <div class="desc">Step out of the hotel door and into 1697. The Belle fountain, the Dolder Tower, the cobblestones, the half-timbered houses. No agenda — just walk, hold hands, and let France arrive. This is the moment the whole trip has been building toward. The village empties of day-trippers after 5 PM. It's yours.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">DINNER · ~7:30 PM</div><div class="stop-name">Le Caveau des Rois ⭐ 4.5</div></div><span class="pp pp-var">~€35/person · ~€70 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Arrival dinner · steps from the hotel</span>
+      <div class="desc">Excellent local food, superb wine by the carafe, warm service. Reviewers call it one of the only restaurants they went to twice in Riquewihr. Simple, fresh, very well prepared Alsatian classics. The perfect soft landing for your first night. Closed Mon/Tue — Thursday is fine. Reserve ahead.</div>
+      <div class="hours">Hours: Wed–Sun 11:30 AM–2 PM, 6:30–9 PM · closed Mon &amp; Tue</div>
+      <a class="lnk" href="https://maps.google.com/?cid=10924461396895499605" target="_blank">View on Maps ↗</a>
+    </div></div>
+  </div>
+  <div class="romance-box"><h3>💕 Tonight's tone</h3><p>You've been travelling for over 24 hours. A short walk, a good meal, an early night. Tomorrow morning you'll wake up in Belle's village for the first of three mornings. Let tonight be exactly as quiet as it needs to be.</p></div>
+</div>
+</div>
+
+<!-- ========== DAY 2 ========== -->
+<div id="d2" class="day-section">
+<div class="container">
+  <div class="day-header">
+    <div class="day-circle">2</div>
+    <div>
+      <div class="day-date">Friday, September 5</div>
+      <div class="day-title">The Beast's Castle + Colmar</div>
+      <div class="day-subtitle">A mountaintop fortress, then a canal town straight from the film.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot"></div><div class="pace-dot"></div></div><span class="pace-note">Moderate — one castle, one town, relaxed afternoon return.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today</div><div class="db-amount">~€150–210 for 2</div></div>
+  <span class="film-badge film-beauty">🌹 Beauty &amp; the Beast — Day 1</span>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">BREAKFAST · ~8:00 AM</div><div class="stop-name">Kouglopf &amp; Cie ⭐ 4.7 — Riquewihr's best bakery</div></div><span class="pp pp-var">~€6–10 for 2</span></div>
+      <span class="tag tag-meal">🥐 Opens 7 AM · takeaway croissants on the cobblestones</span>
+      <div class="desc">The best croissants in the village — buttery, flaky, fresh. Reviewers came back an hour later for more. No seating (takeaway only), so grab your pastries and eat on the steps of the village fountain — the exact Belle fountain. Pair with a coffee from a nearby café. Perfect start.</div>
+      <div class="hours">Hours: Tue–Sun 7:00 AM–6:00 PM · closed Monday</div>
+      <a class="lnk" href="https://maps.google.com/?cid=16023148804396519436" target="_blank">View on Maps ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~9:30 AM</div><div class="stop-name">Taxi or organised tour to Haut-Koenigsbourg</div></div><span class="pp pp-var">~€130–160 full-day taxi total</span></div>
+      <span class="tag tag-transit">🚗 ~45 min from Riquewihr · arrange via hotel</span>
+      <div class="desc">A full-day taxi covering Haut-Koenigsbourg → Colmar → back to Riquewihr is the most comfortable option (~€130–160 total for the car). Ask Hôtel Saint-Nicolas to arrange — they know local drivers. Alternatively, an organised Alsace wine-route tour from Colmar includes both stops.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~10:30 AM — OPEN 9:30 AM</div><div class="stop-name">Château du Haut-Koenigsbourg ⭐ 4.7 · 41,000+ reviews</div></div><span class="pp pp-var">€12/person · €24 for 2</span></div>
+      <span class="tag tag-sight">🌹 The Beast's castle — 714m above all of Alsace</span>
+      <div class="desc">A medieval fortress on a rocky spur with panoramic views of France, Germany, and Switzerland on a clear September day. This is widely cited as the inspiration for the Beast's mountain castle — the isolation, the drama, the height. You immediately feel it. Optional audio guide +€4/person. Allow 1.5 hours.</div>
+      <a class="lnk" href="https://tickets.haut-koenigsbourg.fr" target="_blank">Book tickets online ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">LUNCH · ~12:30 PM</div><div class="stop-name">Le 757 — Castle Terrace Café, Haut-Koenigsbourg</div></div><span class="pp pp-var">~€35–50 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Lunch at 714m · Alsace plain at your feet</span>
+      <div class="desc">The castle's own restaurant with a terrace overlooking the entire wine valley. Local specialities — tarte flambée, Munster cheese, Alsace wines. This might be the most uniquely situated lunch of your lives. Take your time.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot romance"></div><div class="line"></div></div>
+    <div class="sc romance-card">
+      <div class="stop-top"><div><div class="stop-time">AFTERNOON · ~2:30 PM</div><div class="stop-name">Colmar Old Town — Little Venice</div></div><span class="pp pp-rom">Free to wander · €15 wine stops</span></div>
+      <span class="tag tag-rom">🌹 Belle's broader fairy-tale region</span>
+      <div class="desc">30-minute drive down to Colmar. The Little Venice canal quarter — flower-draped bridges, colour-washed half-timbered houses — is one of the most photographed urban spaces in France. No agenda: browse bookshops, find a canal terrace, share a glass of Gewurztraminer. Leave by 5:30 PM to be back for dinner.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">DINNER · ~7:30 PM</div><div class="stop-name">Au Tire Bouchon ⭐ 4.4 — Riquewihr</div></div><span class="pp pp-var">~€30/person · ~€60 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Back in the village · traditional Alsatian</span>
+      <div class="desc">On the main street of Riquewihr, with a 15th-century wine cellar next door. Choucroute garnie, escargot, baeckeoffe, local Riesling. Open daily — one of the most consistent restaurants in the village. Book ahead for September. Walk home in 3 minutes.</div>
+      <div class="hours">Hours: Daily 11:45 AM–9:00 PM</div>
+      <a class="lnk" href="https://maps.google.com/?cid=17124527756481200854" target="_blank">View on Maps ↗</a>
+    </div></div>
+  </div>
+</div>
+</div>
+
+<!-- ========== DAY 3 ========== -->
+<div id="d3" class="day-section">
+<div class="container">
+  <div class="day-header">
+    <div class="day-circle">3</div>
+    <div>
+      <div class="day-date">Saturday, September 6</div>
+      <div class="day-title">Ribeauvillé + Riquewihr + AOR La Table</div>
+      <div class="day-subtitle">Gaston's town in the morning. Belle's village all afternoon. The dinner of the trip tonight.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot"></div><div class="pace-dot"></div></div><span class="pace-note">Moderate — one town trip, then home to the village for the evening.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today · AOR is the big spend</div><div class="db-amount">~€310–410 for 2</div></div>
+  <span class="film-badge film-beauty">🌹 Beauty &amp; the Beast — Day 2</span>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">BREAKFAST · ~8:30 AM</div><div class="stop-name">Kouglopf &amp; Cie — again, because it's that good</div></div><span class="pp pp-var">~€6–10 for 2</span></div>
+      <span class="tag tag-meal">🥐 Last morning in Riquewihr before checkout tomorrow</span>
+      <div class="desc">Pain au chocolat this time. Or the quiche. Eat on the cobblestones while the village is quiet. Today is the last full day as a base here — savour the morning light.</div>
+      <div class="hours">Hours: Tue–Sun 7:00 AM–6:00 PM · open Saturday ✓</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">MID-MORNING · ~10:30 AM</div><div class="stop-name">Taxi to Ribeauvillé</div></div><span class="pp pp-var">~€15–20 for the car</span></div>
+      <span class="tag tag-transit">🚗 ~10 min from Riquewihr</span>
+      <div class="desc">A short taxi to the neighbouring village. Return taxis are easy to call from the village.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~11:00 AM</div><div class="stop-name">Ribeauvillé — Three Hilltop Castles</div></div><span class="pp pp-free">Free</span></div>
+      <span class="tag tag-sight">🌹 Gaston's home base — ruined castles above the town</span>
+      <div class="desc">Twice the size of Riquewihr, rougher-edged, and dominated by three ruined medieval castles (Saint Ulrich, Girsberg, Haut-Ribeaupierre) on the hillside above. Walk the Grand'Rue, look up at the castles, stop for a glass of Pinot Noir at a winstub. This is Gaston's territory — you'll feel the contrast with Belle's gentle Riquewihr immediately.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">LUNCH · ~12:30 PM</div><div class="stop-name">Winstub Zum Pfifferhus ⭐ 4.2 — Ribeauvillé</div></div><span class="pp pp-var">~€25/person · ~€50 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Gaston's tavern — hearty Alsatian feast</span>
+      <div class="desc">Legendary winstub on Ribeauvillé's Grand'Rue — wooden interior, sausages, baeckeoffe, local wine poured freely. The exact energy where Gaston's mob would have plotted. The deliberate contrast to AOR tonight. Confirm Saturday opening hours when you book.</div>
+      <div class="hours">Check current hours before booking — varies seasonally</div>
+      <a class="lnk" href="https://maps.google.com/?cid=16461011843296127747" target="_blank">View on Maps ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot romance"></div><div class="line"></div></div>
+    <div class="sc romance-card">
+      <div class="stop-top"><div><div class="stop-time">AFTERNOON · ~2:30 PM onwards</div><div class="stop-name">Riquewihr — Belle's village, unhurried afternoon</div></div><span class="pp pp-rom">Free · wine tasting optional ~€5–10</span></div>
+      <span class="tag tag-rom">🌹 This is Belle's village — your afternoon, your pace</span>
+      <div class="desc">Taxi back to Riquewihr. The afternoon is yours with no agenda. The Dolder Tower (climb for views), Musée Hansi (charming Alsace illustration museum), Famille Hugel wine cellar tasting (free, just inside the village), the village walls walk. Or simply sit with a Riesling at a café terrace and watch the day-trippers slowly go home, leaving the village to you.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">DINNER · ~8:00 PM</div><div class="stop-name">AOR La Table ⭐ 4.9 — Riquewihr</div></div><span class="pp pp-var">~€100–130/person · ~€200–260 for 2 with wine</span></div>
+      <span class="tag tag-meal">🍽️ THE dinner — ring the doorbell · tasting menu</span>
+      <div class="desc">Ring the doorbell. Step into a candlelit, bohemian room. Chef Serge presents a tasting menu — no à la carte, just course after course of magic. 4.9 stars from everyone who has been. Tell them it's your anniversary trip when booking. The most romantic dinner in all of Alsace. Book the moment your dates are confirmed — it sells out weeks ahead. After dinner, walk back through the dark, silent village to your room. Three minutes. Unforgettable.</div>
+      <a class="lnk" href="https://www.thefork.com/restaurant/aor-la-table-riquewihr/r607659" target="_blank">Reserve AOR La Table — book first ↗</a>
+    </div></div>
+  </div>
+  <div class="romance-box"><h3>💕 After AOR</h3><p>The village will be completely silent by the time you leave AOR — no cars, no crowds, just cobblestones and lamplight. Walk slowly back. This is the best three minutes of the trip.</p></div>
+</div>
+</div>
+
+<!-- ========== DAY 4 ========== -->
+<div id="d4" class="day-section">
+<div class="container">
+  <div class="day-header">
+    <div class="day-circle">4</div>
+    <div>
+      <div class="day-date">Sunday, September 7</div>
+      <div class="day-title">Loire Valley Rest Day — Amboise</div>
+      <div class="day-subtitle">Travel morning, then do absolutely nothing on purpose.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot"></div><div class="pace-dot"></div><div class="pace-dot"></div></div><span class="pace-note">Easy — travel in the morning, rest all afternoon.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today</div><div class="db-amount">~€210–290 for 2</div></div>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">BREAKFAST · ~8:30 AM</div><div class="stop-name">Village boulangerie — last Riquewihr morning</div></div><span class="pp pp-var">~€8–12 for 2</span></div>
+      <span class="tag tag-meal">🥐 Croissant and coffee · checkout by 11 AM</span>
+      <div class="desc">One final slow morning in the village before checkout. Pack, settle the bill. Take a last look at the fairy-tale street from your window. Taxi to Colmar station.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">MID-MORNING · ~11:30 AM</div><div class="stop-name">Taxi to Colmar · TGV west to Tours via Paris</div></div><span class="pp pp-var">~€80–120/person</span></div>
+      <span class="tag tag-transit">🚄 ~3–4h total · the longest journey of the trip</span>
+      <div class="desc">This is the one real travel day. Taxi Riquewihr → Colmar (~15 min, ~€20), then TGV west via Paris to Tours (Loire Valley). Book the TGV legs well in advance for the best fares. Bring a book, a playlist, and snacks — sit back and watch France go by.</div>
+      <a class="lnk" href="https://www.sncf-connect.com/en-en" target="_blank">Book on SNCF ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot hotel"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">EARLY AFTERNOON · CHECK-IN</div><div class="stop-name">Château de Pray, Amboise ⭐ 4.4</div></div><span class="pp pp-var">~€130–180/night · 1 room</span></div>
+      <span class="tag tag-hotel">🏨 Nights 4 &amp; 5 · 13th-century château · Loire views · pool</span>
+      <div class="desc">A romantic twin-tower château just outside Amboise with gardens, a pool, and Loire River views. Reviewers consistently call it a hidden gem. Taxi from Tours station ~€30–40. No Marriott in this area — but this is far better than any chain hotel for this part of the trip.</div>
+      <a class="lnk" href="https://www.chateaudepray.fr/en/" target="_blank">Château de Pray website ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot rest"></div><div class="line"></div></div>
+    <div class="sc rest-card">
+      <div class="stop-top"><div><div class="stop-time">AFTERNOON · however long you need</div><div class="stop-name">Pool · gardens · terrace · do nothing</div></div><span class="pp pp-free">Free · this is the point</span></div>
+      <span class="tag tag-rest">🌿 Deliberately unscheduled</span>
+      <div class="desc">Swim. Lie in the garden. Read on the terrace with a glass of Vouvray. Nap. Walk down to the Loire river bank and sit on the grass. Amboise town is 5 minutes away if you want to explore. You've done three days of fairy-tale villages — your minds and bodies need this afternoon of pure nothing.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">DINNER · ~7:30 PM</div><div class="stop-name">Restaurant at Château de Pray ⭐ 4.4</div></div><span class="pp pp-var">~€45–55/person · ~€90–110 for 2</span></div>
+      <span class="tag tag-meal">🍽️ In-house château dinner · walk from your room</span>
+      <div class="desc">Chef Laura Cervantes — inventive seasonal Loire Valley cuisine, candlelit château dining room, beautiful wine list. Walk from your bedroom to your table. This is the whole point of a château hotel. Mention it's an anniversary trip when you book. The Loire produces some of France's finest whites — Vouvray and Sancerre especially.</div>
+      <a class="lnk" href="https://www.chateaudepray.fr/en/restaurant/" target="_blank">Château restaurant info ↗</a>
+    </div></div>
+  </div>
+  <div class="romance-box"><h3>💕 Today's intention</h3><p>The Loire rest day is a gift you give yourselves. You've earned it after three beautiful but stimulating Alsace days. Let the château do its work — a pool, a garden, a lovely dinner with nowhere to be afterwards.</p></div>
+</div>
+</div>
+
+<!-- ========== DAY 5 ========== -->
+<div id="d5" class="day-section">
+<div class="container">
+  <div class="day-header">
+    <div class="day-circle">5</div>
+    <div>
+      <div class="day-date">Monday, September 8</div>
+      <div class="day-title">Château d'Ussé — Where the Story Was Written</div>
+      <div class="day-subtitle">One castle, then an afternoon back at the château.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot"></div><div class="pace-dot"></div></div><span class="pace-note">Moderate — one castle outing, restful afternoon return.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today</div><div class="db-amount">~€130–185 for 2</div></div>
+  <span class="film-badge film-sleeping">🏰 Sleeping Beauty #3 — The Original Story Castle</span>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">BREAKFAST · ~9:00 AM</div><div class="stop-name">Château de Pray terrace breakfast</div></div><span class="pp pp-var">~€18–22/person · check if included in rate</span></div>
+      <span class="tag tag-meal">🥐 Loire valley views · leave after 10:30 AM at earliest</span>
+      <div class="desc">The morning terrace at Château de Pray, looking over the gardens toward the Loire. There's no reason to rush — the castle opens at 10 AM and is only 30 minutes away.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~10:30 AM</div><div class="stop-name">Taxi to Château d'Ussé</div></div><span class="pp pp-var">~€30–40 each way for the car</span></div>
+      <span class="tag tag-transit">🚗 ~30 min · pre-book your driver for return pickup</span>
+      <div class="desc">Rural location — arrange the taxi in advance and ask the driver to collect you at a set time (around 2:30 PM after lunch). Acco-Dispo organised château shuttle from Tours is an alternative if you prefer.</div>
+      <a class="lnk" href="http://www.accodispo-tours.com" target="_blank">Acco-Dispo info ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~12:00 PM — OPEN 10:00 AM–7:00 PM</div><div class="stop-name">Château d'Ussé ⭐ 4.5</div></div><span class="pp pp-var">€14.50/person · €29 for 2</span></div>
+      <span class="tag tag-sight">🏰 Where Charles Perrault wrote Sleeping Beauty in 1697</span>
+      <div class="desc">Charles Perrault wrote La Belle au Bois Dormant here, inspired by the mystery of this Loire château. Inside: a full Sleeping Beauty exhibition through the tower rooms — wax scenes of every key moment from the fairies to the spindle to the prince's kiss. The Loire River gardens are stunning in September. Allow 2 hours.</div>
+      <a class="lnk" href="https://www.chateaudusse.fr/en/" target="_blank">Castle website ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">LUNCH · ~2:00 PM</div><div class="stop-name">Castle café at Ussé · or Chinon riverside</div></div><span class="pp pp-var">~€40–60 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Loire goat cheese · Chinon red wine</span>
+      <div class="desc">Castle has a café on-site. Or taxi the 15 minutes to Chinon town — a beautiful medieval village with riverside restaurants, famous goat cheese (Sainte-Maure de Touraine), and Chinon red wine. Pick up a bottle to take back to the château terrace.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot rest"></div><div class="line"></div></div>
+    <div class="sc rest-card">
+      <div class="stop-top"><div><div class="stop-time">AFTERNOON · back by ~4:30 PM</div><div class="stop-name">Back at Château de Pray — garden, terrace, pool</div></div><span class="pp pp-free">Free · last Loire afternoon</span></div>
+      <span class="tag tag-rest">🌿 Swim · sit with the Chinon wine you bought · watch the Loire</span>
+      <div class="desc">Last afternoon in the Loire. Nowhere to be. The château pool, the terrace, the garden. September evening light on the river. Tomorrow the trip moves toward Paris.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">DINNER · ~7:30 PM</div><div class="stop-name">La Pause du Temps ⭐ 4.5 — Amboise</div></div><span class="pp pp-var">~€30–40/person · ~€60–80 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Small family bistro in Amboise town · lovely value</span>
+      <div class="desc">A short taxi into Amboise. Small, family-run, daily specials with Loire wines. Reviewers describe "one of the best meals in France" for the quality and value. Roquefort tart, duck confit, fresh seasonal dishes. Taxi back to château ~€15.</div>
+    </div></div>
+  </div>
+</div>
+</div>
+
+<!-- ========== DAY 6 ========== -->
+<div id="d6" class="day-section">
+<div class="container">
+  <div class="day-header">
+    <div class="day-circle">6</div>
+    <div>
+      <div class="day-date">Tuesday, September 9</div>
+      <div class="day-title">Château de Pierrefonds → Arrive Paris</div>
+      <div class="day-subtitle">One castle on the way, then Paris for the anniversary eve.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot"></div><div class="pace-dot"></div></div><span class="pace-note">Moderate — travel day with one castle stop, gentle Paris evening.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today</div><div class="db-amount">~€250–340 for 2</div></div>
+  <span class="film-badge film-sleeping">🏰 Sleeping Beauty #2 — Walt's Visual Inspiration</span>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">BREAKFAST · ~8:30 AM</div><div class="stop-name">Château de Pray — final Loire morning</div></div><span class="pp pp-var">~€18–22/person</span></div>
+      <span class="tag tag-meal">🥐 Last château breakfast · checkout by 11 AM</span>
+      <div class="desc">Linger over breakfast. Checkout. Taxi to Tours station — trains north to Paris and onward to Compiègne.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~11:30 AM</div><div class="stop-name">Trains: Tours → Paris → Compiègne · taxi to Pierrefonds</div></div><span class="pp pp-var">~€40–70/person</span></div>
+      <span class="tag tag-transit">🚄 ~2.5h total · Pierrefonds 20 min taxi from Compiègne</span>
+      <div class="desc">TGV Tours → Paris Montparnasse, Metro or taxi to Paris Nord, TER to Compiègne, taxi to Pierrefonds village. Slightly involved but very manageable — and Pierrefonds is entirely worth the detour. It sits perfectly on the way from the Loire toward Paris.</div>
+      <a class="lnk" href="https://www.sncf-connect.com/en-en" target="_blank">Book on SNCF ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~2:00 PM — OPEN 10:00 AM</div><div class="stop-name">Château de Pierrefonds ⭐ 4.6 · 15,000+ reviews</div></div><span class="pp pp-var">€7.50/person · €15 for 2</span></div>
+      <span class="tag tag-sight">🏰 Where Walt Disney's animators drew Sleeping Beauty</span>
+      <div class="desc">Eight soaring white towers, dramatic Neo-Gothic restoration by Viollet-le-Duc. Walt Disney was captivated by this castle while developing Sleeping Beauty — the animators used it as a primary visual reference for the film's look. Standing before it, you immediately see why. Audio guide +€3/person. Allow 1.5 hours. Note: closed Mondays Sep–Apr — Tuesday is fine.</div>
+      <a class="lnk" href="https://maps.google.com/?cid=18071026432561459202" target="_blank">View on Maps ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~4:00 PM</div><div class="stop-name">Coffee &amp; cake in Pierrefonds village by the lake</div></div><span class="pp pp-var">~€12–18 for 2</span></div>
+      <span class="tag tag-meal">☕ Village café · lake reflection of the castle</span>
+      <div class="desc">The village below the castle sits beside a beautiful lake. A café terrace, a tarte tatin, and the castle reflected in the water before you head back to the train.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot hotel"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">EVENING · CHECK-IN</div><div class="stop-name">Courtyard by Marriott Paris Gare de Lyon</div></div><span class="pp pp-incl">✦ Platinum · free breakfast both mornings</span></div>
+      <span class="tag tag-hotel">🏨 Nights 6 &amp; 7 · ~€200–260/room/night</span>
+      <div class="desc">RER A from Gare de Lyon to Disneyland tomorrow — 40 minutes, no changes. Free Marriott breakfast both mornings (anniversary morning + fly-home morning). The location earns its keep entirely on those two transit links.</div>
+      <div class="mbadge">✦ Platinum — free breakfast both mornings · likely upgrade</div><br>
+      <a class="lnk" href="https://www.marriott.com/en-us/hotels/parcy-courtyard-paris-gare-de-lyon/overview/" target="_blank">Book at Marriott.com ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">DINNER · ~8:00 PM</div><div class="stop-name">Le Baron Rouge ⭐ 4.3 — Bastille</div></div><span class="pp pp-var">~€25–35/person · ~€50–70 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Anniversary eve · wine bar · no fuss</span>
+      <div class="desc">A beloved neighbourhood wine bar 10 minutes walk from the hotel — barrels as tables, natural wines by the glass, charcuterie, cheese boards. The perfect low-key dinner the night before your anniversary. Tomorrow is Disneyland — tonight, just a glass of good Burgundy and each other. Typically no reservations, arrive before 7:30 PM.</div>
+      <a class="lnk" href="https://maps.google.com/?q=Le+Baron+Rouge+Paris+Bastille" target="_blank">View on Maps ↗</a>
+    </div></div>
+  </div>
+  <div class="romance-box"><h3>💕 Anniversary eve</h3><p>A quiet wine bar, a gentle evening, an early night. Tomorrow is the big day — Aurora's castle, princess lunch, and the Illuminations fireworks show on your anniversary night. Arrive rested.</p></div>
+</div>
+</div>
+
+<!-- ========== DAY 7 — ANNIVERSARY ========== -->
+<div id="d7" class="day-section">
+<div class="container">
+  <div class="anniv-banner">
+    <h2>✦ Wednesday September 10 — Your Anniversary ✦</h2>
+    <p>Kelly walks through Aurora's Sleeping Beauty castle. Fireworks over the castle tonight.</p>
+  </div>
+  <div class="day-header">
+    <div class="day-circle gold">7</div>
+    <div>
+      <div class="day-date" style="color:#b8860b;">Wednesday, September 10 — Your Anniversary</div>
+      <div class="day-title">Disneyland Paris — Aurora's Castle</div>
+      <div class="day-subtitle">The Sleeping Beauty castle. Princess lunch. Fireworks on your anniversary night.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on gold"></div><div class="pace-dot on gold"></div><div class="pace-dot on gold"></div><div class="pace-dot on gold"></div><div class="pace-dot on gold"></div></div><span class="pace-note">The one big exciting day — fully earned after a week of beautiful places.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today · anniversary splurge · breakfast free via Marriott</div><div class="db-amount">~€430–510 for 2</div></div>
+  <span class="film-badge film-sleeping">🏰 Sleeping Beauty #1 — The Disney Castle · Your Anniversary</span>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">BREAKFAST · 7:30 AM</div><div class="stop-name">Courtyard Marriott breakfast — anniversary morning</div></div><span class="pp pp-incl">Free · Platinum</span></div>
+      <span class="tag tag-meal">🥐 Fuel up early · aim for the RER by 8:15 AM</span>
+      <div class="desc">Eat well and early. Rope drop at Disneyland is worth the early start — the empty Fantasyland photos at 9 AM are the best of the day.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~8:15 AM</div><div class="stop-name">RER A: Gare de Lyon → Marne-la-Vallée/Chessy</div></div><span class="pp pp-var">~€8/person · €16 for 2</span></div>
+      <span class="tag tag-transit">🚂 40 min · direct to park gates · no changes</span>
+      <div class="desc">RER A runs every 10–15 minutes. Step off at the Disneyland station and walk 2 minutes to the gates. Last return train ~00:30 AM.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~9:00 AM — ROPE DROP</div><div class="stop-name">Le Château de la Belle au Bois Dormant ⭐ 4.7</div></div><span class="pp pp-var">€75–85/person · ~€160 for 2 · booked in advance</span></div>
+      <span class="tag tag-sight">🏰 Aurora's castle — on your anniversary · Disneyland Paris</span>
+      <div class="desc">Arrive before the gates open. Walk straight to the castle while Fantasyland is empty — the photos you take of each other in front of it will be among the most treasured of the trip. Explore the stained-glass gallery inside (the Sleeping Beauty story told in panels), and don't miss the dragon's lair underneath the castle. Book Premier Access for the interior in the app on the day.</div>
+      <a class="lnk" href="https://www.disneylandparis.com/en-gb/tickets/" target="_blank">Buy dated tickets in advance ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">LUNCH · ~1:00 PM — book the 1 PM or 1:30 PM slot</div><div class="stop-name">Auberge de Cendrillon ⭐ 4.5 — Anniversary Lunch</div></div><span class="pp pp-var">€95/person · €190 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Princess character dining · the only one in the parks · anniversary</span>
+      <div class="desc">Inside Sleeping Beauty's castle. Tell them it's your anniversary when booking — they love it. 3-course French cuisine with Cinderella and 2–3 other Disney princesses visiting your table. Belle may appear. Book via the Disney website — sells out months ahead. The 1–1:30 PM slot gives you the quieter mid-lunch service and more time with characters.</div>
+      <a class="lnk" href="https://www.disneylandparis.com/en-gb/restaurants/disneyland-park/auberge-de-cendrillon/" target="_blank">Book Auberge de Cendrillon — months ahead ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot romance"></div><div class="line"></div></div>
+    <div class="sc romance-card">
+      <div class="stop-top"><div><div class="stop-time">AFTERNOON · ~3:00–8:30 PM</div><div class="stop-name">Explore Fantasyland at your own pace</div></div><span class="pp pp-rom">Covered by park ticket</span></div>
+      <span class="tag tag-rom">💕 No agenda · just enjoy being here on this day</span>
+      <div class="desc">September crowds are lighter than summer. Rides, the carousel, Phantom Manor, Pirates of the Caribbean — or simply walk through the park and find a quiet corner. Share a churro. Sit by the castle and just look at it. There's no rush — dinner is in the park and the main event is the night show.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">DINNER · ~7:00 PM</div><div class="stop-name">Walt's — An American Restaurant ⭐ 4.3</div></div><span class="pp pp-var">~€45–55/person · ~€90–110 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Anniversary dinner in the park · Main Street</span>
+      <div class="desc">Named after Walt Disney himself, on Main Street USA with windows overlooking Main Street toward the castle. 3-course menu, ~€45–55/person. Book via the Disney app ~2 months ahead. Having dinner in the park means you're perfectly positioned for the night show — no rushing out and back.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">EVENING · ~9:00–9:30 PM</div><div class="stop-name">Disney Illuminations — Castle Light Show &amp; Fireworks</div></div><span class="pp pp-incl">Included with park ticket</span></div>
+      <span class="tag tag-sight">✨ Fireworks over Aurora's castle · your anniversary night</span>
+      <div class="desc">The Sleeping Beauty castle transforms — 20 HD projectors, music, Disney stories in light, then fireworks. On your anniversary. After walking through the castle together this morning. Find a spot on Main Street, left of centre, facing the castle. This is the moment. Happy anniversary.</div>
+    </div></div>
+  </div>
+  <div class="romance-box"><h3>💕 The anniversary moment</h3><p>After the fireworks (~10 PM), RER A back to Gare de Lyon — you'll be in the hotel by 11. A glass of champagne at the hotel bar if you still have energy, or just the quiet of your Paris room and the knowledge that you just watched fireworks over Aurora's castle on your anniversary in France. Hard to beat.</p></div>
+</div>
+</div>
+
+<!-- ========== DAY 8 ========== -->
+<div id="d8" class="day-section">
+<div class="container">
+  <div class="day-header">
+    <div class="day-circle">8</div>
+    <div>
+      <div class="day-date">Thursday, September 11</div>
+      <div class="day-title">Paris Morning — Ratatouille Farewell</div>
+      <div class="day-subtitle">Remy's market, Montmartre rooftop, Le Poulbot. Then home.</div>
+    </div>
+  </div>
+  <div class="pace-bar"><span class="pace-label">Pace:</span><div class="pace-dots"><div class="pace-dot on"></div><div class="pace-dot on"></div><div class="pace-dot"></div><div class="pace-dot"></div><div class="pace-dot"></div></div><span class="pace-note">Easy — a gentle morning before the afternoon flight.</span></div>
+  <div class="day-budget"><div class="db-label">Estimated spend today</div><div class="db-amount">~€100–145 for 2</div></div>
+  <span class="film-badge film-ratatouille">🐀 Ratatouille — Farewell Paris</span>
+
+  <div class="stops">
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">BREAKFAST · ~8:30 AM</div><div class="stop-name">Courtyard Marriott breakfast · last morning</div></div><span class="pp pp-incl">Free · Platinum</span></div>
+      <span class="tag tag-meal">🥐 Final free Marriott breakfast · eat well · travel day</span>
+      <div class="desc">Eat well — it's a long day of travel ahead. Checkout at 12 PM with Platinum late checkout. Leave bags with concierge after checkout and head out light.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">MORNING · ~10:00 AM</div><div class="stop-name">Marché d'Aligre — Remy's Market</div></div><span class="pp pp-free">Free · ~€10–15 for market snacks</span></div>
+      <span class="tag tag-sight">🐀 Ratatouille · Remy's inspiration</span>
+      <div class="desc">10-minute walk from the hotel. The vibrant covered market that channels everything Ratatouille — fresh produce, cheese, charcuterie, flowers, baguettes. Browse, buy a little something, watch Parisian life on a Thursday morning. Open Tue–Sun. Perfect send-off.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot romance"></div><div class="line"></div></div>
+    <div class="sc romance-card">
+      <div class="stop-top"><div><div class="stop-time">LATE MORNING · ~11:30 AM</div><div class="stop-name">Sacré-Cœur, Montmartre — one last look</div></div><span class="pp pp-rom">Free · Metro ~€2</span></div>
+      <span class="tag tag-rom">🐀 Remy's rooftop Paris · farewell view</span>
+      <div class="desc">Metro Line 12 to Abbesses. Walk up to the steps of Sacré-Cœur. Sit with a coffee and look out over all of Paris. Eight days of fairy tales, three castles, two beauty-and-the-beast days, the anniversary fireworks — all of it visible from this one viewpoint. Take a photo. Take a breath.</div>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot meal"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">LUNCH · ~1:00 PM</div><div class="stop-name">Le Poulbot ⭐ 4.7 — Montmartre</div></div><span class="pp pp-var">~€45–60/person · ~€90–120 for 2</span></div>
+      <span class="tag tag-meal">🍽️ Final French meal · steps from Sacré-Cœur</span>
+      <div class="desc">Steps from Sacré-Cœur. Duck confit, onion soup, crème brûlée, good Burgundy. The farewell to France. Tell them it's the last meal of an anniversary trip — they'll make a fuss. Finish by 2:30 PM, taxi or Metro back to collect bags, then to CDG.</div>
+      <a class="lnk" href="https://www.thefork.com/restaurant/le-poulbot-paris/r430329" target="_blank">Reserve on TheFork ↗</a>
+    </div></div>
+
+    <div class="stop"><div class="tl"><div class="dot transit"></div><div class="line"></div></div>
+    <div class="sc">
+      <div class="stop-top"><div><div class="stop-time">~3:00 PM</div><div class="stop-name">To CDG Airport</div></div><span class="pp pp-var">~€12–15 RER · €55–65 taxi</span></div>
+      <span class="tag tag-transit">🛫 Allow 2.5 hours before departure</span>
+      <div class="desc">RER B from Châtelet (change at Châtelet-Les Halles from Metro) to CDG Terminal 2 (~30–40 min). Or taxi direct from Gare de Lyon hotel (~45–60 min, ~€55–65). CDG can be chaotic — do not cut it close. Pick up Alsatian wine, jam, and macarons in the CDG shops.</div>
+    </div></div>
+  </div>
+</div>
+</div>
+
+<!-- ========== BUDGET ========== -->
+<div id="budget" class="day-section">
+<div class="container">
+  <div class="budget-hero">
+    <h2 style="font-weight:normal;">Trip Budget — 2 adults · 8 days · 1 room</h2>
+    <p style="opacity:0.8;font-size:0.87rem;font-style:italic;">Sep 4–11, 2025 · All hotel costs are per room not per person</p>
+    <div class="budget-total">€3,250 – €4,150</div>
+    <div style="font-size:0.87rem;opacity:0.75;">in France · + C$1,640 flights = ~C$6,520–C$7,870 all-in for 2</div>
+  </div>
+
+  <div class="cad-note">📌 €1 ≈ C$1.50 (mid-2025). Hotel rates are per room per night. Marriott Platinum free breakfast on 2 Paris mornings = ~€96 saved.</div>
+
+  <div class="bg-grid">
+    <div class="bg-card"><div class="bg-label">Flights (2 pax)</div><div class="bg-amount">~C$1,640</div><div class="bg-note">Air Canada YYZ→CDG return · Wed Sep 3</div></div>
+    <div class="bg-card"><div class="bg-label">Hotels (7 nights, 1 room)</div><div class="bg-amount">€1,150–€1,560</div><div class="bg-note">3 × Saint-Nicolas + 2 × Château de Pray + 2 × Marriott</div></div>
+    <div class="bg-card"><div class="bg-label">Attractions (2 pax)</div><div class="bg-amount">€248–€308</div><div class="bg-note">3 castles + Disney + Premier Access</div></div>
+    <div class="bg-card"><div class="bg-label">All meals (8 days)</div><div class="bg-amount">€1,000–€1,280</div><div class="bg-note">Every breakfast, lunch &amp; dinner</div></div>
+    <div class="bg-card"><div class="bg-label">Transport (France)</div><div class="bg-amount">€540–€710</div><div class="bg-note">TGVs, taxis, RER, full-day Alsace taxi</div></div>
+    <div class="bg-card savings"><div class="bg-label">Marriott Savings</div><div class="bg-amount">−€96+</div><div class="bg-note">Free breakfast 2 Paris mornings</div></div>
+  </div>
+
+  <div class="bb">
+    <div class="bb-hd"><div>Item</div><div>Per person/unit</div><div>Total</div></div>
+
+    <div class="bb-sec"><div class="bb-sec-lbl">✈️ Flights</div></div>
+    <div class="bb-row"><div><div class="bb-name">Air Canada YYZ → CDG return · Wed Sep 3 / Thu Sep 11</div><div class="bb-sub">Nonstop A330 · book mid-June 2025 for best fare</div></div><div class="bb-each">~C$820</div><div class="bb-total">~C$1,640</div></div>
+
+    <div class="bb-sec"><div class="bb-sec-lbl">🏨 Hotels (per room per night)</div></div>
+    <div class="bb-row"><div><div class="bb-name">Hôtel Saint-Nicolas, Riquewihr</div><div class="bb-sub">Sep 4–6 · 3 nights · request room 11 or 12</div></div><div class="bb-each">€110–140/night</div><div class="bb-total">€330–420</div></div>
+    <div class="bb-row"><div><div class="bb-name">Château de Pray, Amboise</div><div class="bb-sub">Sep 7–8 · 2 nights · romantic Loire château</div></div><div class="bb-each">€130–180/night</div><div class="bb-total">€260–360</div></div>
+    <div class="bb-row"><div><div class="bb-name">Courtyard Marriott Paris Gare de Lyon</div><div class="bb-sub">Sep 9–10 · 2 nights · free breakfast both mornings via Platinum</div></div><div class="bb-each">€200–260/night</div><div class="bb-total">€400–520</div></div>
+    <div class="bb-row" style="background:#f5f0fa;"><div><div class="bb-name" style="font-weight:bold;">Hotel subtotal · 7 nights · 1 room</div></div><div class="bb-each"></div><div class="bb-total">€990–1,300</div></div>
+
+    <div class="bb-sec"><div class="bb-sec-lbl">🏰 Attractions (for 2 adults)</div></div>
+    <div class="bb-row"><div><div class="bb-name">Disneyland Paris 1-day ticket · Sep 10 · Wednesday</div><div class="bb-sub">Booked in advance — Wed is near low end of price range (~€75)</div></div><div class="bb-each">€75–85</div><div class="bb-total">€150–170</div></div>
+    <div class="bb-row"><div><div class="bb-name">Disney Premier Access · castle + 2 rides</div><div class="bb-sub">Buy in app on the day</div></div><div class="bb-each">€15–25</div><div class="bb-total">€30–50</div></div>
+    <div class="bb-row"><div><div class="bb-name">Château du Haut-Koenigsbourg · Sep 5</div><div class="bb-sub">Optional audio guide +€4/person</div></div><div class="bb-each">€12</div><div class="bb-total">€24</div></div>
+    <div class="bb-row"><div><div class="bb-name">Château d'Ussé · Sep 8</div></div><div class="bb-each">€14.50</div><div class="bb-total">€29</div></div>
+    <div class="bb-row"><div><div class="bb-name">Château de Pierrefonds · Sep 9</div><div class="bb-sub">Optional audio guide +€3/person · closed Mon, open Tue ✓</div></div><div class="bb-each">€7.50</div><div class="bb-total">€15</div></div>
+    <div class="bb-row" style="background:#f5f0fa;"><div><div class="bb-name" style="font-weight:bold;">Attractions subtotal</div></div><div class="bb-each"></div><div class="bb-total">€248–288</div></div>
+
+    <div class="bb-sec"><div class="bb-sec-lbl">🍽️ All meals · every breakfast, lunch &amp; dinner</div></div>
+    <div class="bb-row"><div><div class="bb-name">Marriott free breakfasts × 2 mornings</div><div class="bb-sub">Sep 10 anniversary morning + Sep 11 fly-home morning</div></div><div class="bb-each">€0</div><div class="bb-total grn">€0 (saves ~€96)</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 4 breakfast — in flight / airport snack</div></div><div class="bb-each">€0–10</div><div class="bb-total">€0–20</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 4 dinner — Le Caveau des Rois, Riquewihr</div></div><div class="bb-each">~€35</div><div class="bb-total">€70</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 5 breakfast — Kouglopf &amp; Cie, Riquewihr</div></div><div class="bb-each">€3–5</div><div class="bb-total">€6–10</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 5 lunch — Le 757, castle terrace, Haut-Koenigsbourg</div></div><div class="bb-each">€18–25</div><div class="bb-total">€35–50</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 5 dinner — Au Tire Bouchon, Riquewihr</div></div><div class="bb-each">€30</div><div class="bb-total">€60</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 6 breakfast — Kouglopf &amp; Cie, Riquewihr</div></div><div class="bb-each">€3–5</div><div class="bb-total">€6–10</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 6 lunch — Winstub Zum Pfifferhus, Ribeauvillé</div></div><div class="bb-each">€25</div><div class="bb-total">€50</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 6 dinner — AOR La Table, Riquewihr ⭐ 4.9</div><div class="bb-sub">Tasting menu + wine pairing · book immediately</div></div><div class="bb-each">€100–130</div><div class="bb-total">€200–260</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 7 breakfast — Riquewihr boulangerie</div></div><div class="bb-each">€4–6</div><div class="bb-total">€8–12</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 7 lunch — light snack on train</div></div><div class="bb-each">€8–12</div><div class="bb-total">€16–24</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 7 dinner — Château de Pray restaurant</div></div><div class="bb-each">€45–55</div><div class="bb-total">€90–110</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 8 breakfast — Château de Pray terrace</div></div><div class="bb-each">€18–22</div><div class="bb-total">€36–44</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 8 lunch — Ussé castle café or Chinon</div></div><div class="bb-each">€20–30</div><div class="bb-total">€40–60</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 8 dinner — La Pause du Temps, Amboise</div></div><div class="bb-each">€30–40</div><div class="bb-total">€60–80</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 9 breakfast — Château de Pray terrace</div></div><div class="bb-each">€18–22</div><div class="bb-total">€36–44</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 9 lunch — village café, Pierrefonds</div></div><div class="bb-each">€8–12</div><div class="bb-total">€16–24</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 9 dinner — Le Baron Rouge, Paris</div></div><div class="bb-each">€25–35</div><div class="bb-total">€50–70</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 10 lunch — Auberge de Cendrillon, Disneyland</div></div><div class="bb-each">€95</div><div class="bb-total">€190</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 10 dinner — Walt's Restaurant, Disneyland</div></div><div class="bb-each">€45–55</div><div class="bb-total">€90–110</div></div>
+    <div class="bb-row"><div><div class="bb-name">Sep 11 lunch — Le Poulbot, Montmartre</div></div><div class="bb-each">€45–60</div><div class="bb-total">€90–120</div></div>
+    <div class="bb-row"><div><div class="bb-name">Wine, café stops, Alsace tastings, market snacks</div></div><div class="bb-each">€10–15/day</div><div class="bb-total">€80–120</div></div>
+    <div class="bb-row" style="background:#f5f0fa;"><div><div class="bb-name" style="font-weight:bold;">Dining subtotal</div></div><div class="bb-each"></div><div class="bb-total">€1,029–1,338</div></div>
+
+    <div class="bb-sec"><div class="bb-sec-lbl">🚄 Transport within France</div></div>
+    <div class="bb-row"><div><div class="bb-name">TGV: CDG → Colmar (arrival Sep 4)</div></div><div class="bb-each">€30–50</div><div class="bb-total">€60–100</div></div>
+    <div class="bb-row"><div><div class="bb-name">Full-day taxi: Riquewihr → Haut-Koenigsbourg → Colmar → Riquewihr (Sep 5)</div></div><div class="bb-each">—</div><div class="bb-total">€130–160</div></div>
+    <div class="bb-row"><div><div class="bb-name">Local taxis: Riquewihr ↔ Ribeauvillé (Sep 6)</div></div><div class="bb-each">—</div><div class="bb-total">€30–40</div></div>
+    <div class="bb-row"><div><div class="bb-name">TGV + trains: Colmar → Amboise (Sep 7)</div></div><div class="bb-each">€80–120</div><div class="bb-total">€160–240</div></div>
+    <div class="bb-row"><div><div class="bb-name">Taxi: Amboise ↔ Château d'Ussé (Sep 8)</div></div><div class="bb-each">—</div><div class="bb-total">€60–80</div></div>
+    <div class="bb-row"><div><div class="bb-name">Trains: Tours → Compiègne + taxis, Pierrefonds (Sep 9)</div></div><div class="bb-each">€40–70</div><div class="bb-total">€80–140</div></div>
+    <div class="bb-row"><div><div class="bb-name">RER A: Paris ↔ Disneyland return (Sep 10)</div></div><div class="bb-each">€8</div><div class="bb-total">€32</div></div>
+    <div class="bb-row"><div><div class="bb-name">Paris Metro + CDG transfer (Sep 8, 11)</div></div><div class="bb-each">—</div><div class="bb-total">€50–70</div></div>
+    <div class="bb-row" style="background:#f5f0fa;"><div><div class="bb-name" style="font-weight:bold;">Transport subtotal</div></div><div class="bb-each"></div><div class="bb-total">€602–862</div></div>
+
+    <div class="bb-sec"><div class="bb-sec-lbl">🧳 Extras</div></div>
+    <div class="bb-row"><div><div class="bb-name">Travel insurance</div><div class="bb-sub">~2% of total trip value — strongly recommended</div></div><div class="bb-each">—</div><div class="bb-total">€120–160</div></div>
+    <div class="bb-row"><div><div class="bb-name">Alsace wine, souvenirs, gifts to take home</div></div><div class="bb-each">—</div><div class="bb-total">€80–150</div></div>
+    <div class="bb-row"><div><div class="bb-name">Incidentals &amp; contingency</div></div><div class="bb-each">—</div><div class="bb-total">€100</div></div>
+
+    <div class="bb-sec"><div class="bb-sec-lbl">💰 Grand Total</div></div>
+    <div class="bb-row" style="background:#f0e8fa;">
+      <div><div class="bb-name" style="font-size:1rem;font-weight:bold;color:#2c1654;">Total in Euros · excl. flights</div><div class="bb-sub">Hotels + Attractions + Dining + Transport + Extras</div></div>
+      <div class="bb-each"></div><div class="bb-total" style="font-size:1.1rem;color:#4a2878;">€3,169–€4,198</div>
+    </div>
+    <div class="bb-row" style="background:#f0e8fa;">
+      <div><div class="bb-name" style="font-size:1rem;font-weight:bold;color:#2c1654;">Total in Canadian Dollars · incl. flights</div><div class="bb-sub">Using €1 ≈ C$1.50 + C$1,640 flights</div></div>
+      <div class="bb-each"></div><div class="bb-total" style="font-size:1.1rem;color:#4a2878;">~C$6,394–C$7,937</div>
+    </div>
+    <div class="bb-row" style="background:#e8f5e8;">
+      <div><div class="bb-name" style="color:#1a5c1a;">Marriott Platinum savings — free breakfast 2 mornings</div></div>
+      <div class="bb-each" style="color:#1a5c1a;">€24/person</div><div class="bb-total grn">−€96 saved</div>
+    </div>
+  </div>
+
+  <div class="tip"><h3>💡 Where the money goes</h3><ul>
+    <li>AOR La Table (€200–260) and Auberge de Cendrillon (€190) are the two biggest single spends — both exceptional and completely different in character.</li>
+    <li>The Alsace→Loire train day (Sep 7) is the priciest transport day — book TGV legs as early as possible for €25–35/person advance fares.</li>
+    <li>Château de Pray (€260–360 for 2 nights) earns its keep — the built-in romance of a Loire château hotel is worth more than 2 chain hotel nights.</li>
+    <li>Removing the Strasbourg Marriott saves ~€400–520 in hotel costs vs the previous version, at zero loss in experience — in fact it's better.</li>
+    <li>Haut-Koenigsbourg (€24 for 2) is the best-value attraction of the trip — extraordinary for the price.</li>
+  </ul></div>
+</div>
+</div>
+
+<!-- ========== CHECKLIST ========== -->
+<div id="checklist" class="day-section">
+<div class="container">
+  <h2 style="color:#2c1654;margin-bottom:0.3rem;">Booking checklist</h2>
+  <p style="color:#7a6890;font-style:italic;margin-bottom:0.9rem;">Work through in order — the first four are the most time-sensitive.</p>
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  <p id="progress-text" style="font-size:0.83rem;color:#7a6890;margin-bottom:1.2rem;">0 of 24 booked</p>
+
+  <div class="section-label">⭐ Book these first — all sell out earliest</div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>AOR La Table, Riquewihr — Sep 6 dinner · tasting menu · 4.9★ · sells out weeks ahead · mention anniversary</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Auberge de Cendrillon, Disneyland — Sep 10 anniversary lunch · €95/person · books months ahead · mention anniversary</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Château de Pray, Amboise — Sep 7–8 (2 nights) · romantic château · limited rooms · mention anniversary</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Hôtel Saint-Nicolas, Riquewihr — Sep 4–6 (3 nights) · request room 11 or 12</label></div>
+
+  <div class="section-label">✈️ Flights &amp; arrival transfer</div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Air Canada YYZ → CDG · depart Wed Sep 3 overnight · return Thu Sep 11 · ~C$820/person · book mid-June 2025</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>TGV: CDG Airport → Colmar on Sep 4 arrival · book same day as flights · ~€30–50/person</label></div>
+
+  <div class="section-label">🏨 Remaining hotel</div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Courtyard Marriott Paris Gare de Lyon — Sep 9–10 (2 nights) · note Platinum status at booking</label></div>
+
+  <div class="section-label">🏰 Attractions</div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Disneyland Paris dated ticket · Sep 10 (Wednesday) · ~€75–85/person · buy online not at gate</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Walt's Restaurant Disneyland · Sep 10 anniversary dinner · ~€45–55/person · book via Disney app ~2 months ahead</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Haut-Koenigsbourg entry · Sep 5 · €12/person · book online for September crowds</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Château d'Ussé · Sep 8 · €14.50/person · check opening hours</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Château de Pierrefonds · Sep 9 · €7.50/person · confirm open on Tuesdays in September ✓</label></div>
+
+  <div class="section-label">🚗 Transport to pre-arrange</div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Full-day taxi: Haut-Koenigsbourg → Colmar → Riquewihr (Sep 5) · ask Hôtel Saint-Nicolas to arrange · ~€130–160 total</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>TGV + trains: Colmar → Amboise (Sep 7) · book early for €25–35/person advance TGV fares</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Taxi: Amboise ↔ Château d'Ussé (Sep 8) · rural area, book driver in advance</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Trains: Tours → Compiègne + taxi to/from Pierrefonds (Sep 9)</label></div>
+
+  <div class="section-label">🍽️ Restaurant reservations</div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Le Caveau des Rois, Riquewihr — Sep 4 arrival dinner · mention anniversary</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Au Tire Bouchon, Riquewihr — Sep 5 dinner · open daily · book ahead for September</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Winstub Zum Pfifferhus, Ribeauvillé — Sep 6 lunch · confirm Saturday hours before booking</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Château de Pray restaurant — Sep 7 &amp; Sep 8 dinners · book with hotel reservation · mention anniversary</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>La Pause du Temps, Amboise — Sep 8 dinner</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Le Baron Rouge, Paris Bastille — Sep 9 anniversary eve · no reservations · arrive by 7:30 PM</label></div>
+  <div class="ci" onclick="toggleCheck(this)"><input type="checkbox"><label>Le Poulbot, Montmartre — Sep 11 farewell lunch · reserve via TheFork a few days before</label></div>
+</div>
+</div>
+
+<script>
+function showDay(id) {
+  document.querySelectorAll('.day-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  const order = ['overview','meals','budget','flights','d1','d2','d3','d4','d5','d6','d7','d8','checklist'];
+  const idx = order.indexOf(id);
+  if (idx >= 0) document.querySelectorAll('.day-btn')[idx].classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function toggleCheck(el) {
+  const cb = el.querySelector('input[type=checkbox]');
+  cb.checked = !cb.checked;
+  el.classList.toggle('done', cb.checked);
+  const all = document.querySelectorAll('.ci input[type=checkbox]');
+  const done = document.querySelectorAll('.ci input[type=checkbox]:checked');
+  document.getElementById('progress-fill').style.width = Math.round(done.length/all.length*100) + '%';
+  document.getElementById('progress-text').textContent = done.length + ' of ' + all.length + ' booked';
+}
+</script>
+</body>
+</html>
